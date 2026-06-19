@@ -1443,7 +1443,7 @@
       if (isNaN(t) || isNaN(d)) return;
 
       if (lockState.lockType === 'wood') {
-        if (t < 3.5 || d < 9.9) {
+        if (t < 3.0 || d < 9.9) {
           lockState.result = 'fail';
           lockState.step = 6;
         } else {
