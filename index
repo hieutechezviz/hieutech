@@ -1,0 +1,1418 @@
+<html lang="vi" class="h-full"><head>
+  <script src="/_sdk/telemetry_sdk.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hieutech Installer Portal</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Be Vietnam Pro', sans-serif; box-sizing: border-box; }
+    .fade-in { animation: fadeIn 0.4s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-y-0{top:0px;bottom:0px}.left-0{left:0px}.right-0{right:0px}.top-0{top:0px}.top-\[76px\]{top:76px}.z-10{z-index:10}.z-50{z-index:50}.z-\[60\]{z-index:60}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-2{margin-left:0.5rem}.mr-2{margin-right:0.5rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-12{margin-top:3rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.mt-auto{margin-top:auto}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-full{height:100%}.h-10{height:2.5rem}.h-12{height:3rem}.h-16{height:4rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-7{height:1.75rem}.h-auto{height:auto}.h-3\.5{height:0.875rem}.max-h-64{max-height:16rem}.w-10{width:2.5rem}.w-16{width:4rem}.w-20{width:5rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-7{width:1.75rem}.w-auto{width:auto}.w-full{width:100%}.w-3\.5{width:0.875rem}.max-w-2xl{max-width:42rem}.max-w-7xl{max-width:80rem}.max-w-full{max-width:100%}.max-w-md{max-width:28rem}.flex-1{flex:1 1 0%}.flex-none{flex:none}.flex-shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.-translate-y-1\/4{--tw-translate-y:-25%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-x-1\/4{--tw-translate-x:25%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.appearance-none{-webkit-appearance:none;appearance:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-5{grid-template-columns:repeat(5, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-1 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.25rem * var(--tw-space-x-reverse));margin-left:calc(0.25rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.rounded-full{border-radius:9999px}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-t-2{border-top-width:2px}.border-blue-100{--tw-border-opacity:1;border-color:rgb(219 234 254 / var(--tw-border-opacity, 1))}.border-blue-600{--tw-border-opacity:1;border-color:rgb(37 99 235 / var(--tw-border-opacity, 1))}.border-gray-100{--tw-border-opacity:1;border-color:rgb(243 244 246 / var(--tw-border-opacity, 1))}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-green-200{--tw-border-opacity:1;border-color:rgb(187 247 208 / var(--tw-border-opacity, 1))}.border-orange-200{--tw-border-opacity:1;border-color:rgb(254 215 170 / var(--tw-border-opacity, 1))}.border-orange-300{--tw-border-opacity:1;border-color:rgb(253 186 116 / var(--tw-border-opacity, 1))}.border-red-200{--tw-border-opacity:1;border-color:rgb(254 202 202 / var(--tw-border-opacity, 1))}.border-red-300{--tw-border-opacity:1;border-color:rgb(252 165 165 / var(--tw-border-opacity, 1))}.border-transparent{border-color:transparent}.border-blue-500{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.border-white\/20{border-color:rgb(255 255 255 / 0.2)}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-green-50{--tw-bg-opacity:1;background-color:rgb(240 253 244 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237 / var(--tw-bg-opacity, 1))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-white\/10{background-color:rgb(255 255 255 / 0.1)}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.from-blue-600{--tw-gradient-from:#2563eb var(--tw-gradient-from-position);--tw-gradient-to:rgb(37 99 235 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-blue-800{--tw-gradient-to:#1e40af var(--tw-gradient-to-position)}.object-contain{object-fit:contain}.p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-5{padding:1.25rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.py-8{padding-top:2rem;padding-bottom:2rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pl-10{padding-left:2.5rem}.pl-3{padding-left:0.75rem}.pr-3{padding-right:0.75rem}.pr-4{padding-right:1rem}.text-left{text-align:left}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-5xl{font-size:3rem;line-height:1}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-blue-100{--tw-text-opacity:1;color:rgb(219 234 254 / var(--tw-text-opacity, 1))}.text-blue-200{--tw-text-opacity:1;color:rgb(191 219 254 / var(--tw-text-opacity, 1))}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.text-green-500{--tw-text-opacity:1;color:rgb(34 197 94 / var(--tw-text-opacity, 1))}.text-green-700{--tw-text-opacity:1;color:rgb(21 128 61 / var(--tw-text-opacity, 1))}.text-green-800{--tw-text-opacity:1;color:rgb(22 101 52 / var(--tw-text-opacity, 1))}.text-orange-500{--tw-text-opacity:1;color:rgb(249 115 22 / var(--tw-text-opacity, 1))}.text-orange-600{--tw-text-opacity:1;color:rgb(234 88 12 / var(--tw-text-opacity, 1))}.text-orange-700{--tw-text-opacity:1;color:rgb(194 65 12 / var(--tw-text-opacity, 1))}.text-orange-800{--tw-text-opacity:1;color:rgb(154 52 18 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-red-700{--tw-text-opacity:1;color:rgb(185 28 28 / var(--tw-text-opacity, 1))}.text-red-800{--tw-text-opacity:1;color:rgb(153 27 27 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.placeholder-gray-500::placeholder{--tw-placeholder-opacity:1;color:rgb(107 114 128 / var(--tw-placeholder-opacity, 1))}.opacity-10{opacity:0.1}.opacity-80{opacity:0.8}.opacity-70{opacity:0.7}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-shadow{transition-property:box-shadow;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-300{transition-duration:300ms}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-110:hover{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-blue-500:hover{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.hover\:border-blue-300:hover{--tw-border-opacity:1;border-color:rgb(147 197 253 / var(--tw-border-opacity, 1))}.hover\:bg-blue-50:hover{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-200:hover{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity, 1))}.hover\:bg-green-700:hover{--tw-bg-opacity:1;background-color:rgb(21 128 61 / var(--tw-bg-opacity, 1))}.hover\:bg-orange-50:hover{--tw-bg-opacity:1;background-color:rgb(255 247 237 / var(--tw-bg-opacity, 1))}.hover\:bg-red-50:hover{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-100:hover{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-50:hover{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.hover\:text-red-700:hover{--tw-text-opacity:1;color:rgb(185 28 28 / var(--tw-text-opacity, 1))}.hover\:shadow:hover{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:border-blue-500:focus{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}.disabled\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\:bg-gray-300:disabled{--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity, 1))}.group:hover .group-hover\:text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width: 640px){.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width: 768px){.md\:flex{display:flex}.md\:hidden{display:none}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:col-span-5{grid-column:span 5 / span 5}.lg\:col-span-7{grid-column:span 7 / span 7}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:p-8{padding:2rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}}</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-y-0{top:0px;bottom:0px}.left-0{left:0px}.top-0{top:0px}.top-\[76px\]{top:76px}.right-0{right:0px}.z-50{z-index:50}.z-\[60\]{z-index:60}.z-10{z-index:10}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-8{margin-bottom:2rem}.ml-2{margin-left:0.5rem}.mt-1{margin-top:0.25rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mr-2{margin-right:0.5rem}.mt-0\.5{margin-top:0.125rem}.mt-12{margin-top:3rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.mt-auto{margin-top:auto}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-full{height:100%}.h-10{height:2.5rem}.h-12{height:3rem}.h-16{height:4rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-7{height:1.75rem}.h-3\.5{height:0.875rem}.h-auto{height:auto}.max-h-64{max-height:16rem}.w-20{width:5rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-7{width:1.75rem}.w-auto{width:auto}.w-full{width:100%}.w-10{width:2.5rem}.w-16{width:4rem}.w-3\.5{width:0.875rem}.max-w-2xl{max-width:42rem}.max-w-7xl{max-width:80rem}.max-w-full{max-width:100%}.max-w-md{max-width:28rem}.flex-none{flex:none}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.-translate-y-1\/4{--tw-translate-y:-25%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-x-1\/4{--tw-translate-x:25%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.appearance-none{-webkit-appearance:none;appearance:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-5{grid-template-columns:repeat(5, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-1{gap:0.25rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-1 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.25rem * var(--tw-space-x-reverse));margin-left:calc(0.25rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.rounded{border-radius:0.25rem}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-md{border-radius:0.375rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-t-2{border-top-width:2px}.border-blue-600{--tw-border-opacity:1;border-color:rgb(37 99 235 / var(--tw-border-opacity, 1))}.border-gray-100{--tw-border-opacity:1;border-color:rgb(243 244 246 / var(--tw-border-opacity, 1))}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-transparent{border-color:transparent}.border-blue-100{--tw-border-opacity:1;border-color:rgb(219 234 254 / var(--tw-border-opacity, 1))}.border-blue-500{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.border-green-200{--tw-border-opacity:1;border-color:rgb(187 247 208 / var(--tw-border-opacity, 1))}.border-orange-200{--tw-border-opacity:1;border-color:rgb(254 215 170 / var(--tw-border-opacity, 1))}.border-orange-300{--tw-border-opacity:1;border-color:rgb(253 186 116 / var(--tw-border-opacity, 1))}.border-red-200{--tw-border-opacity:1;border-color:rgb(254 202 202 / var(--tw-border-opacity, 1))}.border-red-300{--tw-border-opacity:1;border-color:rgb(252 165 165 / var(--tw-border-opacity, 1))}.border-white\/20{border-color:rgb(255 255 255 / 0.2)}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-green-50{--tw-bg-opacity:1;background-color:rgb(240 253 244 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237 / var(--tw-bg-opacity, 1))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.bg-white\/10{background-color:rgb(255 255 255 / 0.1)}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.from-blue-600{--tw-gradient-from:#2563eb var(--tw-gradient-from-position);--tw-gradient-to:rgb(37 99 235 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-blue-800{--tw-gradient-to:#1e40af var(--tw-gradient-to-position)}.object-contain{object-fit:contain}.p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pl-10{padding-left:2.5rem}.pl-3{padding-left:0.75rem}.pr-3{padding-right:0.75rem}.pr-4{padding-right:1rem}.text-left{text-align:left}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-5xl{font-size:3rem;line-height:1}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-blue-100{--tw-text-opacity:1;color:rgb(219 234 254 / var(--tw-text-opacity, 1))}.text-blue-200{--tw-text-opacity:1;color:rgb(191 219 254 / var(--tw-text-opacity, 1))}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-green-500{--tw-text-opacity:1;color:rgb(34 197 94 / var(--tw-text-opacity, 1))}.text-green-700{--tw-text-opacity:1;color:rgb(21 128 61 / var(--tw-text-opacity, 1))}.text-green-800{--tw-text-opacity:1;color:rgb(22 101 52 / var(--tw-text-opacity, 1))}.text-orange-500{--tw-text-opacity:1;color:rgb(249 115 22 / var(--tw-text-opacity, 1))}.text-orange-600{--tw-text-opacity:1;color:rgb(234 88 12 / var(--tw-text-opacity, 1))}.text-orange-700{--tw-text-opacity:1;color:rgb(194 65 12 / var(--tw-text-opacity, 1))}.text-orange-800{--tw-text-opacity:1;color:rgb(154 52 18 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-red-700{--tw-text-opacity:1;color:rgb(185 28 28 / var(--tw-text-opacity, 1))}.text-red-800{--tw-text-opacity:1;color:rgb(153 27 27 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.placeholder-gray-500::placeholder{--tw-placeholder-opacity:1;color:rgb(107 114 128 / var(--tw-placeholder-opacity, 1))}.opacity-10{opacity:0.1}.opacity-70{opacity:0.7}.opacity-80{opacity:0.8}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-shadow{transition-property:box-shadow;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-300{transition-duration:300ms}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-110:hover{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-blue-300:hover{--tw-border-opacity:1;border-color:rgb(147 197 253 / var(--tw-border-opacity, 1))}.hover\:border-blue-500:hover{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-100:hover{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-50:hover{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-200:hover{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-50:hover{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.hover\:bg-green-700:hover{--tw-bg-opacity:1;background-color:rgb(21 128 61 / var(--tw-bg-opacity, 1))}.hover\:bg-orange-50:hover{--tw-bg-opacity:1;background-color:rgb(255 247 237 / var(--tw-bg-opacity, 1))}.hover\:bg-red-50:hover{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.hover\:text-red-700:hover{--tw-text-opacity:1;color:rgb(185 28 28 / var(--tw-text-opacity, 1))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.hover\:shadow:hover{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:border-blue-500:focus{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}.disabled\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\:bg-gray-300:disabled{--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity, 1))}.group:hover .group-hover\:text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width: 640px){.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width: 768px){.md\:flex{display:flex}.md\:hidden{display:none}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:col-span-5{grid-column:span 5 / span 5}.lg\:col-span-7{grid-column:span 7 / span 7}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:p-8{padding:2rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}}</style></head>
+<body class="h-full bg-gray-50 text-gray-800">
+  <div id="app" class="h-full w-full overflow-auto">
+    <!-- Zalo Contact Bar -->
+    <div class="w-full flex justify-center bg-white border-b border-gray-200 py-3 sticky top-0 z-[60]">
+      <a href="https://zalo.me/ezvizvietnam" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center hover:scale-105 transition duration-200">
+        <img src="https://inkythuatso.com/uploads/images/2021/09/zalo-logo-inkythuatso-14-15-03-04.jpg" alt="Zalo OA" class="h-12 w-auto object-contain" loading="lazy" onerror="this.style.background='#e5e7eb';this.alt='Zalo';">
+        <span class="text-sm text-blue-600 font-semibold mt-1">Liên hệ trực tiếp</span>
+      </a>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-[76px] z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center gap-2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT5cft3SsnScJUvjaTu1tjuohBfKHija2Q6w&amp;s" alt="Hieutech Logo" class="h-10 w-auto object-contain rounded" loading="lazy" onerror="this.style.background='#dbeafe';this.alt='Logo';">
+            <span id="site-title" class="text-2xl font-bold text-blue-700 tracking-tight">Hieutech</span>
+            <a href="https://www.youtube.com/@hieutech" target="_blank" rel="noopener noreferrer" class="ml-2 flex items-center text-red-600 hover:text-red-700 hover:scale-110 transition-transform duration-200" title="Kênh YouTube Hieutech">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-7 h-7"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+            </a>
+          </div>
+          <div class="hidden md:flex space-x-1">
+            <button onclick="switchTab('faq')" id="nav-faq" class="nav-btn flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="wrench" class="lucide lucide-wrench w-4 h-4"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg> Hỗ trợ &amp; Lỗi
+            </button>
+            <button onclick="switchTab('products')" id="nav-products" class="nav-btn flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium bg-blue-50 text-blue-700">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="file-text" class="lucide lucide-file-text w-4 h-4"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line><line x1="10" x2="8" y1="9" y2="9"></line></svg> Tài liệu Sản phẩm
+            </button>
+            <button onclick="switchTab('calculator')" id="nav-calculator" class="nav-btn flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="calculator" class="lucide lucide-calculator w-4 h-4"><rect width="16" height="20" x="4" y="2" rx="2"></rect><line x1="8" x2="16" y1="6" y2="6"></line><line x1="16" x2="16" y1="14" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg> Tính Camera
+            </button>
+            <button onclick="switchTab('lock')" id="nav-lock" class="nav-btn flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="lock" class="lucide lucide-lock w-4 h-4"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Đánh giá Khóa & Cửa
+            </button>
+            <button onclick="switchTab('installer')" id="nav-installer" class="nav-btn flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="users" class="lucide lucide-users w-4 h-4"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> Tìm Thợ Uỷ Quyền
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Nav -->
+      <div class="md:hidden flex border-t border-gray-100 bg-white overflow-x-auto">
+        <button onclick="switchTab('faq')" id="mnav-faq" class="mobile-nav flex-none w-20 flex flex-col items-center py-3 text-xs font-medium text-gray-500 border-t-2 border-transparent">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="wrench" class="lucide lucide-wrench w-5 h-5 mb-1"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg> Hỗ trợ
+        </button>
+        <button onclick="switchTab('products')" id="mnav-products" class="mobile-nav flex-none w-20 flex flex-col items-center py-3 text-xs font-medium text-blue-600 bg-blue-50 border-t-2 border-blue-600">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="file-text" class="lucide lucide-file-text w-5 h-5 mb-1"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line><line x1="10" x2="8" y1="9" y2="9"></line></svg> Tài liệu
+        </button>
+        <button onclick="switchTab('calculator')" id="mnav-calculator" class="mobile-nav flex-none w-20 flex flex-col items-center py-3 text-xs font-medium text-gray-500 border-t-2 border-transparent">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="calculator" class="lucide lucide-calculator w-5 h-5 mb-1"><rect width="16" height="20" x="4" y="2" rx="2"></rect><line x1="8" x2="16" y1="6" y2="6"></line><line x1="16" x2="16" y1="14" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg> Camera
+        </button>
+        <button onclick="switchTab('lock')" id="mnav-lock" class="mobile-nav flex-none w-20 flex flex-col items-center py-3 text-xs font-medium text-gray-500 border-t-2 border-transparent">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="lock" class="lucide lucide-lock w-5 h-5 mb-1"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Khóa cửa
+        </button>
+        <button onclick="switchTab('installer')" id="mnav-installer" class="mobile-nav flex-none w-20 flex flex-col items-center py-3 text-xs font-medium text-gray-500 border-t-2 border-transparent">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="users" class="lucide lucide-users w-5 h-5 mb-1"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> Tìm thợ
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      
+      <!-- FAQ Tab -->
+      <div id="tab-faq" class="fade-in hidden">
+        <div class="mb-8">
+          <h1 class="text-3xl font-bold text-gray-900 mb-2">Các vấn đề thường gặp</h1>
+          <p class="text-gray-500">Tìm kiếm nhanh các lỗi, cách khắc phục cho thiết bị.</p>
+        </div>
+        <div class="relative mb-8 max-w-2xl">
+          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="search" class="lucide lucide-search w-5 h-5 text-gray-400"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          </div>
+          <input type="text" id="faq-search" class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-xl bg-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm" placeholder="Tìm kiếm theo mã lỗi, tên thiết bị..." oninput="filterFaqs()">
+        </div>
+        <div id="faq-list" class="space-y-4">
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(0)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">ALL Model</span>
+              <h3 class="text-lg font-medium text-gray-900">Thẻ nhớ báo cần phải định dạng lại sau thời gian sử dụng--&gt; lỗi thẻ nhớ</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(1)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">NVR/Đầu ghi</span>
+              <h3 class="text-lg font-medium text-gray-900">Một số đầu ghi khi add tự động sẽ chỉ xuất 1 mắt cam</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(2)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Smartlock</span>
+              <h3 class="text-lg font-medium text-gray-900">Cách reset khóa Ezviz về cài đặt gốc DL05,DL50FVS,DL06</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(3)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Smartlock</span>
+              <h3 class="text-lg font-medium text-gray-900">Cách reset khóa Ezviz về cài đặt gốc DL03, dl04</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(4)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">ALL Model</span>
+              <h3 class="text-lg font-medium text-gray-900">Mất mã QR</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(5)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Camera WiFi</span>
+              <h3 class="text-lg font-medium text-gray-900">Làm sao để thêm thiết bị vào app EZVIZ?</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(6)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Camera WiFi</span>
+              <h3 class="text-lg font-medium text-gray-900">Tại sao không quét được mã QR?</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(7)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Camera WiFi</span>
+              <h3 class="text-lg font-medium text-gray-900">Camera không kết nối được WiFi?</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(8)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Camera WiFi</span>
+              <h3 class="text-lg font-medium text-gray-900">Làm sao để reset camera?</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(9)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Camera WiFi</span>
+              <h3 class="text-lg font-medium text-gray-900">Camera hiển thị offline?</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(10)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Camera WiFi</span>
+              <h3 class="text-lg font-medium text-gray-900">Không xem được camera từ xa?</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(11)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Camera WiFi</span>
+              <h3 class="text-lg font-medium text-gray-900">Làm sao chia sẻ camera cho người khác?</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(12)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Camera WiFi</span>
+              <h3 class="text-lg font-medium text-gray-900">Làm sao xóa thiết bị khỏi tài khoản?</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(13)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Camera WiFi</span>
+              <h3 class="text-lg font-medium text-gray-900">Quên mật khẩu tài khoản EZVIZ?</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(14)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Camera WiFi</span>
+              <h3 class="text-lg font-medium text-gray-900">Không nhận được thông báo cảnh báo?</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(15)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Camera WiFi</span>
+              <h3 class="text-lg font-medium text-gray-900">Camera không ghi hình?</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(16)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Camera WiFi</span>
+              <h3 class="text-lg font-medium text-gray-900">Camera không nhận thẻ nhớ?</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(17)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Camera WiFi</span>
+              <h3 class="text-lg font-medium text-gray-900">Camera bị lag / giật?</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(18)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Camera WiFi</span>
+              <h3 class="text-lg font-medium text-gray-900">Hình ảnh camera bị mờ?</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(19)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Camera WiFi</span>
+              <h3 class="text-lg font-medium text-gray-900">Không nghe được âm thanh?</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(20)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Camera WiFi</span>
+              <h3 class="text-lg font-medium text-gray-900">Không nói chuyện được qua camera?</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(21)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Camera WiFi</span>
+              <h3 class="text-lg font-medium text-gray-900">Camera không quay (PTZ)?</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(22)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Camera WiFi</span>
+              <h3 class="text-lg font-medium text-gray-900">Camera báo động sai liên tục?</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(23)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Camera WiFi</span>
+              <h3 class="text-lg font-medium text-gray-900">Camera không lên nguồn?</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(24)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Camera WiFi</span>
+              <h3 class="text-lg font-medium text-gray-900">Làm sao cập nhật firmware camera?</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(25)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">ALL Model</span>
+              <h3 class="text-lg font-medium text-gray-900">Xóa liên kết tài khoản Ezviz trên camera</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(26)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">DL06</span>
+              <h3 class="text-lg font-medium text-gray-900">Lỗi mở cửa từ bên ngoài mà không cần nhập mật khẩu?</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(27)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">DL06</span>
+              <h3 class="text-lg font-medium text-gray-900">Chốt trẻ em không hoạt động sau khi thay đổi tay nắm cửa</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(28)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">DL50FVS</span>
+              <h3 class="text-lg font-medium text-gray-900">Chốt motor khóa lỗi, tự đóng ra đóng vào</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(29)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Smartlock</span>
+              <h3 class="text-lg font-medium text-gray-900">Khóa lắp xong, không tự khóa, mở được từ bên ngoài</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(30)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">DL06&amp;DL06 Pro</span>
+              <h3 class="text-lg font-medium text-gray-900">Cách đổi chiều chốt lõi khóa</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(31)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">ALL Model</span>
+              <h3 class="text-lg font-medium text-gray-900">Cách kiểm tra quyền truy cập vào thiết bị</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(32)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Camera</span>
+              <h3 class="text-lg font-medium text-gray-900">Cách vẽ vùng phát hiện</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(33)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Camera</span>
+              <h3 class="text-lg font-medium text-gray-900">Cách kết nối wifi mới</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(34)">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">Smartlock</span>
+              <h3 class="text-lg font-medium text-gray-900">Cách reset về cài đặt gốc khóa thông minh</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6"><path d="m6 9 6 6 6-6"></path></svg></div>
+          </button>
+          
+        </div>
+      </div>
+      </div>
+
+      <!-- Products Tab -->
+      <div id="tab-products" class="fade-in">
+        <div class="mb-8">
+          <h1 class="text-3xl font-bold text-gray-900 mb-2">Giới thiệu sản phẩm &amp; HDSD</h1>
+          <p class="text-gray-500">Danh sách tài liệu, video hướng dẫn cài đặt và cấu hình sản phẩm.</p>
+        </div>
+        <div class="relative mb-8 max-w-2xl">
+          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="search" class="lucide lucide-search w-5 h-5 text-gray-400"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          </div>
+          <input type="text" id="product-search" class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-xl bg-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm" placeholder="Tìm kiếm sản phẩm..." oninput="filterProducts()">
+        </div>
+        <div id="product-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Camera</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">CB8C LITE</h3>
+          <a href="https://www.youtube.com/watch?v=2L5HPTpN9iA&amp;t=60s" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Đầu ghi</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">Đầu ghi Ezviz X5S</h3>
+          <a href="https://www.youtube.com/watch?v=mqU_Dv6w-2U" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Smart Home</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">HP2- mắt thần</h3>
+          <a href="https://www.youtube.com/watch?v=3NS5PDijssQ&amp;t=21s" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Phần mềm</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">Ezviz Studio</h3>
+          <a href="https://www.youtube.com/watch?v=fEsoe9wZNLg" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Smart Home</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">HP7-Chuông cửa rào</h3>
+          <a href="https://www.youtube.com/watch?v=FxYHXVLUdo0&amp;t=289s" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Giải pháp</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">Tương tác Smartlock &amp; Camera</h3>
+          <a href="https://www.youtube.com/watch?v=fEsoe9wZNLg" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Smartlock</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">HD Cấu hình DL05</h3>
+          <a href="https://www.youtube.com/watch?v=mKf7IDyO0h0" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Smartlock</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">HD Cấu hình DL50FVS</h3>
+          <a href="https://www.youtube.com/watch?v=D20W3KnknzM" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Smartlock</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">HD Cấu hình DL03</h3>
+          <a href="https://www.youtube.com/watch?v=UyQkCSafwCc" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Smartlock</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">HD Cấu hình DL04</h3>
+          <a href="https://www.youtube.com/watch?v=iQvQfWIjN4I&amp;t=125s" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Smartlock</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">HD Cấu hình DL06 Pro</h3>
+          <a href="https://www.youtube.com/results?search_query=DL06+Pro+setup" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Smart Home</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">HP4 Smart Peephole</h3>
+          <a href="https://www.youtube.com/results?search_query=HP4+Smart+Peephole" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Đầu ghi</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">NVR X6</h3>
+          <a href="https://www.youtube.com/results?search_query=EZVIZ+X6+NVR+Features" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Camera</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">REVIEW H7C/C7</h3>
+          <a href="https://www.youtube.com/watch?v=3YYBxAelWps&amp;t=85s&amp;pp=0gcJCT4LAYcqIYzv" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Router</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">E4P</h3>
+          <a href="https://www.youtube.com/watch?v=Ylupt5kqrbI&amp;t=35s" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Camera</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">S10</h3>
+          <a href="https://www.youtube.com/results?search_query=Giới+thiệu+camera+video+call+EZVIZ+S10" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Camera</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">CB2 4G</h3>
+          <a href="https://www.youtube.com/results?search_query=Giới+thiệu+camera+pin+4G+EZVIZ+CB2" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Camera</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">H8X</h3>
+          <a href="https://www.youtube.com/results?search_query=Hướng+dẫn+cấu+hình+Camera+H8x+chi+tiết" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Smartlock</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">DL04</h3>
+          <a href="https://www.youtube.com/results?search_query=Introduction+%26+setup+of+the+EZVIZ+DL04+Pro" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Camera</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">C60P</h3>
+          <a href="https://www.youtube.com/results?search_query=cấu+hình+chi+tiết+camera+mắt+kép+Ezviz+C60p" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Camera</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">H9C</h3>
+          <a href="https://www.youtube.com/results?search_query=cấu+hình+chi+tiết+camera+H9c+Ezviz" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Smart Home</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">Homegate way A3</h3>
+          <a href="https://www.youtube.com/results?search_query=EZVIZ+HOME+GATEWAY+A3" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Camera</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">H6c/C6n G1 2K</h3>
+          <a href="https://www.youtube.com/results?search_query=H6C/C6N+G1+2K" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">Smartlock</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="youtube" class="lucide lucide-youtube w-5 h-5 text-red-500 opacity-70 group-hover:opacity-100"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">DL20FVS</h3>
+          <a href="https://www.youtube.com/results?search_query=EZVIZ+DL20FVS" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-4 h-4"><path d="m22 8-6 4 6 4V8Z"></path><rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect></svg> Xem tài liệu / Video
+          </a>
+        </div></div>
+      </div>
+
+      <!-- Calculator Tab -->
+      <div id="tab-calculator" class="fade-in hidden">
+        <div class="mb-8">
+          <h1 class="text-3xl font-bold text-gray-900 mb-2">Công cụ Tính toán Camera</h1>
+          <p class="text-gray-500">Ước tính dung lượng thẻ nhớ, ổ cứng cần thiết dựa trên chuẩn nén H.265.</p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <div class="lg:col-span-7 bg-white rounded-2xl shadow-sm border border-gray-200 p-6 lg:p-8">
+            <div class="flex gap-4 mb-8 p-1 bg-gray-100 rounded-lg">
+              <button onclick="setCalcMode('storage')" id="mode-storage" class="flex-1 py-2 px-4 text-sm font-medium rounded-md bg-white text-blue-700 shadow-sm">Tính dung lượng</button>
+              <button onclick="setCalcMode('days')" id="mode-days" class="flex-1 py-2 px-4 text-sm font-medium rounded-md text-gray-500 hover:text-gray-700">Tính thời gian</button>
+            </div>
+            <div class="space-y-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Độ phân giải Camera</label>
+                <div id="resolution-btns" class="grid grid-cols-5 gap-2"><button data-res="1080p" onclick="setResolution('1080p')" class="py-2 text-sm font-medium rounded-lg border transition-all border-blue-500 bg-blue-50 text-blue-700">1080p</button><button data-res="2K" onclick="setResolution('2K')" class="py-2 text-sm font-medium rounded-lg border transition-all border-gray-200 bg-white text-gray-600 hover:border-blue-300">2K</button><button data-res="2K+" onclick="setResolution('2K+')" class="py-2 text-sm font-medium rounded-lg border transition-all border-gray-200 bg-white text-gray-600 hover:border-blue-300">2K+</button><button data-res="3K" onclick="setResolution('3K')" class="py-2 text-sm font-medium rounded-lg border transition-all border-gray-200 bg-white text-gray-600 hover:border-blue-300">3K</button><button data-res="4K" onclick="setResolution('4K')" class="py-2 text-sm font-medium rounded-lg border transition-all border-gray-200 bg-white text-gray-600 hover:border-blue-300">4K</button></div>
+                <p id="rate-info" class="text-xs text-gray-500 mt-2 flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="info" class="lucide lucide-info w-3.5 h-3.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg> Tốc độ tiêu hao ước tính: ~16 GB/Ngày (Chuẩn H.265)</p>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Số lượng Camera (Mắt)</label>
+                <input type="number" id="calc-cameras" min="1" value="1" class="block w-full px-4 py-3 border border-gray-300 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500" oninput="calculate()">
+              </div>
+              <div id="days-input-section">
+                <label class="block text-sm font-medium text-gray-700 mb-2">Thời gian cần lưu (Ngày)</label>
+                <input type="number" id="calc-days" min="1" value="7" class="block w-full px-4 py-3 border border-gray-300 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500" oninput="calculate()">
+              </div>
+              <div id="capacity-input-section" class="hidden">
+                <label class="block text-sm font-medium text-gray-700 mb-2">Dung lượng Thẻ nhớ / Ổ cứng (GB)</label>
+                <input type="number" id="calc-capacity" min="1" value="64" class="block w-full px-4 py-3 border border-gray-300 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500" oninput="calculate()">
+                <div class="flex gap-2 mt-3 flex-wrap" id="capacity-presets"><button onclick="document.getElementById('calc-capacity').value=32;calculate()" class="px-3 py-1 text-xs border border-gray-200 rounded-full hover:bg-gray-50 text-gray-600">32GB</button><button onclick="document.getElementById('calc-capacity').value=64;calculate()" class="px-3 py-1 text-xs border border-gray-200 rounded-full hover:bg-gray-50 text-gray-600">64GB</button><button onclick="document.getElementById('calc-capacity').value=128;calculate()" class="px-3 py-1 text-xs border border-gray-200 rounded-full hover:bg-gray-50 text-gray-600">128GB</button><button onclick="document.getElementById('calc-capacity').value=256;calculate()" class="px-3 py-1 text-xs border border-gray-200 rounded-full hover:bg-gray-50 text-gray-600">256GB</button><button onclick="document.getElementById('calc-capacity').value=512;calculate()" class="px-3 py-1 text-xs border border-gray-200 rounded-full hover:bg-gray-50 text-gray-600">512GB</button><button onclick="document.getElementById('calc-capacity').value=1024;calculate()" class="px-3 py-1 text-xs border border-gray-200 rounded-full hover:bg-gray-50 text-gray-600">1TB</button><button onclick="document.getElementById('calc-capacity').value=2048;calculate()" class="px-3 py-1 text-xs border border-gray-200 rounded-full hover:bg-gray-50 text-gray-600">2TB</button><button onclick="document.getElementById('calc-capacity').value=4096;calculate()" class="px-3 py-1 text-xs border border-gray-200 rounded-full hover:bg-gray-50 text-gray-600">4TB</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-5">
+            <div class="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl shadow-lg p-6 lg:p-8 text-white h-full flex flex-col justify-center relative overflow-hidden">
+              <div class="absolute right-0 top-0 opacity-10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="hard-drive" style="width:200px;height:200px;" class="lucide lucide-hard-drive transform translate-x-1/4 -translate-y-1/4"><line x1="22" x2="2" y1="12" y2="12"></line><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" x2="6.01" y1="16" y2="16"></line><line x1="10" x2="10.01" y1="16" y2="16"></line></svg>
+              </div>
+              <h3 class="text-blue-100 font-medium mb-2 relative z-10">Kết quả ước tính</h3>
+              <div id="calc-result" class="relative z-10">
+          <div class="text-5xl font-bold mb-2">112<span class="text-2xl ml-2 font-medium text-blue-200">GB</span></div>
+          <p class="text-blue-100 text-sm mt-4 leading-relaxed">Để lưu trữ cho <strong class="text-white">1 camera</strong> độ phân giải <strong class="text-white">1080p</strong> trong vòng <strong class="text-white">7 ngày</strong>.</p>
+          <div class="mt-8 p-4 bg-white/10 rounded-xl border border-white/20"><p class="text-sm">Gợi ý thẻ nhớ/Ổ cứng mua:</p><p class="font-bold text-lg mt-1">128 GB</p></div></div>
+              <p class="text-xs text-blue-200 mt-8 relative z-10 opacity-80 italic">* Kết quả mang tính ước tính dựa trên chuẩn nén H.265 ghi hình liên tục.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lock Evaluator Tab -->
+      <div id="tab-lock" class="fade-in hidden">
+        <div class="mb-8">
+          <h1 class="text-3xl font-bold text-gray-900 mb-2">Công cụ Đánh giá Khóa cửa</h1>
+          <p class="text-gray-500">Kiểm tra thông số để xác định xem khóa có phù hợp với cửa của bạn không.</p>
+        </div>
+
+        <div class="max-w-md mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+          <div class="bg-blue-600 p-6 text-white text-center">
+            <h1 class="text-2xl font-bold">Kiểm tra độ phù hợp</h1>
+            <p class="text-blue-100 text-sm mt-2">Công cụ hỗ trợ đánh giá nhanh chóng</p>
+          </div>
+
+          <div class="p-6 relative">
+            <!-- Step 1 -->
+            <div id="lock-step-1" class="space-y-4 fade-in">
+              <label class="block text-gray-700 font-medium mb-2">Hãy lựa chọn khóa cửa mà bạn muốn lắp đặt:</label>
+              <div class="relative">
+                <select id="lock-select" class="w-full p-4 border border-gray-300 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none appearance-none" onchange="onLockSelect(event)"><option value="" disabled="" selected="">-- Chọn dòng khóa --</option><option value="DL05">DL05</option><option value="DL50FVS">DL50FVS</option><option value="Y2000">Y2000</option><option value="Y3000FVP">Y3000FVP</option><option value="DL20FVS">DL20FVS</option><option value="DL04">DL04 Series</option><option value="DL03">DL03 Series</option><option value="DL06">DL06</option><option value="DL06Pro">DL06 Pro</option></select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-5 h-5"><path d="m6 9 6 6 6-6"></path></svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div id="lock-step-2" class="space-y-6 fade-in hidden">
+              <div class="bg-blue-50 p-4 rounded-xl border border-blue-100 flex items-start space-x-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="alert-circle" class="lucide lucide-alert-circle w-6 h-6 text-blue-500 flex-shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
+                <p class="text-gray-800 font-medium leading-relaxed">
+                  Sản phẩm bạn đang lựa chọn phù hợp nhất với <strong class="text-blue-600" id="lock-type-label">KHÓA CỬA</strong>.
+                </p>
+              </div>
+              <button onclick="confirmLockType()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 px-4 rounded-xl flex items-center justify-center transition-colors">
+                Xác nhận để tiếp tục <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" class="lucide lucide-arrow-right w-5 h-5 ml-2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </button>
+            </div>
+
+            <!-- Step 3 -->
+            <div id="lock-step-3" class="space-y-5 fade-in hidden">
+              <h2 class="text-lg font-semibold text-gray-800 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="ruler" class="lucide lucide-ruler w-5 h-5 mr-2 text-blue-500"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"></path><path d="m14.5 12.5 2-2"></path><path d="m11.5 9.5 2-2"></path><path d="m8.5 6.5 2-2"></path><path d="m17.5 15.5 2-2"></path></svg> Hãy điền kích thước cửa
+              </h2>
+              <div class="space-y-4">
+                <div>
+                  <label class="block text-gray-600 text-sm font-medium mb-1">Độ dày cửa (cm)</label>
+                  <input type="number" step="0.1" id="lock-thickness" placeholder="VD: 4.5" oninput="validateLockDim()" class="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none">
+                </div>
+                <div>
+                  <label class="block text-gray-600 text-sm font-medium mb-1">Chiều sâu cửa có thể khoan đến (cm)</label>
+                  <input type="number" step="0.1" id="lock-depth" placeholder="VD: 10.5" oninput="validateLockDim()" class="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none">
+                </div>
+              </div>
+              <button id="btn-lock-dim" disabled="" onclick="checkLockDimensions()" class="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-semibold py-3.5 px-4 rounded-xl transition-colors mt-4">
+                Kiểm tra kích thước
+              </button>
+            </div>
+
+            <!-- Step 4 -->
+            <div id="lock-step-4" class="space-y-5 fade-in hidden">
+              <h2 class="text-lg font-semibold text-gray-800 text-center mb-6">Cửa của bạn thuộc loại nào?</h2>
+              <div class="grid grid-cols-1 gap-4">
+                <button onclick="selectDoorStatus('new')" class="flex flex-col items-center justify-center p-6 border-2 border-gray-200 hover:border-blue-500 rounded-2xl transition-all group hover:bg-blue-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="door-open" class="lucide lucide-door-open w-10 h-10 text-gray-400 group-hover:text-blue-500 mb-2"><path d="M13 4h3a2 2 0 0 1 2 2v14"></path><path d="M2 20h3"></path><path d="M13 20h9"></path><path d="M10 12v.01"></path><path d="M13 4.562v16.157a1 1 0 0 1-1.242.97L5 20V5.562a2 2 0 0 1 1.515-1.94l4-1A2 2 0 0 1 13 4.561Z"></path></svg>
+                  <span class="font-semibold text-gray-700 group-hover:text-blue-600">1. Cửa của bạn là cửa mới</span>
+                  <span class="text-xs text-gray-500 mt-1">(Chưa từng đục đẽo hay lắp khóa)</span>
+                </button>
+                <button onclick="selectDoorStatus('retrofit')" class="flex flex-col items-center justify-center p-6 border-2 border-gray-200 hover:border-blue-500 rounded-2xl transition-all group hover:bg-blue-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="alert-circle" class="lucide lucide-alert-circle w-10 h-10 text-gray-400 group-hover:text-blue-500 mb-2"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
+                  <span class="font-semibold text-gray-700 group-hover:text-blue-600">2. Cửa của bạn là cửa cải tạo</span>
+                  <span class="text-xs text-gray-500 mt-1">(Đã có khóa cũ cần thay thế)</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div id="lock-step-5" class="space-y-5 fade-in hidden">
+              <h2 class="text-lg font-semibold text-gray-800">Đo khoảng cách tâm lỗ khóa</h2>
+              <p class="text-sm text-gray-600">Hãy đo từ mép cửa đến tâm tay nắm như hình và cho biết kích thước (cm):</p>
+              
+              <div class="bg-white rounded-xl overflow-hidden border border-gray-200 flex flex-col items-center justify-center p-2 relative shadow-sm">
+                <img src="Untitled.png" alt="Hướng dẫn đo khoảng cách tâm lỗ khóa" class="max-w-full h-auto rounded-lg object-contain max-h-64">
+                <p class="text-xs text-gray-500 mt-3 mb-1 italic font-medium text-center">Hình ảnh minh họa cách đo từ mép cửa đến tâm tay nắm</p>
+              </div>
+
+              <div>
+                <input type="number" step="0.1" id="lock-handle-distance" placeholder="Nhập kích thước đo được (VD: 6.0)" oninput="validateLockDist()" class="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-center text-lg font-medium">
+              </div>
+              <button id="btn-lock-dist" disabled="" onclick="checkLockHandleDistance()" class="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-semibold py-3.5 px-4 rounded-xl transition-colors mt-4">
+                Kiểm tra kết quả
+              </button>
+            </div>
+
+            <!-- Step 6 (Result) -->
+            <div id="lock-step-6" class="space-y-6 fade-in hidden">
+              
+              <div id="lock-result-success" class="bg-green-50 border border-green-200 rounded-2xl p-6 text-center hidden">
+                <div class="flex justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" class="lucide lucide-check-circle w-16 h-16 text-green-500"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
+                <h2 class="text-2xl font-bold text-green-700 mb-2">Tuyệt vời!</h2>
+                <p class="text-green-800 font-medium text-lg">Chúc mừng cửa của bạn phù hợp để lắp khóa.</p>
+              </div>
+
+              <div id="lock-result-fail" class="bg-red-50 border border-red-200 rounded-2xl p-6 text-center hidden">
+                <div class="flex justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x-circle" class="lucide lucide-x-circle w-16 h-16 text-red-500"><circle cx="12" cy="12" r="10"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg></div>
+                <h2 class="text-2xl font-bold text-red-700 mb-2">Chưa phù hợp</h2>
+                <p class="text-red-800 font-medium">Cửa không phù hợp để lắp khóa hoặc có thể phát sinh thay lõi, liên hệ shop để biết chi tiết.</p>
+                <button class="mt-4 bg-white border border-red-300 text-red-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-red-50 transition-colors">
+                  Liên hệ tư vấn viên
+                </button>
+              </div>
+
+              <button onclick="resetLockTool()" class="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3.5 px-4 rounded-xl flex items-center justify-center transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="rotate-ccw" class="lucide lucide-rotate-ccw w-5 h-5 mr-2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg> Kiểm tra cửa khác
+              </button>
+            </div>
+          </div>
+          
+          <div class="bg-gray-100 p-3 text-center text-xs text-gray-400 border-t border-gray-200" id="lock-progress">Bước 1/6</div>
+        </div>
+      </div>
+
+      <!-- Installer Search Tab -->
+      <div id="tab-installer" class="fade-in hidden">
+        <div class="mb-8">
+          <h1 class="text-3xl font-bold text-gray-900 mb-2">Tìm kiếm thợ khóa Ezviz</h1>
+          <p class="text-gray-500">Tra cứu nhanh danh sách thợ lắp đặt ủy quyền tại địa phương của bạn.</p>
+        </div>
+
+        <div class="max-w-md mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+          <div class="bg-blue-600 p-6 text-white text-center">
+            <h1 class="text-2xl font-bold">Tìm thợ ủy quyền</h1>
+            <p class="text-blue-100 text-sm mt-2">Lựa chọn khu vực bạn đang sinh sống</p>
+          </div>
+          <div class="p-6 space-y-6">
+            <div class="space-y-4">
+              <label class="block text-gray-700 font-medium mb-2">Khu vực / Tỉnh thành:</label>
+              <div class="relative">
+                <select id="installer-select" class="w-full p-4 border border-gray-300 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none appearance-none" onchange="checkInstaller()"><option value="" disabled="" selected="">-- Chọn Tỉnh / Thành phố --</option><option value="An Giang">An Giang</option><option value="Bà Rịa – Vũng Tàu">Bà Rịa – Vũng Tàu</option><option value="Bắc Giang">Bắc Giang</option><option value="Bắc Kạn">Bắc Kạn</option><option value="Bạc Liêu">Bạc Liêu</option><option value="Bắc Ninh">Bắc Ninh</option><option value="Bến Tre">Bến Tre</option><option value="Bình Định">Bình Định</option><option value="Bình Dương">Bình Dương</option><option value="Bình Phước">Bình Phước</option><option value="Bình Thuận">Bình Thuận</option><option value="Cà Mau">Cà Mau</option><option value="Cần Thơ">Cần Thơ</option><option value="Cao Bằng">Cao Bằng</option><option value="Đà Nẵng">Đà Nẵng</option><option value="Đắk Lắk">Đắk Lắk</option><option value="Đắk Nông">Đắk Nông</option><option value="Điện Biên">Điện Biên</option><option value="Đồng Nai">Đồng Nai</option><option value="Đồng Tháp">Đồng Tháp</option><option value="Gia Lai">Gia Lai</option><option value="Hà Giang">Hà Giang</option><option value="Hà Nam">Hà Nam</option><option value="Hà Nội">Hà Nội</option><option value="Hà Tĩnh">Hà Tĩnh</option><option value="Hải Dương">Hải Dương</option><option value="Hải Phòng">Hải Phòng</option><option value="Hậu Giang">Hậu Giang</option><option value="TP.Hồ Chí Minh">TP.Hồ Chí Minh</option><option value="Hòa Bình">Hòa Bình</option><option value="Hưng Yên">Hưng Yên</option><option value="Khánh Hòa">Khánh Hòa</option><option value="Kiên Giang">Kiên Giang</option><option value="Kon Tum">Kon Tum</option><option value="Lai Châu">Lai Châu</option><option value="Lâm Đồng">Lâm Đồng</option><option value="Lạng Sơn">Lạng Sơn</option><option value="Lào Cai">Lào Cai</option><option value="Long An">Long An</option><option value="Nam Định">Nam Định</option><option value="Nghệ An">Nghệ An</option><option value="Ninh Bình">Ninh Bình</option><option value="Ninh Thuận">Ninh Thuận</option><option value="Phú Thọ">Phú Thọ</option><option value="Phú Yên">Phú Yên</option><option value="Quảng Bình">Quảng Bình</option><option value="Quảng Nam">Quảng Nam</option><option value="Quảng Ngãi">Quảng Ngãi</option><option value="Quảng Ninh">Quảng Ninh</option><option value="Quảng Trị">Quảng Trị</option><option value="Sóc Trăng">Sóc Trăng</option><option value="Sơn La">Sơn La</option><option value="Tây Ninh">Tây Ninh</option><option value="Thái Bình">Thái Bình</option><option value="Thái Nguyên">Thái Nguyên</option><option value="Thanh Hóa">Thanh Hóa</option><option value="Thừa Thiên Huế">Thừa Thiên Huế</option><option value="Tiền Giang">Tiền Giang</option><option value="Trà Vinh">Trà Vinh</option><option value="Tuyên Quang">Tuyên Quang</option><option value="Vĩnh Long">Vĩnh Long</option><option value="Vĩnh Phúc">Vĩnh Phúc</option><option value="Yên Bái">Yên Bái</option></select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-5 h-5"><path d="m6 9 6 6 6-6"></path></svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Results -->
+            <div id="installer-result-success" class="bg-green-50 border border-green-200 rounded-2xl p-6 text-center hidden animate-in zoom-in duration-300">
+              <div class="flex justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" class="lucide lucide-check-circle w-16 h-16 text-green-500"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
+              <h2 class="text-xl font-bold text-green-700 mb-2">Chúc mừng!</h2>
+              <p class="text-green-800 font-medium">Khu vực của bạn có thợ lắp đặt Uỷ Quyền của Ezviz. Liên hệ ngay để kết nối!</p>
+              <a href="https://zalo.me/ezvizvietnam" target="_blank" class="mt-4 inline-block bg-green-600 text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-green-700 transition-colors">
+                Liên hệ Zalo
+              </a>
+            </div>
+
+            <div id="installer-result-fail" class="bg-orange-50 border border-orange-200 rounded-2xl p-6 text-center hidden animate-in zoom-in duration-300">
+              <div class="flex justify-center mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin-off" class="lucide lucide-map-pin-off w-16 h-16 text-orange-500"><path d="M5.43 5.43A8.06 8.06 0 0 0 4 10c0 6 8 12 8 12a29.94 29.94 0 0 0 5-5"></path><path d="M19.18 13.52A8.66 8.66 0 0 0 20 10a8 8 0 0 0-8-8 7.88 7.88 0 0 0-3.52.82"></path><path d="M9.13 9.13A2.78 2.78 0 0 0 9 10a3 3 0 0 0 3 3 2.78 2.78 0 0 0 .87-.13"></path><path d="M14.9 9.25a3 3 0 0 0-2.15-2.16"></path><line x1="2" x2="22" y1="2" y2="22"></line></svg></div>
+              <h2 class="text-xl font-bold text-orange-700 mb-2">Chưa hỗ trợ</h2>
+              <p class="text-orange-800 font-medium">Xin lỗi hiện tại chưa có thợ ủy quyền tại khu vực này. Vui lòng liên hệ Ezviz để được hướng dẫn.</p>
+              <a href="https://zalo.me/ezvizvietnam" target="_blank" class="mt-4 inline-block bg-white border border-orange-300 text-orange-600 px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-orange-50 transition-colors">
+                Liên hệ hỗ trợ
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-12 py-6">
+      <div class="max-w-7xl mx-auto px-4 text-center text-sm text-gray-500" id="footer-text">
+        © 2026 Hieutech Ezviz [Đẹp Trai - Tài Năng -Tố Chất Lãnh Đạo]
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // DATA
+    const faqsData = [
+      { model: "ALL Model", question: "Thẻ nhớ báo cần phải định dạng lại sau thời gian sử dụng--> lỗi thẻ nhớ", answer: "Thay thẻ nhớ khác", link: "" },
+      { model: "NVR/Đầu ghi", question: "Một số đầu ghi khi add tự động sẽ chỉ xuất 1 mắt cam", answer: "Sau khi nhập thành công 1 mắt camera, chúng ta ghi lại địa chỉ IP của cam, tiếp tục chọn vào phần gán thủ công, nhập địa chỉ IP, cửa sổ xuất hiện mục chọn thêm kênh. Chúng ta tick vào cả 2 mắt cam là được", link: "" },
+      { model: "Smartlock", question: "Cách reset khóa Ezviz về cài đặt gốc DL05,DL50FVS,DL06", answer: "(cài đặt lại tài khoản quản trị viên, cài đặt lại bluetooth, test xử lý sự cố)\nThao tác như video", link: "https://www.youtube.com/watch?v=QtnEESdmsHY&t=4s" },
+      { model: "Smartlock", question: "Cách reset khóa Ezviz về cài đặt gốc DL03, dl04", answer: "(cài đặt lại tài khoản quản trị viên, test xử lý sự cố)\nThao tác như video", link: "https://www.youtube.com/watch?v=ufvwasXEaaM&t=7s" },
+      { model: "ALL Model", question: "Mất mã QR", answer: "Cách 1: gửi lên TTBH để được cấp lại mã\nCách 2: Gửi yêu cầu qua Zalo OA - Ezviz Việt Nam (Chỉ khi camera còn nằm trong tài khoản Ezviz)", link: "" },
+      { model: "Camera WiFi", question: "Làm sao để thêm thiết bị vào app EZVIZ?", answer: "Mở app EZVIZ, chọn dấu +, quét mã QR trên thiết bị, sau đó nhập thông tin WiFi 2.4GHz để hoàn tất cài đặt.", link: "" },
+      { model: "Camera WiFi", question: "Tại sao không quét được mã QR?", answer: "Do camera không nhận diện được mã QR. Hãy tăng độ sáng màn hình điện thoại, đưa lại gần camera và giữ ổn định khi quét.", link: "" },
+      { model: "Camera WiFi", question: "Camera không kết nối được WiFi?", answer: "Nguyên nhân thường do nhập sai mật khẩu hoặc dùng WiFi 5GHz. Hãy kiểm tra lại mật khẩu và đảm bảo sử dụng WiFi 2.4GHz.", link: "" },
+      { model: "Camera WiFi", question: "Làm sao để reset camera?", answer: "Nhấn giữ nút reset trên camera từ 5–10 giây cho đến khi thiết bị khởi động lại.", link: "" },
+      { model: "Camera WiFi", question: "Camera hiển thị offline?", answer: "Kiểm tra nguồn điện và kết nối mạng. Khởi động lại modem/router và đảm bảo WiFi hoạt động ổn định.", link: "" },
+      { model: "Camera WiFi", question: "Không xem được camera từ xa?", answer: "Kiểm tra camera đã online chưa, đăng nhập đúng tài khoản và đảm bảo thiết bị có kết nối internet.", link: "" },
+      { model: "Camera WiFi", question: "Làm sao chia sẻ camera cho người khác?", answer: "Vào phần cài đặt thiết bị trong app EZVIZ, chọn 'Chia sẻ thiết bị' và nhập tài khoản người nhận.", link: "" },
+      { model: "Camera WiFi", question: "Làm sao xóa thiết bị khỏi tài khoản?", answer: "Vào cài đặt thiết bị trong app, chọn 'Xóa thiết bị' để gỡ camera khỏi tài khoản hiện tại.", link: "" },
+      { model: "Camera WiFi", question: "Quên mật khẩu tài khoản EZVIZ?", answer: "Chọn 'Quên mật khẩu' trên màn hình đăng nhập và làm theo hướng dẫn để đặt lại mật khẩu.", link: "" },
+      { model: "Camera WiFi", question: "Không nhận được thông báo cảnh báo?", answer: "Kiểm tra đã bật thông báo trong app EZVIZ và cho phép thông báo trong cài đặt điện thoại.", link: "" },
+      { model: "Camera WiFi", question: "Camera không ghi hình?", answer: "Có thể do thẻ nhớ lỗi hoặc chưa format. Hãy format lại thẻ hoặc thay thẻ nhớ mới.", link: "" },
+      { model: "Camera WiFi", question: "Camera không nhận thẻ nhớ?", answer: "Do thẻ nhớ không tương thích hoặc bị lỗi. Nên sử dụng thẻ Class 10 chính hãng và thử thay thẻ khác.", link: "" },
+      { model: "Camera WiFi", question: "Camera bị lag / giật?", answer: "Nguyên nhân do mạng yếu. Hãy giảm độ phân giải hoặc kiểm tra lại kết nối WiFi.", link: "" },
+      { model: "Camera WiFi", question: "Hình ảnh camera bị mờ?", answer: "Có thể do ống kính bẩn hoặc cài đặt bitrate thấp. Hãy lau sạch lens và điều chỉnh lại chất lượng hình ảnh.", link: "" },
+      { model: "Camera WiFi", question: "Không nghe được âm thanh?", answer: "Kiểm tra đã bật quyền micro trong app và trên điện thoại.", link: "" },
+      { model: "Camera WiFi", question: "Không nói chuyện được qua camera?", answer: "Kiểm tra quyền micro/loa và đảm bảo thiết bị không bị lỗi phần cứng.", link: "" },
+      { model: "Camera WiFi", question: "Camera không quay (PTZ)?", answer: "Có thể do lỗi motor hoặc phần mềm. Hãy thử reset camera, nếu vẫn lỗi cần bảo hành.", link: "" },
+      { model: "Camera WiFi", question: "Camera báo động sai liên tục?", answer: "Do độ nhạy phát hiện cao hoặc môi trường nhiễu. Hãy giảm độ nhạy và thiết lập vùng cảnh báo.", link: "" },
+      { model: "Camera WiFi", question: "Camera không lên nguồn?", answer: "Kiểm tra adapter và dây nguồn. Thử thay nguồn cùng thông số để kiểm tra.", link: "" },
+      { model: "Camera WiFi", question: "Làm sao cập nhật firmware camera?", answer: "Vào phần cài đặt thiết bị trong app EZVIZ và chọn cập nhật firmware nếu có phiên bản mới.", link: "" },
+      { model: "ALL Model", question: "Xóa liên kết tài khoản Ezviz trên camera", answer: "Nhắn tin qua Zalo với cú pháp: Số SN + hình ảnh thiết bị", link: "" },
+      { model: "DL06", question: "Lỗi mở cửa từ bên ngoài mà không cần nhập mật khẩu?", answer: "Vị trí chốt cây ty không phù hợp", link: "https://youtube.com/shorts/llAwb2VXyBI?si=JobZH6Oztv5jRi_q" },
+      { model: "DL06", question: "Chốt trẻ em không hoạt động sau khi thay đổi tay nắm cửa", answer: "Thao tác điều chỉnh chốt cố định như video", link: "https://www.youtube.com/shorts/DgyArT-TgWk" },
+      { model: "DL50FVS", question: "Chốt motor khóa lỗi, tự đóng ra đóng vào", answer: "Lỗi lắp đặt, xem video xử lý", link: "https://www.youtube.com/watch?v=NGg7BN4IiKg&pp=0gcJCT4LAYcqIYzv" },
+      { model: "Smartlock", question: "Khóa lắp xong, không tự khóa, mở được từ bên ngoài", answer: "Lỗi lắp đặt, xem video xử lý", link: "https://www.youtube.com/watch?v=jyMsmaJ7IWo" },
+      { model: "DL06&DL06 Pro", question: "Cách đổi chiều chốt lõi khóa", answer: "Xem video hướng dẫn", link: "https://www.youtube.com/watch?v=bEMzq2JrmJ4" },
+      { model: "ALL Model", question: "Cách kiểm tra quyền truy cập vào thiết bị", answer: "Xem video hướng dẫn", link: "https://www.youtube.com/shorts/mXtVc96Cd9A" },
+      { model: "Camera", question: "Cách vẽ vùng phát hiện", answer: "Xem video hướng dẫn", link: "https://www.youtube.com/shorts/_l2CrJ7uKpE" },
+      { model: "Camera", question: "Cách kết nối wifi mới", answer: "Xem video hướng dẫn", link: "https://www.youtube.com/shorts/S2sgqlGBaQs" },
+      { model: "Smartlock", question: "Cách reset về cài đặt gốc khóa thông minh", answer: "Xem video hướng dẫn", link: "https://www.youtube.com/shorts/E4n1jJgN-Js" }
+    ];
+
+    const productsData = [
+      { model: "CB8C LITE", link: "https://www.youtube.com/watch?v=2L5HPTpN9iA&t=60s", type: "Camera" },
+      { model: "H90F/C90F mắt kép zoom 12x", link: "https://www.youtube.com/watch?v=K2vqnrU3Ddg&t=20s", type: "Camera" },
+      { model: "H90/C90 mắt kép", link: "https://www.youtube.com/watch?v=JdvF17yQZ3I&t=91s", type: "Camera" },
+      { model: "Đầu ghi Ezviz X5S", link: "https://www.youtube.com/watch?v=mqU_Dv6w-2U", type: "Đầu ghi" },
+      { model: "HP2- mắt thần", link: "https://www.youtube.com/watch?v=3NS5PDijssQ&t=21s", type: "Smart Home" },
+      { model: "H80F zoom 12x", link: "https://www.youtube.com/watch?v=uFDp2YJHOTY&t=364s", type: "Camera" },
+      { model: "Camera POE của Ezviz", link: "https://www.youtube.com/watch?v=z6KfaSp2a2c&pp=0gcJCT4LAYcqIYzv", type: "Camera" },
+      { model: "Ezviz Studio", link: "https://www.youtube.com/watch?v=fEsoe9wZNLg", type: "Phần mềm" },
+      { model: "HP7-Chuông cửa rào", link: "https://www.youtube.com/watch?v=FxYHXVLUdo0&t=289s", type: "Smart Home" },
+      { model: "Tương tác Smartlock & Camera", link: "https://www.youtube.com/watch?v=fEsoe9wZNLg", type: "Giải pháp" },
+      { model: "HD Cấu hình DL05", link: "https://www.youtube.com/watch?v=mKf7IDyO0h0", type: "Smartlock" },
+      { model: "HD Cấu hình DL50FVS", link: "https://www.youtube.com/watch?v=D20W3KnknzM", type: "Smartlock" },
+      { model: "HD Cấu hình DL03", link: "https://www.youtube.com/watch?v=UyQkCSafwCc", type: "Smartlock" },
+      { model: "HD Cấu hình DL04", link: "https://www.youtube.com/watch?v=iQvQfWIjN4I&t=125s", type: "Smartlock" },
+      { model: "HD Cấu hình DL06 Pro", link: "https://www.youtube.com/watch?v=jKWPDchkof0&t=16s&pp=0gcJCT4LAYcqIYzv", type: "Smartlock" },
+      { model: "HP4 Smart Peephole", link: "https://www.youtube.com/watch?v=cG8vicSmdo4&t=15s", type: "Smart Home" },
+      { model: "NVR X6", link: "https://www.youtube.com/watch?v=VqLuJpiH6gU&t=4s", type: "Đầu ghi" },
+      { model: "REVIEW H7C/C7", link: "https://www.youtube.com/watch?v=3YYBxAelWps&t=85s&pp=0gcJCT4LAYcqIYzv", type: "Camera" },
+      { model: "E4P", link: "https://www.youtube.com/watch?v=Ylupt5kqrbI&t=35s", type: "Router" },
+      { model: "S10", link: "https://www.youtube.com/watch?v=tn4vOj4rSR0&t=7s", type: "Camera" },
+      { model: "CB2 4G", link: "https://www.youtube.com/watch?v=KWqT7OGaG98&t=21s", type: "Camera" },
+      { model: "H8X", link: "https://www.youtube.com/watch?v=D3g7Oo2qsg4&t=35s", type: "Camera" },
+      { model: "DL04", link: "https://www.youtube.com/watch?v=GKIXdJzIlsQ&t=19s", type: "Smartlock" },
+      { model: "C60P", link: "https://www.youtube.com/watch?v=xKD0tL08Cb8&t=512s", type: "Camera" },
+      { model: "H9C", link: "https://www.youtube.com/watch?v=zM5necvSct4&t=194s", type: "Camera" },
+      { model: "Homegate way A3", link: "https://www.youtube.com/watch?v=690X_3NEN9I", type: "Smart Home" },
+      { model: "H6c/C6n G1 2K", link: "https://www.youtube.com/watch?v=SIxP7QeRRJg&t=55s&pp=0gcJCT4LAYcqIYzv", type: "Camera" },
+      { model: "Beansview D210", link: "https://www.youtube.com/watch?v=C5Xv9nVQiRg&t=113s", type: "Camera" },
+      { model: "Beansview D220", link: "https://www.youtube.com/watch?v=3ke8ui9Rd-A&t=62s", type: "Camera" },
+      { model: "Beansview D320", link: "https://www.youtube.com/watch?v=4gpeU6U5Nmw&t=9s", type: "Camera" },
+      { model: "DL20FVS", link: "https://www.youtube.com/watch?v=hOSUM1OA5y8", type: "Smartlock" }
+    ];
+
+    const resolutionRates = { "1080p": 16, "2K": 21, "2K+": 27, "3K": 32, "4K": 48 };
+
+    // LOCK DATA
+    const LOCK_MODELS = [
+      { id: 'DL05', name: 'DL05', type: 'wood' },
+      { id: 'DL50FVS', name: 'DL50FVS', type: 'wood' },
+      { id: 'Y2000', name: 'Y2000', type: 'wood' },
+      { id: 'Y3000FVP', name: 'Y3000FVP', type: 'wood' },
+      { id: 'DL20FVS', name: 'DL20FVS', type: 'wood' },
+      { id: 'DL04', name: 'DL04 Series', type: 'wood' },
+      { id: 'DL03', name: 'DL03 Series', type: 'wood' },
+      { id: 'DL06', name: 'DL06', type: 'alum' },
+      { id: 'DL06Pro', name: 'DL06 Pro', type: 'alum' },
+    ];
+
+    // PROVINCE DATA
+    const PROVINCES = [
+      "An Giang", "Bà Rịa – Vũng Tàu", "Bắc Giang", "Bắc Kạn", "Bạc Liêu", "Bắc Ninh", "Bến Tre", "Bình Định", "Bình Dương", "Bình Phước", "Bình Thuận", "Cà Mau", "Cần Thơ", "Cao Bằng", "Đà Nẵng", "Đắk Lắk", "Đắk Nông", "Điện Biên", "Đồng Nai", "Đồng Tháp", "Gia Lai", "Hà Giang", "Hà Nam", "Hà Nội", "Hà Tĩnh", "Hải Dương", "Hải Phòng", "Hậu Giang", "TP.Hồ Chí Minh", "Hòa Bình", "Hưng Yên", "Khánh Hòa", "Kiên Giang", "Kon Tum", "Lai Châu", "Lâm Đồng", "Lạng Sơn", "Lào Cai", "Long An", "Nam Định", "Nghệ An", "Ninh Bình", "Ninh Thuận", "Phú Thọ", "Phú Yên", "Quảng Bình", "Quảng Nam", "Quảng Ngãi", "Quảng Ninh", "Quảng Trị", "Sóc Trăng", "Sơn La", "Tây Ninh", "Thái Bình", "Thái Nguyên", "Thanh Hóa", "Thừa Thiên Huế", "Tiền Giang", "Trà Vinh", "Tuyên Quang", "Vĩnh Long", "Vĩnh Phúc", "Yên Bái"
+    ];
+
+    const SUPPORTED_PROVINCES = [
+      "TP.Hồ Chí Minh", "Hà Nội", "Đà Nẵng", "Nghệ An", "Hải Phòng", "Hải Dương", "Thừa Thiên Huế", "Bắc Ninh", "Quảng Ninh", "Tây Ninh", "Bình Phước", "Đắk Lắk", "An Giang", "Cần Thơ", "Vĩnh Long", "Trà Vinh", "Tiền Giang", "Bình Dương", "Sóc Trăng", "Quảng Bình", "Đồng Nai"
+    ];
+
+    // STATE
+    let activeTab = 'faq';
+    let expandedFaq = null;
+    let calcMode = 'storage';
+    let resolution = '1080p';
+
+    let lockState = {
+      step: 1, selectedLock: '', lockType: null, doorStatus: '', result: null
+    };
+
+    // DEFAULT CONFIG
+    const defaultConfig = {
+      site_title: "Hieutech",
+      footer_text: "© 2026 Hieutech Installer Portal. Dành riêng cho kỹ thuật viên và thợ lắp đặt.",
+      primary_color: "#1d4ed8",
+      surface_color: "#ffffff",
+      text_color: "#1f2937",
+      accent_color: "#2563eb",
+      secondary_color: "#f3f4f6"
+    };
+
+    //    // ELEMENT SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange: async (config) => {
+          const title = config.site_title || defaultConfig.site_title;
+          const footer = config.footer_text || defaultConfig.footer_text;
+          const primary = config.primary_color || defaultConfig.primary_color;
+          const surface = config.surface_color || defaultConfig.surface_color;
+          const textCol = config.text_color || defaultConfig.text_color;
+          const accent = config.accent_color || defaultConfig.accent_color;
+          const secondary = config.secondary_color || defaultConfig.secondary_color;
+          const font = config.font_family || 'Be Vietnam Pro';
+          const fontSize = config.font_size || 16;
+
+          document.getElementById('site-title').textContent = title;
+          document.getElementById('site-title').style.color = primary;
+          document.getElementById('footer-text').textContent = footer;
+          document.body.style.fontFamily = `${font}, sans-serif`;
+          document.body.style.fontSize = fontSize + 'px';
+          document.body.style.color = textCol;
+          document.body.style.backgroundColor = secondary;
+        },
+        mapToCapabilities: (config) => ({
+          recolorables: [
+            { get: () => config.secondary_color || defaultConfig.secondary_color, set: (v) => { config.secondary_color = v; window.elementSdk.setConfig({ secondary_color: v }); } },
+            { get: () => config.surface_color || defaultConfig.surface_color, set: (v) => { config.surface_color = v; window.elementSdk.setConfig({ surface_color: v }); } },
+            { get: () => config.text_color || defaultConfig.text_color, set: (v) => { config.text_color = v; window.elementSdk.setConfig({ text_color: v }); } },
+            { get: () => config.primary_color || defaultConfig.primary_color, set: (v) => { config.primary_color = v; window.elementSdk.setConfig({ primary_color: v }); } },
+            { get: () => config.accent_color || defaultConfig.accent_color, set: (v) => { config.accent_color = v; window.elementSdk.setConfig({ accent_color: v }); } }
+          ],
+          borderables: [],
+          fontEditable: { get: () => config.font_family || 'Be Vietnam Pro', set: (v) => { config.font_family = v; window.elementSdk.setConfig({ font_family: v }); } },
+          fontSizeable: { get: () => config.font_size || 16, set: (v) => { config.font_size = v; window.elementSdk.setConfig({ font_size: v }); } }
+        }),
+        mapToEditPanelValues: (config) => new Map([
+          ["site_title", config.site_title || defaultConfig.site_title],
+          ["footer_text", config.footer_text || defaultConfig.footer_text]
+        ])
+      });
+    }
+
+    // TAB SWITCHING
+    function switchTab(tab) {
+      activeTab = tab;
+      document.getElementById('tab-faq').classList.toggle('hidden', tab !== 'faq');
+      document.getElementById('tab-products').classList.toggle('hidden', tab !== 'products');
+      document.getElementById('tab-calculator').classList.toggle('hidden', tab !== 'calculator');
+      document.getElementById('tab-lock').classList.toggle('hidden', tab !== 'lock');
+      document.getElementById('tab-installer').classList.toggle('hidden', tab !== 'installer');
+
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        const isActive = btn.id === 'nav-' + tab;
+        btn.className = `nav-btn flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium ${isActive ? 'bg-blue-50 text-blue-700' : 'text-gray-600 hover:bg-gray-100'}`;
+      });
+      document.querySelectorAll('.mobile-nav').forEach(btn => {
+        const isActive = btn.id === 'mnav-' + tab;
+        btn.className = `mobile-nav flex-none w-20 flex flex-col items-center py-3 text-xs font-medium ${isActive ? 'text-blue-600 bg-blue-50 border-t-2 border-blue-600' : 'text-gray-500 border-t-2 border-transparent'}`;
+      });
+      lucide.createIcons();
+    }
+
+    // FAQ
+    function filterFaqs() {
+      const term = document.getElementById('faq-search').value.toLowerCase();
+      const filtered = faqsData.filter(f => f.question.toLowerCase().includes(term) || f.model.toLowerCase().includes(term));
+      renderFaqs(filtered, term);
+    }
+
+    function renderFaqs(faqs, term) {
+      const container = document.getElementById('faq-list');
+      if (faqs.length === 0) {
+        container.innerHTML = `<div class="text-center py-12 bg-white rounded-xl border border-dashed border-gray-300"><p class="text-gray-500">Không tìm thấy kết quả phù hợp cho "${term || ''}"</p></div>`;
+        return;
+      }
+      container.innerHTML = faqs.map((faq, i) => `
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
+          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(${i})">
+            <div class="pr-4">
+              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">${faq.model}</span>
+              <h3 class="text-lg font-medium text-gray-900">${faq.question}</h3>
+            </div>
+            <div class="text-gray-400 flex-shrink-0"><i data-lucide="${expandedFaq === i ? 'chevron-up' : 'chevron-down'}" class="w-6 h-6"></i></div>
+          </button>
+          ${expandedFaq === i ? `
+          <div class="px-6 pb-5 pt-2 border-t border-gray-100 bg-gray-50">
+            <div class="flex items-start gap-3">
+              <i data-lucide="info" class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0"></i>
+              <div class="text-gray-700 whitespace-pre-line"><span class="font-semibold block mb-1">Cách xử lý / Giải thích:</span>${faq.answer}</div>
+            </div>
+            ${faq.link ? `<div class="mt-4 ml-8"><a href="${faq.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-red-600 font-medium hover:text-red-700 bg-red-50 px-3 py-2 rounded-lg border border-red-100"><i data-lucide="youtube" class="w-4 h-4"></i> Xem video hướng dẫn</a></div>` : ''}
+          </div>` : ''}
+        </div>
+      `).join('');
+      lucide.createIcons();
+    }
+
+    function toggleFaq(i) { expandedFaq = expandedFaq === i ? null : i; filterFaqs(); }
+
+    // PRODUCTS
+    function filterProducts() {
+      const term = document.getElementById('product-search').value.toLowerCase();
+      const filtered = productsData.filter(p => p.model.toLowerCase().includes(term) || p.type.toLowerCase().includes(term));
+      renderProducts(filtered);
+    }
+
+    function renderProducts(prods) {
+      document.getElementById('product-list').innerHTML = prods.map(p => {
+        const isYT = p.link.includes('youtube.com') || p.link.includes('youtu.be');
+        return `
+        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+          <div class="flex justify-between items-start mb-4">
+            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">${p.type}</span>
+            <i data-lucide="${isYT ? 'youtube' : 'link'}" class="w-5 h-5 ${isYT ? 'text-red-500' : 'text-blue-500'} opacity-70 group-hover:opacity-100"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">${p.model}</h3>
+          <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+            <i data-lucide="video" class="w-4 h-4"></i> Xem tài liệu / Video
+          </a>
+        </div>`;
+      }).join('');
+      lucide.createIcons();
+    }
+
+    //    // CALCULATOR
+    function setCalcMode(mode) {
+      calcMode = mode;
+      document.getElementById('mode-storage').className = `flex-1 py-2 px-4 text-sm font-medium rounded-md ${mode === 'storage' ? 'bg-white text-blue-700 shadow-sm' : 'text-gray-500 hover:text-gray-700'}`;
+      document.getElementById('mode-days').className = `flex-1 py-2 px-4 text-sm font-medium rounded-md ${mode === 'days' ? 'bg-white text-blue-700 shadow-sm' : 'text-gray-500 hover:text-gray-700'}`;
+      document.getElementById('days-input-section').classList.toggle('hidden', mode !== 'storage');
+      document.getElementById('capacity-input-section').classList.toggle('hidden', mode !== 'days');
+      calculate();
+    }
+
+    function setResolution(res) {
+      resolution = res;
+      document.querySelectorAll('#resolution-btns button').forEach(btn => {
+        const isActive = btn.dataset.res === res;
+        btn.className = `py-2 text-sm font-medium rounded-lg border transition-all ${isActive ? 'border-blue-500 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-600 hover:border-blue-300'}`;
+      });
+      document.getElementById('rate-info').innerHTML = `<i data-lucide="info" class="w-3.5 h-3.5"></i> Tốc độ tiêu hao ước tính: ~${resolutionRates[res]} GB/Ngày (Chuẩn H.265)`;
+      lucide.createIcons();
+      calculate();
+    }
+
+    function calculate() {
+      const cameras = Math.max(1, parseInt(document.getElementById('calc-cameras').value) || 1);
+      const rate = resolutionRates[resolution];
+      const resultEl = document.getElementById('calc-result');
+
+      if (calcMode === 'storage') {
+        const days = Math.max(1, parseInt(document.getElementById('calc-days').value) || 1);
+        const total = rate * cameras * days;
+        const display = total >= 1000 ? (total / 1024).toFixed(2) : Math.ceil(total);
+        const unit = total >= 1000 ? 'TB' : 'GB';
+        const suggest = total <= 32 ? '32 GB' : total <= 64 ? '64 GB' : total <= 128 ? '128 GB' : total <= 256 ? '256 GB' : total <= 512 ? '512 GB' : `${Math.ceil(total / 1024)} TB`;
+        resultEl.innerHTML = `
+          <div class="text-5xl font-bold mb-2">${display}<span class="text-2xl ml-2 font-medium text-blue-200">${unit}</span></div>
+          <p class="text-blue-100 text-sm mt-4 leading-relaxed">Để lưu trữ cho <strong class="text-white">${cameras} camera</strong> độ phân giải <strong class="text-white">${resolution}</strong> trong vòng <strong class="text-white">${days} ngày</strong>.</p>
+          <div class="mt-8 p-4 bg-white/10 rounded-xl border border-white/20"><p class="text-sm">Gợi ý thẻ nhớ/Ổ cứng mua:</p><p class="font-bold text-lg mt-1">${suggest}</p></div>`;
+      } else {
+        const capacity = Math.max(1, parseInt(document.getElementById('calc-capacity').value) || 1);
+        const possibleDays = Math.floor(capacity / (rate * cameras));
+        resultEl.innerHTML = `
+          <div class="text-5xl font-bold mb-2">${possibleDays}<span class="text-2xl ml-2 font-medium text-blue-200">Ngày</span></div>
+          <p class="text-blue-100 text-sm mt-4 leading-relaxed">Với dung lượng <strong class="text-white">${capacity >= 1024 ? (capacity/1024)+'TB' : capacity+'GB'}</strong>, hệ thống <strong class="text-white">${cameras} camera</strong> độ phân giải <strong class="text-white">${resolution}</strong> có thể lưu trữ tối đa.</p>`;
+      }
+    }
+
+    function initCalculator() {
+      const resBtns = document.getElementById('resolution-btns');
+      resBtns.innerHTML = Object.keys(resolutionRates).map(res => `<button data-res="${res}" onclick="setResolution('${res}')" class="py-2 text-sm font-medium rounded-lg border transition-all ${res === resolution ? 'border-blue-500 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-600 hover:border-blue-300'}">${res}</button>`).join('');
+      
+      const presets = document.getElementById('capacity-presets');
+      presets.innerHTML = [32,64,128,256,512,1024,2048,4096].map(c => `<button onclick="document.getElementById('calc-capacity').value=${c};calculate()" class="px-3 py-1 text-xs border border-gray-200 rounded-full hover:bg-gray-50 text-gray-600">${c>=1024?(c/1024)+'TB':c+'GB'}</button>`).join('');
+      
+      document.getElementById('rate-info').innerHTML = `<i data-lucide="info" class="w-3.5 h-3.5"></i> Tốc độ tiêu hao ước tính: ~${resolutionRates[resolution]} GB/Ngày (Chuẩn H.265)`;
+      calculate();
+    }
+
+    // LOCK EVALUATOR
+    function initLockTool() {
+      const select = document.getElementById('lock-select');
+      select.innerHTML = '<option value="" disabled selected>-- Chọn dòng khóa --</option>' + 
+        LOCK_MODELS.map(l => `<option value="${l.id}">${l.name}</option>`).join('');
+    }
+
+    function renderLockStep() {
+      for(let i=1; i<=6; i++) {
+        const el = document.getElementById('lock-step-' + i);
+        if(el) el.classList.toggle('hidden', lockState.step !== i);
+      }
+      document.getElementById('lock-progress').innerText = `Bước ${lockState.step}/6`;
+      lucide.createIcons();
+    }
+
+    function onLockSelect(e) {
+      const val = e.target.value;
+      lockState.selectedLock = val;
+      if (val) {
+        lockState.lockType = LOCK_MODELS.find(l => l.id === val).type;
+        lockState.step = 2;
+        document.getElementById('lock-type-label').innerText = lockState.lockType === 'wood' ? 'KHÓA CỬA GỖ' : 'KHÓA CỬA NHÔM';
+        renderLockStep();
+      }
+    }
+
+    function confirmLockType() {
+      lockState.step = 3;
+      renderLockStep();
+    }
+
+    function validateLockDim() {
+      const t = document.getElementById('lock-thickness').value;
+      const d = document.getElementById('lock-depth').value;
+      document.getElementById('btn-lock-dim').disabled = (!t || !d);
+    }
+
+    function checkLockDimensions() {
+      const t = parseFloat(document.getElementById('lock-thickness').value.replace(',', '.'));
+      const d = parseFloat(document.getElementById('lock-depth').value.replace(',', '.'));
+      
+      if (isNaN(t) || isNaN(d)) return;
+
+      if (lockState.lockType === 'wood') {
+        if (t < 3.5 || d < 9.9) {
+          lockState.result = 'fail';
+          lockState.step = 6;
+        } else {
+          lockState.step = 4;
+        }
+      } else if (lockState.lockType === 'alum') {
+        if (t < 3.0 || d < 7.0) {
+          lockState.result = 'fail';
+          lockState.step = 6;
+        } else {
+          lockState.step = 4;
+        }
+      }
+      renderLockResult();
+      renderLockStep();
+    }
+
+    function selectDoorStatus(status) {
+      lockState.doorStatus = status;
+      if (status === 'new') {
+        lockState.result = 'success';
+        lockState.step = 6;
+      } else {
+        lockState.step = 5;
+      }
+      renderLockResult();
+      renderLockStep();
+    }
+
+    function validateLockDist() {
+      const hd = document.getElementById('lock-handle-distance').value;
+      document.getElementById('btn-lock-dist').disabled = !hd;
+    }
+
+    function checkLockHandleDistance() {
+      const hd = parseFloat(document.getElementById('lock-handle-distance').value.replace(',', '.'));
+      if (isNaN(hd)) return;
+
+      if (lockState.lockType === 'wood') {
+        if (hd > 5.7 && hd < 6.3) {
+          lockState.result = 'success';
+        } else {
+          lockState.result = 'fail';
+        }
+      } else if (lockState.lockType === 'alum') {
+        if (hd > 3.3 && hd < 3.7) {
+          lockState.result = 'success';
+        } else {
+          lockState.result = 'fail';
+        }
+      }
+      lockState.step = 6;
+      renderLockResult();
+      renderLockStep();
+    }
+
+    function renderLockResult() {
+      const successUI = document.getElementById('lock-result-success');
+      const failUI = document.getElementById('lock-result-fail');
+      if (lockState.result === 'success') {
+        successUI.classList.remove('hidden');
+        failUI.classList.add('hidden');
+      } else {
+        successUI.classList.add('hidden');
+        failUI.classList.remove('hidden');
+      }
+    }
+
+    function resetLockTool() {
+      lockState = { step: 1, selectedLock: '', lockType: null, doorStatus: '', result: null };
+      document.getElementById('lock-select').value = '';
+      document.getElementById('lock-thickness').value = '';
+      document.getElementById('lock-depth').value = '';
+      document.getElementById('lock-handle-distance').value = '';
+      document.getElementById('btn-lock-dim').disabled = true;
+      document.getElementById('btn-lock-dist').disabled = true;
+      renderLockStep();
+    }
+
+    //    // INSTALLER SEARCH
+    function initInstallerTool() {
+      const select = document.getElementById('installer-select');
+      select.innerHTML = '<option value="" disabled selected>-- Chọn Tỉnh / Thành phố --</option>' + 
+        PROVINCES.map(p => `<option value="${p}">${p}</option>`).join('');
+    }
+
+    function checkInstaller() {
+      const val = document.getElementById('installer-select').value;
+      const successUI = document.getElementById('installer-result-success');
+      const failUI = document.getElementById('installer-result-fail');
+      
+      if (!val) return;
+
+      if (SUPPORTED_PROVINCES.includes(val)) {
+        successUI.classList.remove('hidden');
+        failUI.classList.add('hidden');
+      } else {
+        successUI.classList.add('hidden');
+        failUI.classList.remove('hidden');
+      }
+      lucide.createIcons();
+    }
+
+    // INIT APP
+    filterFaqs();
+    filterProducts();
+    initCalculator();
+    initLockTool();
+    initInstallerTool();
+    lucide.createIcons();
+  </script>
+  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0d7f143770a84f3',t:'MTc4MTc2MTA1MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; visibility: hidden;"></iframe><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; visibility: hidden;"></iframe>
+
+</body></html>
