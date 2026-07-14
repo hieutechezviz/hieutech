@@ -282,44 +282,151 @@
       <!-- Calculator Tab -->
       <div id="tab-calculator" class="fade-in hidden">
         <div class="mb-8">
-          <h1 class="text-3xl font-bold text-gray-900 mb-2">Công cụ Tính toán lưu trữ Camera</h1>
-          <p class="text-gray-500">Ước tính dung lượng thẻ nhớ, ổ cứng cần thiết dựa trên chuẩn nén H.265.</p>
+          <h1 class="text-3xl font-bold text-gray-900 mb-2">Công cụ Tính toán Lưu trữ & Data Camera</h1>
+          <p class="text-gray-500">Ước tính dung lượng thẻ nhớ/ổ cứng hoặc dung lượng data 4G cần thiết cho hệ thống camera.</p>
         </div>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          <div class="lg:col-span-7 bg-white rounded-2xl shadow-sm border border-gray-200 p-6 lg:p-8">
-            <div class="flex gap-4 mb-8 p-1 bg-gray-100 rounded-lg">
-              <button onclick="setCalcMode('storage')" id="mode-storage" class="flex-1 py-2 px-4 text-sm font-medium rounded-md bg-white text-blue-700 shadow-sm">Tính theo dung lượng</button>
-              <button onclick="setCalcMode('days')" id="mode-days" class="flex-1 py-2 px-4 text-sm font-medium rounded-md text-gray-500 hover:text-gray-700">Tính theo thời gian</button>
+
+        <div class="flex gap-3 mb-6 flex-wrap">
+          <button onclick="setCalculatorSection('storage')" id="calc-section-storage" class="flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold border-2 transition-all">
+            <i data-lucide="hard-drive" class="w-4 h-4"></i> Lưu trữ thẻ nhớ / Ổ cứng
+          </button>
+          <button onclick="setCalculatorSection('data4g')" id="calc-section-data4g" class="flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold border-2 transition-all">
+            <i data-lucide="signal" class="w-4 h-4"></i> Data 4G (SIM)
+          </button>
+        </div>
+
+        <div id="calc-storage-section">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div class="lg:col-span-7 bg-white rounded-2xl shadow-sm border border-gray-200 p-6 lg:p-8">
+              <div class="flex gap-4 mb-8 p-1 bg-gray-100 rounded-lg">
+                <button onclick="setCalcMode('storage')" id="mode-storage" class="flex-1 py-2 px-4 text-sm font-medium rounded-md bg-white text-blue-700 shadow-sm">Tính theo dung lượng</button>
+                <button onclick="setCalcMode('days')" id="mode-days" class="flex-1 py-2 px-4 text-sm font-medium rounded-md text-gray-500 hover:text-gray-700">Tính theo thời gian</button>
+              </div>
+              <div class="space-y-6">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Độ phân giải Camera</label>
+                  <div id="resolution-btns" class="grid grid-cols-5 gap-2"></div>
+                  <p id="rate-info" class="text-xs text-gray-500 mt-2 flex items-center gap-1"></p>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Số lượng Camera (Mắt)</label>
+                  <input type="number" id="calc-cameras" min="1" value="1" class="block w-full px-4 py-3 border border-gray-300 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500" oninput="calculate()">
+                </div>
+                <div id="days-input-section">
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Thời gian cần lưu (Ngày)</label>
+                  <input type="number" id="calc-days" min="1" value="7" class="block w-full px-4 py-3 border border-gray-300 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500" oninput="calculate()">
+                </div>
+                <div id="capacity-input-section" class="hidden">
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Dung lượng Thẻ nhớ / Ổ cứng (GB)</label>
+                  <input type="number" id="calc-capacity" min="1" value="64" class="block w-full px-4 py-3 border border-gray-300 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500" oninput="calculate()">
+                  <div class="flex gap-2 mt-3 flex-wrap" id="capacity-presets"></div>
+                </div>
+              </div>
             </div>
-            <div class="space-y-6">
-              <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">Độ phân giải Camera</label>
-                <div id="resolution-btns" class="grid grid-cols-5 gap-2"></div>
-                <p id="rate-info" class="text-xs text-gray-500 mt-2 flex items-center gap-1"></p>
-              </div>
-              <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">Số lượng Camera (Mắt)</label>
-                <input type="number" id="calc-cameras" min="1" value="1" class="block w-full px-4 py-3 border border-gray-300 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500" oninput="calculate()">
-              </div>
-              <div id="days-input-section">
-                <label class="block text-sm font-medium text-gray-700 mb-2">Thời gian cần lưu (Ngày)</label>
-                <input type="number" id="calc-days" min="1" value="7" class="block w-full px-4 py-3 border border-gray-300 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500" oninput="calculate()">
-              </div>
-              <div id="capacity-input-section" class="hidden">
-                <label class="block text-sm font-medium text-gray-700 mb-2">Dung lượng Thẻ nhớ / Ổ cứng (GB)</label>
-                <input type="number" id="calc-capacity" min="1" value="64" class="block w-full px-4 py-3 border border-gray-300 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500" oninput="calculate()">
-                <div class="flex gap-2 mt-3 flex-wrap" id="capacity-presets"></div>
+            <div class="lg:col-span-5">
+              <div class="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl shadow-lg p-6 lg:p-8 text-white h-full flex flex-col justify-center relative overflow-hidden">
+                <div class="absolute right-0 top-0 opacity-10">
+                  <i data-lucide="hard-drive" style="width:200px;height:200px;" class="transform translate-x-1/4 -translate-y-1/4"></i>
+                </div>
+                <h3 class="text-blue-100 font-medium mb-2 relative z-10">Kết quả ước tính</h3>
+                <div id="calc-result" class="relative z-10"></div>
+                <p class="text-xs text-blue-200 mt-8 relative z-10 opacity-80 italic">* Kết quả mang tính ước tính dựa trên chuẩn nén H.265 ghi hình liên tục.</p>
               </div>
             </div>
           </div>
-          <div class="lg:col-span-5">
-            <div class="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl shadow-lg p-6 lg:p-8 text-white h-full flex flex-col justify-center relative overflow-hidden">
-              <div class="absolute right-0 top-0 opacity-10">
-                <i data-lucide="hard-drive" style="width:200px;height:200px;" class="transform translate-x-1/4 -translate-y-1/4"></i>
+        </div>
+
+        <div id="calc-data4g-section" class="hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div class="lg:col-span-7 space-y-6">
+              <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 lg:p-8">
+                <h2 class="text-lg font-semibold mb-6 flex items-center gap-2 text-gray-800">
+                  <i data-lucide="camera" class="w-5 h-5 text-blue-500"></i> Thông số thiết bị
+                </h2>
+                <div class="space-y-5">
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Độ phân giải Camera</label>
+                    <div id="resolution4g-btns" class="grid grid-cols-2 md:grid-cols-3 gap-2"></div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Số lượng Camera (Mắt)</label>
+                    <input type="number" id="data4g-quantity" min="1" max="100" value="1" class="block w-full px-4 py-3 border border-gray-300 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500" oninput="calculateData4g()">
+                  </div>
+                </div>
               </div>
-              <h3 class="text-blue-100 font-medium mb-2 relative z-10">Kết quả ước tính</h3>
-              <div id="calc-result" class="relative z-10"></div>
-              <p class="text-xs text-blue-200 mt-8 relative z-10 opacity-80 italic">* Kết quả mang tính ước tính dựa trên chuẩn nén H.265 ghi hình liên tục.</p>
+              <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 lg:p-8">
+                <h2 class="text-lg font-semibold mb-6 flex items-center gap-2 text-gray-800">
+                  <i data-lucide="clock" class="w-5 h-5 text-blue-500"></i> Nhu cầu sử dụng
+                </h2>
+                <div class="space-y-5">
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Chế độ xem trực tiếp / Lưu Cloud</label>
+                    <div class="flex flex-wrap gap-4">
+                      <label class="flex items-center gap-2 cursor-pointer">
+                        <input type="radio" name="data4g-viewMode" value="intermittent" checked class="text-blue-600 focus:ring-blue-500 w-4 h-4 cursor-pointer" onchange="calculateData4g()">
+                        <span class="text-sm">Xem ngắt quãng (Thực tế)</span>
+                      </label>
+                      <label class="flex items-center gap-2 cursor-pointer">
+                        <input type="radio" name="data4g-viewMode" value="continuous" class="text-blue-600 focus:ring-blue-500 w-4 h-4 cursor-pointer" onchange="calculateData4g()">
+                        <span class="text-sm">Liên tục 24/24</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div id="data4g-minutes-section">
+                    <div class="flex justify-between items-center mb-2">
+                      <label class="block text-sm font-medium text-gray-700">Tổng thời gian xem mỗi ngày</label>
+                      <span id="data4g-minutes-display" class="text-sm font-semibold text-blue-600">30 phút</span>
+                    </div>
+                    <input type="range" id="data4g-minutesPerDay" min="1" max="300" step="1" value="30" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600" oninput="calculateData4g()">
+                    <div class="flex justify-between text-xs text-gray-400 mt-2">
+                      <span>1 phút</span>
+                      <span>5 tiếng</span>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Số ngày tính toán</label>
+                    <input type="number" id="data4g-days" min="1" value="30" class="block w-full px-4 py-3 border border-gray-300 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500" oninput="calculateData4g()">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-5 space-y-6">
+              <div class="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl shadow-lg p-6 lg:p-8 text-white relative overflow-hidden">
+                <div class="absolute right-0 top-0 opacity-10">
+                  <i data-lucide="signal" style="width:200px;height:200px;" class="transform translate-x-1/4 -translate-y-1/4"></i>
+                </div>
+                <h3 class="text-blue-100 font-medium mb-4 relative z-10 flex items-center gap-2"><i data-lucide="wifi" class="w-5 h-5"></i> Kết quả dự kiến</h3>
+                <div class="relative z-10 space-y-4">
+                  <div class="bg-white/10 p-4 rounded-xl border border-white/20">
+                    <p id="data4g-total-days-label" class="text-blue-100 text-sm mb-1">Tổng data cho 30 ngày</p>
+                    <div class="flex items-baseline">
+                      <span id="data4g-totalGB" class="text-4xl md:text-5xl font-extrabold tracking-tight">0</span>
+                      <span class="ml-2 text-xl text-blue-200 font-semibold">GB</span>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-2 gap-3">
+                    <div class="bg-white/10 p-4 rounded-xl border border-white/20">
+                      <p class="text-blue-100 text-xs mb-1">Mỗi ngày tốn khoảng</p>
+                      <div class="flex items-baseline"><span id="data4g-dailyGB" class="text-2xl font-bold">0</span><span class="ml-1 text-sm text-blue-200">GB</span></div>
+                    </div>
+                    <div class="bg-white/10 p-4 rounded-xl border border-white/20">
+                      <p class="text-blue-100 text-xs mb-1">Băng thông cấp</p>
+                      <div class="flex items-baseline"><span id="data4g-totalMbps" class="text-2xl font-bold">0</span><span class="ml-1 text-sm text-blue-200">Mbps</span></div>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-xs text-blue-200 mt-6 relative z-10 opacity-80 italic">* Kết quả mang tính ước tính dựa trên chuẩn nén H.265.</p>
+              </div>
+              <div class="bg-blue-50 border border-blue-100 rounded-2xl p-6">
+                <h3 class="font-semibold text-blue-800 mb-2 flex items-center gap-2">
+                  <i data-lucide="signal-high" class="w-5 h-5"></i> Gợi ý gói cước sim 4G
+                </h3>
+                <p id="data4g-recommendation" class="text-blue-700/80 text-sm leading-relaxed">Đang tính toán...</p>
+              </div>
+              <div class="bg-orange-50 border border-orange-100 rounded-2xl p-4 text-sm flex items-start gap-3 text-orange-800">
+                <i data-lucide="alert-circle" class="w-5 h-5 flex-shrink-0 mt-0.5"></i>
+                <p class="leading-relaxed"><strong>Lưu ý:</strong> Mức tiêu hao data 4G chỉ diễn ra mạnh khi <b>mở app xem trực tiếp</b> hoặc camera <b>phát hiện chuyển động và đẩy video lên Cloud</b>. Ở trạng thái chờ, camera tiêu tốn cực kỳ ít dung lượng (vài MB/ngày để duy trì kết nối). Bảng tính áp dụng cho chuẩn nén H.265.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -1570,6 +1677,16 @@
 
     const resolutionRates = { "1080p": 16, "2K": 21, "2K+": 27, "3K": 32, "4K": 48 };
 
+    // Bitrate (Mbps) theo độ phân giải, dùng cho công cụ tính Data 4G
+    const CAMERA_SPECS_4G = {
+      "2MP (Full HD)": { bitrate: 1 },
+      "3MP (2K)": { bitrate: 1.5 },
+      "4MP (2K+)": { bitrate: 2 },
+      "5MP (3K)": { bitrate: 2.5 },
+      "6MP (3K+)": { bitrate: 3 },
+      "8MP (4K)": { bitrate: 4 }
+    };
+
     // LOCK DATA
     const LOCK_MODELS = [
       { id: 'DL05', name: 'DL05', type: 'wood' },
@@ -1597,6 +1714,9 @@
     let expandedFaq = null;
     let calcMode = 'storage';
     let resolution = '1080p';
+    let calculatorSection = 'storage';
+    let data4gResolution = '2MP (Full HD)';
+    let data4gViewMode = 'intermittent';
     let currentCatalogSearchQuery = '';
     let compareList = [];
 
@@ -2124,6 +2244,74 @@
       calculate();
     }
 
+    // Chuyển đổi giữa công cụ Lưu trữ và công cụ Data 4G
+    function setCalculatorSection(section) {
+      calculatorSection = section;
+      document.getElementById('calc-section-storage').className = `flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold border-2 transition-all ${section === 'storage' ? 'bg-blue-600 border-blue-600 text-white shadow-md' : 'bg-white border-gray-200 text-gray-600 hover:border-blue-300'}`;
+      document.getElementById('calc-section-data4g').className = `flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold border-2 transition-all ${section === 'data4g' ? 'bg-blue-600 border-blue-600 text-white shadow-md' : 'bg-white border-gray-200 text-gray-600 hover:border-blue-300'}`;
+      document.getElementById('calc-storage-section').classList.toggle('hidden', section !== 'storage');
+      document.getElementById('calc-data4g-section').classList.toggle('hidden', section !== 'data4g');
+      lucide.createIcons();
+    }
+
+    // DATA 4G CALCULATOR
+    function setResolution4g(res) {
+      data4gResolution = res;
+      document.querySelectorAll('#resolution4g-btns button').forEach(btn => {
+        const isActive = btn.dataset.res === res;
+        btn.className = `px-4 py-2 text-sm font-medium rounded-lg border transition-all ${isActive ? 'border-blue-500 bg-blue-50 text-blue-700 ring-1 ring-blue-500' : 'border-gray-200 bg-white text-gray-600 hover:border-blue-300'}`;
+      });
+      calculateData4g();
+    }
+
+    function getRecommendation4g(totalGB) {
+      if (totalGB < 10) return 'Gói cước cơ bản (1GB - 2GB/tháng hoặc gói nạp theo dung lượng) là đủ.';
+      if (totalGB < 30) return 'Khuyến nghị đăng ký gói cước 1GB/ngày.';
+      if (totalGB < 60) return 'Khuyến nghị đăng ký gói cước 2GB/ngày (VD: V120, C120...).';
+      if (totalGB < 120) return 'Khuyến nghị đăng ký gói cước 4GB/ngày hoặc không giới hạn dung lượng.';
+      return 'Cảnh báo: Dung lượng rất cao. Bắt buộc dùng gói cước Data không giới hạn (MAX Data) hoặc xem xét lắp mạng dây.';
+    }
+
+    function calculateData4g() {
+      const quantity = Math.max(1, parseInt(document.getElementById('data4g-quantity').value) || 1);
+      const days = Math.max(1, parseInt(document.getElementById('data4g-days').value) || 1);
+      const viewMode = document.querySelector('input[name="data4g-viewMode"]:checked').value;
+      data4gViewMode = viewMode;
+      const minutesPerDay = parseInt(document.getElementById('data4g-minutesPerDay').value) || 1;
+
+      const bitrateMbps = CAMERA_SPECS_4G[data4gResolution].bitrate;
+      // Hệ số chuẩn: 2Mbps liên tục 24h ≈ 21.1GB/ngày → 10.55 GB / Mbps / 24h
+      const daily24hGB = bitrateMbps * 10.55;
+      const hourlyGB = daily24hGB / 24;
+
+      let dailyDataPerCam;
+      const minutesSection = document.getElementById('data4g-minutes-section');
+      if (viewMode === 'continuous') {
+        dailyDataPerCam = daily24hGB;
+        minutesSection.classList.add('hidden');
+      } else {
+        dailyDataPerCam = hourlyGB * (minutesPerDay / 60);
+        minutesSection.classList.remove('hidden');
+        document.getElementById('data4g-minutes-display').textContent = minutesPerDay + ' phút';
+      }
+
+      const totalDaily = dailyDataPerCam * quantity;
+      const totalPeriod = totalDaily * days;
+      const totalBandwidth = bitrateMbps * quantity;
+
+      document.getElementById('data4g-dailyGB').textContent = totalDaily.toFixed(2);
+      document.getElementById('data4g-totalGB').textContent = totalPeriod.toFixed(2);
+      document.getElementById('data4g-totalMbps').textContent = totalBandwidth.toFixed(1);
+      document.getElementById('data4g-total-days-label').textContent = `Tổng data cho ${days} ngày`;
+      document.getElementById('data4g-recommendation').textContent = getRecommendation4g(totalPeriod);
+    }
+
+    function initData4gCalculator() {
+      const resBtns = document.getElementById('resolution4g-btns');
+      resBtns.innerHTML = Object.keys(CAMERA_SPECS_4G).map(res => `<button data-res="${res}" onclick="setResolution4g('${res}')" class="px-4 py-2 text-sm font-medium rounded-lg border transition-all ${res === data4gResolution ? 'border-blue-500 bg-blue-50 text-blue-700 ring-1 ring-blue-500' : 'border-gray-200 bg-white text-gray-600 hover:border-blue-300'}">${res}</button>`).join('');
+      calculateData4g();
+    }
+
     // LOCK EVALUATOR
     function initLockTool() {
       const select = document.getElementById('lock-select');
@@ -2277,6 +2465,8 @@
     filterFaqs();
     filterProducts();
     initCalculator();
+    initData4gCalculator();
+    setCalculatorSection('storage');
     initLockTool();
     initInstallerTool();
     switchTab(activeTab);
