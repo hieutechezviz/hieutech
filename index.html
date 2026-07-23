@@ -18,7 +18,7 @@
   <style>
     body { font-family: 'Be Vietnam Pro', sans-serif; box-sizing: border-box; background: #eef2f7 !important; }
     .fade-in { animation: fadeIn 0.4s ease-out; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 
     /* ===== ZALO BAR ===== */
     #app > div:first-child {
@@ -35,7 +35,7 @@
 
     /* ===== NAV BUTTONS ===== */
     .nav-btn { transition: all 0.2s ease !important; border-radius: 0.75rem !important; }
-    .nav-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.09) !important; }
+    .nav-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,0.09) !important; }
 
     /* ===== HERO BANNER – first heading block of each tab ===== */
     #tab-faq > div:first-child,
@@ -200,16 +200,16 @@
               <i data-lucide="cpu" class="w-4 h-4"></i> Tra cứu Thông số
             </button>
             <button onclick="switchTab('products')" id="nav-products" class="nav-btn flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium bg-blue-50 text-blue-700 whitespace-nowrap">
-              <i data-lucide="video" class="w-4 h-4"></i> Video hướng dẫn
+              <i data-lucide="video" class="w-4 h-4"></i> Video Hướng dẫn
             </button>
             <button onclick="switchTab('calculator')" id="nav-calculator" class="nav-btn flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 whitespace-nowrap">
-              <i data-lucide="calculator" class="w-4 h-4"></i> Lưu trữ&Data
+              <i data-lucide="calculator" class="w-4 h-4"></i> Tính lưu trữ
             </button>
             <button onclick="switchTab('lock')" id="nav-lock" class="nav-btn flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 whitespace-nowrap">
               <i data-lucide="lock" class="w-4 h-4"></i> Đánh giá Khóa
             </button>
             <button onclick="switchTab('installer')" id="nav-installer" class="nav-btn flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 whitespace-nowrap">
-              <i data-lucide="users" class="w-4 h-4"></i> Tìm Thợ khóa
+              <i data-lucide="users" class="w-4 h-4"></i> Tìm Thợ
             </button>
           </div>
         </div>
@@ -226,13 +226,13 @@
           <i data-lucide="video" class="w-5 h-5 mb-1"></i> Video
         </button>
         <button onclick="switchTab('calculator')" id="mnav-calculator" class="mobile-nav flex-none w-[72px] flex flex-col items-center py-3 text-[11px] font-medium text-gray-500 border-t-2 border-transparent">
-          <i data-lucide="calculator" class="w-5 h-5 mb-1"></i> Lưu trữ&Data
+          <i data-lucide="calculator" class="w-5 h-5 mb-1"></i> Lưu trữ
         </button>
         <button onclick="switchTab('lock')" id="mnav-lock" class="mobile-nav flex-none w-[72px] flex flex-col items-center py-3 text-[11px] font-medium text-gray-500 border-t-2 border-transparent">
-          <i data-lucide="lock" class="w-5 h-5 mb-1"></i> Chọn Khóa
+          <i data-lucide="lock" class="w-5 h-5 mb-1"></i> Khóa
         </button>
         <button onclick="switchTab('installer')" id="mnav-installer" class="mobile-nav flex-none w-[72px] flex flex-col items-center py-3 text-[11px] font-medium text-gray-500 border-t-2 border-transparent">
-          <i data-lucide="users" class="w-5 h-5 mb-1"></i> Tìm thợ khóa
+          <i data-lucide="users" class="w-5 h-5 mb-1"></i> Tìm thợ
         </button>
       </div>
     </header>
@@ -244,14 +244,15 @@
       <div id="tab-faq" class="fade-in hidden">
         <div class="mb-8">
           <h1 class="text-3xl font-bold text-gray-900 mb-2">Các vấn đề thường gặp</h1>
-          <p class="text-gray-500">Tìm kiếm nhanh các lỗi, cách khắc phục cho thiết bị.</p>
+          <p class="text-gray-500">Chọn nhóm lỗi → xem các lỗi cụ thể → xem giải pháp. Hoặc gõ từ khóa để tìm nhanh.</p>
         </div>
-        <div class="relative mb-8 max-w-2xl">
+        <div class="relative mb-6 max-w-2xl">
           <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <i data-lucide="search" class="w-5 h-5 text-gray-400"></i>
           </div>
-          <input type="text" id="faq-search" class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-xl bg-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm" placeholder="Tìm kiếm theo mã lỗi, tên thiết bị..." oninput="filterFaqs()">
+          <input type="text" id="faq-search" class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-xl bg-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm" placeholder="Tìm kiếm theo mã lỗi, tên thiết bị, từ khóa..." oninput="filterFaqs()">
         </div>
+        <div id="faq-breadcrumb" class="flex flex-wrap items-center gap-1.5 text-sm text-gray-500 mb-4 min-h-[20px]"></div>
         <div id="faq-list" class="space-y-4">
           <!-- Rendered by JS -->
         </div>
@@ -268,13 +269,16 @@
           <h1 class="text-3xl font-bold text-gray-900 mb-2">Video Hướng dẫn & Cài đặt</h1>
           <p class="text-gray-500">Danh sách tài liệu, video hướng dẫn cài đặt và cấu hình sản phẩm.</p>
         </div>
-        <div class="relative mb-8 max-w-2xl">
+        <div class="relative mb-6 max-w-2xl">
           <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <i data-lucide="search" class="w-5 h-5 text-gray-400"></i>
           </div>
           <input type="text" id="product-search" class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-xl bg-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm" placeholder="Tìm kiếm video..." oninput="filterProducts()">
         </div>
-        <div id="product-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div id="product-category-chips" class="flex gap-3 mb-8 flex-wrap">
+          <!-- Rendered by JS -->
+        </div>
+        <div id="product-list">
           <!-- Rendered by JS -->
         </div>
       </div>
@@ -614,59 +618,97 @@
 
   <script>
     // DATA FAQ
-    const faqsData = [
-      { model: "ALL Model", question: "Thẻ nhớ báo cần phải định dạng lại sau thời gian sử dụng--> lỗi thẻ nhớ", answer: "Thay thẻ nhớ khác", link: "" },
-      { model: "NVR/Đầu ghi", question: "Một số đầu ghi khi add tự động sẽ chỉ xuất 1 mắt cam", answer: "Sau khi nhập thành công 1 mắt camera, chúng ta ghi lại địa chỉ IP của cam, tiếp tục chọn vào phần gán thủ công, nhập địa chỉ IP, cửa sổ xuất hiện mục chọn thêm kênh. Chúng ta tick vào cả 2 mắt cam là được", link: "" },
-      { model: "Smartlock", question: "Cách reset khóa Ezviz về cài đặt gốc DL05,DL50FVS,DL06", answer: "(cài đặt lại tài khoản quản trị viên, cài đặt lại bluetooth, test xử lý sự cố)\nThao tác như video", link: "https://www.youtube.com/watch?v=QtnEESdmsHY&t=4s" },
-      { model: "Smartlock", question: "Cách reset khóa Ezviz về cài đặt gốc DL03, dl04", answer: "(cài đặt lại tài khoản quản trị viên, test xử lý sự cố)\nThao tác như video", link: "https://www.youtube.com/watch?v=ufvwasXEaaM&t=7s" },
-      { model: "ALL Model", question: "Mất mã QR", answer: "Cách 1: gửi lên TTBH để được cấp lại mã\nCách 2: Gửi yêu cầu qua Zalo OA - Ezviz Việt Nam (Chỉ khi camera còn nằm trong tài khoản Ezviz)", link: "" },
-      { model: "Camera WiFi", question: "Làm sao để thêm thiết bị vào app EZVIZ?", answer: "Mở app EZVIZ, chọn dấu +, quét mã QR trên thiết bị, sau đó nhập thông tin WiFi 2.4GHz để hoàn tất cài đặt.", link: "" },
-      { model: "Camera WiFi", question: "Tại sao không quét được mã QR?", answer: "Do camera không nhận diện được mã QR. Hãy tăng độ sáng màn hình điện thoại, đưa lại gần camera và giữ ổn định khi quét.", link: "" },
-      { model: "Camera WiFi", question: "Camera không kết nối được WiFi?", answer: "Nguyên nhân thường do nhập sai mật khẩu hoặc dùng WiFi 5GHz. Hãy kiểm tra lại mật khẩu và đảm bảo sử dụng WiFi 2.4GHz.", link: "" },
-      { model: "Camera WiFi", question: "Làm sao để reset camera?", answer: "Nhấn giữ nút reset trên camera từ 5–10 giây cho đến khi thiết bị khởi động lại.", link: "" },
-      { model: "Camera WiFi", question: "Camera hiển thị offline?", answer: "Kiểm tra nguồn điện và kết nối mạng. Khởi động lại modem/router và đảm bảo WiFi hoạt động ổn định.", link: "" },
-      { model: "Camera WiFi", question: "Không xem được camera từ xa?", answer: "Kiểm tra camera đã online chưa, đăng nhập đúng tài khoản và đảm bảo thiết bị có kết nối internet.", link: "" },
-      { model: "Camera WiFi", question: "Làm sao chia sẻ camera cho người khác?", answer: "Vào phần cài đặt thiết bị trong app EZVIZ, chọn 'Chia sẻ thiết bị' và nhập tài khoản người nhận.", link: "" },
-      { model: "Camera WiFi", question: "Làm sao xóa thiết bị khỏi tài khoản?", answer: "Vào cài đặt thiết bị trong app, chọn 'Xóa thiết bị' để gỡ camera khỏi tài khoản hiện tại.", link: "" },
-      { model: "Camera WiFi", question: "Quên mật khẩu tài khoản EZVIZ?", answer: "Chọn 'Quên mật khẩu' trên màn hình đăng nhập và làm theo hướng dẫn để đặt lại mật khẩu.", link: "" },
-      { model: "Camera WiFi", question: "Không nhận được thông báo cảnh báo?", answer: "Kiểm tra đã bật thông báo trong app EZVIZ và cho phép thông báo trong cài đặt điện thoại.", link: "" },
-      { model: "Camera WiFi", question: "Camera không ghi hình?", answer: "Có thể do thẻ nhớ lỗi hoặc chưa format. Hãy format lại thẻ hoặc thay thẻ nhớ mới.", link: "" },
-      { model: "Camera WiFi", question: "Camera không nhận thẻ nhớ?", answer: "Do thẻ nhớ không tương thích hoặc bị lỗi. Nên sử dụng thẻ Class 10 chính hãng và thử thay thẻ khác.", link: "" },
-      { model: "Camera WiFi", question: "Camera bị lag / giật?", answer: "Nguyên nhân do mạng yếu. Hãy giảm độ phân giải hoặc kiểm tra lại kết nối WiFi.", link: "" },
-      { model: "Camera WiFi", question: "Hình ảnh camera bị mờ?", answer: "Có thể do ống kính bẩn hoặc cài đặt bitrate thấp. Hãy lau sạch lens và điều chỉnh lại chất lượng hình ảnh.", link: "" },
-      { model: "Camera WiFi", question: "Không nghe được âm thanh?", answer: "Kiểm tra đã bật quyền micro trong app và trên điện thoại.", link: "" },
-      { model: "Camera WiFi", question: "Không nói chuyện được qua camera?", answer: "Kiểm tra quyền micro/loa và đảm bảo thiết bị không bị lỗi phần cứng.", link: "" },
-      { model: "Camera WiFi", question: "Camera không quay (PTZ)?", answer: "Có thể do lỗi motor hoặc phần mềm. Hãy thử reset camera, nếu vẫn lỗi cần bảo hành.", link: "" },
-      { model: "Camera WiFi", question: "Camera báo động sai liên tục?", answer: "Do độ nhạy phát hiện cao hoặc môi trường nhiễu. Hãy giảm độ nhạy và thiết lập vùng cảnh báo.", link: "" },
-      { model: "Camera WiFi", question: "Camera không lên nguồn?", answer: "Kiểm tra adapter và dây nguồn. Thử thay nguồn cùng thông số để kiểm tra.", link: "" },
-      { model: "Camera WiFi", question: "Làm sao cập nhật firmware camera?", answer: "Vào phần cài đặt thiết bị trong app EZVIZ và chọn cập nhật firmware nếu có phiên bản mới.", link: "" },
-      { model: "ALL Model", question: "Xóa liên kết tài khoản Ezviz trên camera", answer: "Nhắn tin qua Zalo với cú pháp: Số SN + hình ảnh thiết bị", link: "" },
-      { model: "DL06", question: "Lỗi mở cửa từ bên ngoài mà không cần nhập mật khẩu?", answer: "Vị trí chốt cây ty không phù hợp", link: "https://youtube.com/shorts/llAwb2VXyBI?si=JobZH6Oztv5jRi_q" },
-      { model: "DL06", question: "Chốt trẻ em không hoạt động sau khi thay đổi tay nắm cửa", answer: "Thao tác điều chỉnh chốt cố định như video", link: "https://www.youtube.com/shorts/DgyArT-TgWk" },
-      { model: "DL50FVS", question: "Chốt motor khóa lỗi, tự đóng ra đóng vào", answer: "Lỗi lắp đặt, xem video xử lý", link: "https://www.youtube.com/watch?v=NGg7BN4IiKg&pp=0gcJCT4LAYcqIYzv" },
-      { model: "Smartlock", question: "Khóa lắp xong, không tự khóa, mở được từ bên ngoài", answer: "Lỗi lắp đặt, xem video xử lý", link: "https://www.youtube.com/watch?v=jyMsmaJ7IWo" },
-      { model: "DL06&DL06 Pro", question: "Cách đổi chiều chốt lõi khóa", answer: "Xem video hướng dẫn", link: "https://www.youtube.com/watch?v=bEMzq2JrmJ4" },
-      { model: "ALL Model", question: "Cách kiểm tra quyền truy cập vào thiết bị", answer: "Xem video hướng dẫn", link: "https://www.youtube.com/shorts/mXtVc96Cd9A" },
-      { model: "Camera", question: "Cách vẽ vùng phát hiện", answer: "Xem video hướng dẫn", link: "https://www.youtube.com/shorts/_l2CrJ7uKpE" },
-      { model: "Camera", question: "Cách kết nối wifi mới", answer: "Xem video hướng dẫn", link: "https://www.youtube.com/shorts/S2sgqlGBaQs" },
-      { model: "Smartlock", question: "Cách reset về cài đặt gốc khóa thông minh", answer: "Xem video hướng dẫn", link: "https://www.youtube.com/shorts/E4n1jJgN-Js" },
-      { model: "Lỗi mạng/WiFi", question: "Mất kết nối / Ngoại tuyến / Không kết nối được với điện thoại, WiFi", answer: "Lỗi phổ biến nhất. Bao gồm: mất kết nối, ngoại tuyến, ko kết nối vào app được, báo offline, thiết bị ngoại tuyến, không hoạt động, ko load xem được.\n\nCách xử lý (tuần tự theo các bước, nếu bước 1 không được thì đến bước 2, không được nữa thì đến bước 3...):\n1. Kiểm tra và cập nhật phiên bản mới nhất, nếu đã là phiên bản mới nhất thì reset camera.\nLý do: sau 1 thời gian dài không cập nhật, một số tính năng có thể gặp trục trặc vì không còn đồng bộ với hệ thống dữ liệu chung của Ezviz nên cần cập nhật phiên bản mới. Reset cũng giúp camera khôi phục lại trạng thái ban đầu nếu trong quá trình sử dụng xảy ra những lỗi nhỏ khiến dữ liệu mất đồng bộ.\n2. Kiểm tra môi trường wifi.\nCheck tín hiệu mạng tại vùng lắp đặt → nếu không được thì tháo camera xuống để gắn gần nguồn mạng theo dõi → nếu vẫn không được thì thử nguồn mạng khác (hotspot điện thoại,...).\nLý do: sau 1 thời gian, có thể do số lượng thiết bị sử dụng wifi tăng lên (khách lắp thêm nhiều camera khác, thêm TV, điện thoại) làm giảm tín hiệu wifi. Nếu kéo camera gần nguồn mạng hoặc dùng hotspot điện thoại mà bắt được thì khả năng sóng wifi của khách đang yếu hơn bình thường, có thể tư vấn khách nâng cấp nguồn mạng hoặc lắp camera ở vị trí gần mạng wifi hơn.\n3. Áp dụng bảo hành.", link: "" },
-      { model: "Lỗi mạng/WiFi", question: "Lỗi kết nối sau khi thay đổi mạng / Đổi WiFi / Đổi điện thoại", answer: "Khách hàng đổi mật khẩu WiFi, đổi nhà mạng hoặc đổi điện thoại mới dẫn đến mất kết nối. Bao gồm: đổi wifi, đổi mật khẩu, đổi điện thoại.\n\nCách xử lý (tuần tự theo các bước, nếu bước 1 không được thì đến bước 2, không được nữa thì đến bước 3...):\nCó thể tham khảo video hướng dẫn cách đổi wifi cho camera.\n1. Reset camera\nNhấn giữ nút reset trên camera đến khi thiết bị báo đã reset → dùng app Ezviz quét lại mã QR code của camera → tiến hành cài đặt lại bước chọn WiFi → camera sẽ yêu cầu nhập mã xác thực thiết bị, đây là dãy 6 chữ cái in hoa dưới đáy camera còn gọi là Verification Code → tiếp tục đến khi hoàn thành.\n2. Trường hợp khách đổi tài khoản\nNếu khách đổi qua tài khoản khác trên app Ezviz: rút điện camera (để camera offline) trong 3-5 phút, dùng tài khoản mới quét lại mã QR Code dưới đáy camera để xóa liên kết cũ và cài đặt lại như một camera mới.", link: "https://www.youtube.com/shorts/S2sgqlGBaQs" },
-      { model: "Lỗi hình ảnh/lưu trữ", question: "Không xem lại được video / Không lưu trữ / Lỗi thẻ nhớ", answer: "Lỗi liên quan đến lưu trữ và xem lại dữ liệu. Bao gồm: không xem lại được, không lưu, không lưu trữ, không nhận thẻ nhớ, lỗi thẻ nhớ, không định dạng được thẻ.\n\nCách xử lý (tuần tự theo các bước, nếu bước 1 không được thì đến bước 2, không được nữa thì đến bước 3...):\n1. Kiểm tra và cập nhật phiên bản mới nhất, nếu đã là phiên bản mới nhất thì reset camera.\nLý do: sau 1 thời gian dài không cập nhật, một số tính năng có thể gặp trục trặc vì không còn đồng bộ với hệ thống dữ liệu chung của Ezviz nên cần cập nhật phiên bản mới. Reset cũng giúp camera khôi phục lại trạng thái ban đầu nếu trong quá trình sử dụng xảy ra những lỗi nhỏ khiến dữ liệu mất đồng bộ.\n2. Định dạng lại thẻ nhớ\nVào mục Cài đặt → chọn Danh sách bảo ghi → định dạng lại thẻ nhớ → nếu không được thì thử 1 thẻ nhớ khác thay thế → nếu thẻ khác dùng được thì do thẻ cũ đã hư.\n3. Áp dụng bảo hành.", link: "" },
-      { model: "Lỗi hình ảnh/lưu trữ", question: "Lỗi về màu sắc / Hình ảnh (mờ, chói, trắng đen, không màu)", answer: "Các vấn đề về chất lượng hình ảnh. Bao gồm: mất màu, bị mờ, bị chói, trắng đen, đèn xanh đỏ, hồng ngoại, ngược hình ảnh, đèn vàng, mờ màn hình.\n\nCách xử lý (tuần tự theo các bước, nếu bước 1 không được thì đến bước 2, không được nữa thì đến bước 3...):\n1. Reset lại camera để cấu hình về lại trạng thái ban đầu.\n2. Kiểm tra lại mục Cài đặt hiện tại\nMục \"Chuyển đổi ngày/đêm\" → chọn \"Tự động (đề xuất)\".\nĐộ nhạy chuyển đổi ngày/đêm: độ nhạy càng cao thì sự chênh lệch ánh sáng càng dễ kích hoạt camera bật đèn trợ sáng.\nMục \"Chế độ nhìn xuyên đêm\" → chọn \"Chế độ ban đêm thông minh\".\n3. Áp dụng bảo hành.", link: "" },
-      { model: "Lỗi tính năng camera", question: "Camera bị khóa / Mã hóa / Yêu cầu nhập mật khẩu", answer: "Lỗi liên quan đến bảo mật, mật khẩu. Bao gồm: bị khóa, mã hóa, bắt đăng nhập, quên mật khẩu.\n\nCách xử lý (tuần tự theo các bước, nếu bước 1 không được thì đến bước 2, không được nữa thì đến bước 3...):\nMã xác thực là mã được tạo ngay sau khi cài đặt camera vào app, hệ thống sẽ cho phép người dùng tạo mã xác thực mới. Nếu khách đã tạo mã xác thực mới mà không nhớ thì chỉ cần reset lại camera là thiết bị sẽ quay lại mặc định 6 chữ cái Verification Code.\n1. Tìm và nhập mã xác thực\nMã xác thực còn gọi là Verification Code, gồm 6 chữ cái in hoa nằm ở đáy thiết bị.\nCó thể vào mục Cài đặt, chọn Thông tin thiết bị, kéo xuống bên dưới sẽ thấy Mã xác nhận (bấm vào biểu tượng con mắt để hiển thị).\n2. Tắt yêu cầu mã xác thực mới theo yêu cầu của người dùng\nChọn Cài đặt → Cài đặt riêng tư → Tắt \"Mã hóa Video\" hoặc chọn Đổi mật khẩu.\nKhi đã tắt Mã hóa Video thì camera chia sẻ cho các tài khoản người dùng mà không còn yêu cầu mã hóa nữa, cho phép xem hình trực tiếp từ camera.", link: "" },
-      { model: "Lỗi tính năng camera", question: "Camera tự động xoay / Xoay lung tung / Quay vào tường", answer: "Lỗi cơ chế xoay của camera. Bao gồm: tự xoay, quay vào tường, xoay lung tung.\n\nCách xử lý (tuần tự theo các bước, nếu bước 1 không được thì đến bước 2, không được nữa thì đến bước 3...):\n1. Tắt chế độ Tự động tuần tra\nVào mục Cài đặt → Cài đặt PTZ → Tự động tuần tra (tắt).\n2. Nếu khách hàng muốn sử dụng tính năng theo dõi tự động thì cần cài đặt Góc quay mặc định. Sau khi theo dõi đối tượng, camera sẽ tự động quay về Góc quay mặc định sau 30 giây.\nVào mục Cài đặt → Cài đặt trước PTZ → Tùy chỉnh cài đặt trước → Cài đặt trước → Điều chỉnh góc quay mong muốn trên app, sau đó lưu lại → trong giao diện Cài đặt trước PTZ chọn Lưu vị trí góc xoay hiện tại làm mặc định.", link: "https://www.youtube.com/shorts/VwVrllt8y_s" },
-      { model: "Lỗi tính năng camera", question: "Camera không xoay được (kẹt, không điều khiển được)", answer: "Lỗi khi camera không thể xoay hoặc chỉ xoay được một phần. Bao gồm: không xoay, kẹt, không quay.\n\nCách xử lý (tuần tự theo các bước, nếu bước 1 không được thì đến bước 2, không được nữa thì đến bước 3...):\nThông thường nếu khách hàng dùng tay xoay camera sẽ làm cho góc xoay bị lệch so với ghi nhớ góc xoay của thiết bị trên app. Khi đó, xoay bằng app sẽ không còn khớp nữa.\n1. Hiệu chuẩn lại góc quay\nCài đặt → Cài đặt PTZ → Hiệu chuẩn PTZ.\n2. Kiểm tra và cập nhật phiên bản mới nhất, nếu đã là phiên bản mới nhất thì reset lại camera.\nLý do: sau 1 thời gian dài không cập nhật, một số tính năng có thể gặp trục trặc vì không còn đồng bộ với hệ thống dữ liệu chung của Ezviz nên cần cập nhật phiên bản mới. Reset cũng giúp camera khôi phục lại trạng thái ban đầu nếu trong quá trình sử dụng xảy ra những lỗi nhỏ khiến dữ liệu mất đồng bộ.\n3. Bảo hành máy.", link: "" },
-      { model: "Lỗi tính năng camera", question: "Lỗi âm thanh (không nghe được, bị hú, rè)", answer: "Các vấn đề về âm thanh, đàm thoại. Bao gồm: không nghe tiếng, bị hú, âm thanh nhỏ, tạp âm, kêu tít tít.\n\nGiải thích: Camera khi ở gần thiết bị đang xem trực tiếp trên điện thoại sẽ có hiện tượng nhiễu sóng do không gian kín tạo ra tiếng vọng khi nghe trên app Ezviz. Di chuyển ra xa camera thì sẽ bình thường.", link: "" },
-      { model: "Lỗi tính năng camera", question: "Lỗi không nhận dạng được chuyển động / Không báo động", answer: "Camera không phát hiện hoặc không báo khi có người/chuyển động. Bao gồm: không báo động, không phát hiện người.\n\nCách xử lý:\nVào Cài đặt → Dò tìm thông minh → Chọn \"Áp dụng\" phát hiện người/âm thanh hoặc thay đổi hình ảnh tùy theo nhu cầu của khách hàng.\nSau đó vào lại mục Cài đặt → Thông báo tin nhắn → bật tính năng Nhận Tin nhắn Thiết bị.\nNgoài ra, có thể Lên kế hoạch lời nhắn của thiết bị (theo khung thời gian mình muốn, hoặc khoảng thời gian hiển thị thông báo,...).", link: "" },
-      { model: "Lỗi App điều khiển", question: "Lỗi chia sẻ thiết bị / Thêm thiết bị phụ", answer: "Không thể chia sẻ camera cho người dùng khác, kết nối tivi.\n\nCách xử lý (tuần tự theo các bước, nếu bước 1 không được thì đến bước 2, không được nữa thì đến bước 3...):\n1. Kiểm tra và cập nhật phiên bản mới nhất, nếu đã là phiên bản mới nhất thì reset lại camera.\nLý do: sau 1 thời gian dài không cập nhật, một số tính năng có thể gặp trục trặc vì không còn đồng bộ với hệ thống dữ liệu chung của Ezviz nên cần cập nhật phiên bản mới. Reset cũng giúp camera khôi phục lại trạng thái ban đầu nếu trong quá trình sử dụng xảy ra những lỗi nhỏ khiến dữ liệu mất đồng bộ.\n2. Chia sẻ thiết bị\nLưu ý, khi khách chia sẻ thiết bị, tài khoản được chia sẻ sẽ hiển thị thông báo nhận được chia sẻ và cần được đồng ý.\n3. Đổi tài khoản khác\nCài đặt camera vào 1 tài khoản khác và thử chia sẻ. Nếu do tài khoản cũ bị lỗi thì xóa thiết bị này ra, và vào lại tài khoản mới bằng chính số điện thoại hoặc email đã đăng ký tài khoản vừa xóa.\n4. Bảo hành.", link: "" },
-      { model: "Lỗi App điều khiển", question: "Lỗi app ứng dụng liên quan đến OTP", answer: "Những trường hợp đăng nhập cần mã OTP xác thực hoặc bấm nút Quên mật khẩu để cấp lại nhưng hệ thống không gửi mã.\n- Tài khoản là Số điện thoại:\n+ Kiểm tra số điện thoại có đăng ký, thường người dùng sẽ không nhớ rõ là số họ tạo có số 0 ngay đầu hay không, vì nếu có hoặc không thì App sẽ tính là 2 tài khoản khác nhau. Ví dụ: 123xxx và 0123xxx được tính là 2 tài khoản khác nhau. Nên nếu như không nhận được mã OTP thì thử bỏ số 0 ngay đầu hoặc thêm ngược lại.\n+ Thử dùng 1 điện thoại khác để lấy lại mã.\n- Tài khoản là Email:\n+ Xem có liên kết với số điện thoại nào không để không làm theo cách trên.\n+ Nếu không liên kết thì chuyển sang 1 điện thoại khác để lấy lại mã.", link: "" },
-      { model: "Lỗi App điều khiển", question: "Lỗi app ứng dụng liên quan đến thời gian trên app", answer: "1. Nếu camera bị lỗi thời gian, vào Cài đặt, mục Thông tin thiết bị, kéo chỉnh thông tin Múi giờ/Định dạng thời gian. Có thể reset lại camera và/hoặc cập nhật phiên bản mới cho camera để camera đồng bộ.\n2. Nếu muốn chỉnh cách hiển thị dòng thời gian lưu trữ trên lịch sử ghi hình, ở trang chính, chọn mục Tài khoản (bên dưới), vào Cài đặt, chọn Thiết lập bố cục, chỉnh kiểu dáng thời gian, chọn đồng bộ để áp dụng thời gian.", link: "" },
-      { model: "Lỗi App điều khiển", question: "Liên quan đến thông báo đẩy (spam thông báo, thông báo quá thường xuyên)", answer: "A. Nếu là spam thông báo của một camera bất kỳ:\nVào Cài đặt → Dò tìm thông minh → Nếu chọn áp dụng \"Phát hiện thay đổi hình ảnh\" thì mọi chuyển động thay đổi trong khung hình đều sẽ kích hoạt thông báo (người, thú nuôi, quạt máy, rèm cửa bay, TV đang phát sóng chương trình,...). Chỉ cần chọn áp dụng \"Phát hiện người\", hoặc cẩn trọng hơn nữa thì chọn \"Phát hiện âm thanh bất thường\" để giảm bớt các thông báo không cần thiết.\n\nNếu vẫn muốn giữ phát hiện chuyển động, vào mục Thông báo tin nhắn → muốn nhận Tin nhắn Thiết bị thì bật, không muốn nhận thì tắt → chọn Khoảng thời gian nhắn tin của Thiết bị (tối đa 30 phút, toàn bộ thông báo sẽ được dồn lại và gửi 1 lần sau 30 phút hoặc sau khoảng thời gian khách mong muốn).\n\nNgoài ra, có thể Lên kế hoạch lời nhắc (ví dụ chỉ đẩy thông báo trong khung giờ 8h tối đến 6h sáng, khung giờ khác thì không).\n\nLưu ý về thông báo ứng dụng EZVIZ: nếu tắt tính năng thông báo, thiết bị vẫn ghi nhận sự kiện nhưng cần mở app Ezviz để kiểm tra, thiết bị sẽ không đẩy tin nhắn ra màn hình điện thoại nữa.\n\nB. Nếu là spam thông báo do tài khoản:\nỞ trang chủ tài khoản, chọn mục Sự kiện (bên dưới) → Cài đặt → Cài đặt thông báo đẩy → chọn Thông báo tự kiểm tra (kiểm tra và test khả năng thông báo của app) hoặc chọn Không làm phiền — khi đó chỉ kiểm tra được các sự kiện trong Thư viện nhưng sẽ không nhận được các thông báo đẩy.", link: "" },
-      { model: "Lỗi App điều khiển", question: "Lỗi ứng dụng (app) (thoát, đơ, không tải được)", answer: "Sự cố liên quan đến ứng dụng trên điện thoại, đăng nhập, tự đăng xuất, hiển thị camera trên App.\n\nVào App bị lag, đơ, không tải được:\n- Thử thoát ra khỏi App và mở lại App sau đó kiểm tra tình trạng.\n- Vào Cài đặt của điện thoại > Ứng dụng > App Ezviz > Xóa dữ liệu Cache > vào lại App kiểm tra.\n- Vào CH Play hoặc App Store để kiểm tra cập nhật App lên phiên bản mới nhất.\n- Xóa App và tải lại nếu tất cả các cách trên không hiệu quả.\n- Thử dùng 1 điện thoại khác mở App để xem có bị lag, đơ,... không. Nếu điện thoại đó không có hiện tượng này thì có thể do phiên bản điện thoại cũ không còn tương thích với App nữa, cần nâng cấp phần mềm điện thoại.\n\nSự cố liên quan đến hiển thị camera trên App (nhiều lúc vào App không thấy camera mà chỉ có màn hình trống):\n- Load lại màn hình chính của App (kéo thả trong màn hình chính để App làm mới).\n- Kiểm tra lại trong mục Tài khoản xem có đúng Số điện thoại, Email.\n- Tắt App mở lại.\n- Đăng xuất tài khoản và đăng nhập lại.", link: "" },
-      { model: "Lỗi thiết bị", question: "Camera không có tín hiệu / Không lên nguồn / Chết nguồn", answer: "Lỗi về nguồn điện hoặc tín hiệu cơ bản. Bao gồm: không có tín hiệu, ko lên nguồn, không sáng đèn, ko sạc được.\n\nCách xử lý: Bảo hành.", link: "" },
-      { model: "Lỗi thiết bị", question: "Lỗi cài đặt lại / Reset / Kết nối lại không được", answer: "Khách hàng đã thử reset nhưng không thành công. Bao gồm: reset, cài đặt lại.\n\nCách xử lý: Bảo hành.", link: "" }
+    // NHÓM LỖI CHUNG (dùng cho điều hướng 3 tầng ở tab Hỗ trợ & Lỗi)
+    const faqCategories = [
+      { id: 'network', label: 'Kết nối, Cài đặt & Cập nhật thiết bị', icon: 'wifi', desc: 'Offline, không vào được app, đổi WiFi/điện thoại, thêm/reset thiết bị' },
+      { id: 'video', label: 'Hình ảnh & Video', icon: 'image', desc: 'Mờ, chói, mất màu, giật lag, trắng đen' },
+      { id: 'storage', label: 'Lưu trữ & Thẻ nhớ', icon: 'hard-drive', desc: 'Không ghi hình, lỗi thẻ nhớ, không xem lại được' },
+      { id: 'audio', label: 'Âm thanh', icon: 'volume-2', desc: 'Không nghe tiếng, bị hú/rè, không đàm thoại được' },
+      { id: 'ptz', label: 'Xoay camera (PTZ)', icon: 'rotate-cw', desc: 'Tự xoay lung tung, không xoay được, bị kẹt' },
+      { id: 'alert', label: 'Báo động & Thông báo', icon: 'bell', desc: 'Không báo động, báo động sai, spam thông báo' },
+      { id: 'account', label: 'Tài khoản, Chia sẻ & Mã hóa', icon: 'shield-check', desc: 'Mã QR, mã xác thực, mật khẩu, OTP, chia sẻ thiết bị' },
+      { id: 'app', label: 'Ứng dụng EZVIZ', icon: 'smartphone', desc: 'App lag/đơ/thoát, lỗi thời gian hiển thị' },
+      { id: 'power', label: 'Nguồn điện & Phần cứng', icon: 'plug-zap', desc: 'Không lên nguồn, chết nguồn, reset không thành công' },
+      { id: 'nvr', label: 'Đầu ghi NVR', icon: 'server', desc: 'Lỗi thêm kênh camera vào đầu ghi' },
+      { id: 'lock', label: 'Khóa cửa thông minh (Smartlock)', icon: 'lock', desc: 'Reset khóa, chốt lỗi, chốt trẻ em, đổi chiều chốt' },
     ];
+
+    const faqsData = [
+      { model: "ALL Model", category: "storage", question: "Thẻ nhớ báo cần phải định dạng lại sau thời gian sử dụng--> lỗi thẻ nhớ", answer: "B1: Thử format thẻ nhớ bằng điện thoại hoặc trực tiếp trong app (không chỉ format qua camera).\nB2: Nếu vẫn báo lỗi format, thay thẻ nhớ khác.", link: "https://www.youtube.com/@hieutech" },
+      { model: "NVR/Đầu ghi", category: "nvr", question: "Một số đầu ghi khi add tự động sẽ chỉ xuất 1 mắt cam", answer: "Sau khi nhập thành công 1 mắt camera, chúng ta ghi lại địa chỉ IP của cam, tiếp tục chọn vào phần gán thủ công, nhập địa chỉ IP, cửa sổ xuất hiện mục chọn thêm kênh. Chúng ta tick vào cả 2 mắt cam là được", link: "https://www.youtube.com/@hieutech" },
+      { model: "Smartlock", category: "lock", question: "Cách reset khóa Ezviz về cài đặt gốc DL05,DL50FVS,DL06", answer: "(cài đặt lại tài khoản quản trị viên, cài đặt lại bluetooth, test xử lý sự cố)\nThao tác như video", link: "https://www.youtube.com/watch?v=QtnEESdmsHY&t=4s" },
+      { model: "Smartlock", category: "lock", question: "Cách reset khóa Ezviz về cài đặt gốc DL03, dl04", answer: "(cài đặt lại tài khoản quản trị viên, test xử lý sự cố)\nThao tác như video", link: "https://www.youtube.com/watch?v=ufvwasXEaaM&t=7s" },
+      { model: "ALL Model", category: "account", question: "Mất mã QR", answer: "Cách 1: gửi lên TTBH để được cấp lại mã\nCách 2: Gửi yêu cầu qua Zalo OA - Ezviz Việt Nam (Chỉ khi camera còn nằm trong tài khoản Ezviz)", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "network", question: "Làm sao để thêm thiết bị vào app EZVIZ?", answer: "Mở app EZVIZ, chọn dấu +, quét mã QR trên thiết bị, sau đó nhập thông tin WiFi 2.4GHz để hoàn tất cài đặt.\n\nNếu app báo lỗi khi add (không thêm được thiết bị): thử đăng nhập bằng tài khoản khác để add thử, hoặc reset lại thiết bị rồi add lại từ đầu.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "network", question: "Tại sao không quét được mã QR?", answer: "Do camera không nhận diện được mã QR. Hãy tăng độ sáng màn hình điện thoại, thử đưa gần rồi từ từ ra xa camera để lấy nét (không giữ cố định 1 khoảng cách), và giữ ổn định khi quét.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "network", question: "Camera không kết nối được WiFi?", answer: "Dấu hiệu: không add được camera vào app.\n\nB1: Kiểm tra camera có đang ở trạng thái chờ cấu hình không (đèn xanh chớp nhanh).\nB2: Nhập lại mật khẩu WiFi và kiểm tra xem mạng WiFi đang dùng có bị nhầm sang sóng 5GHz không (một số camera không hỗ trợ băng tần 5GHz) — đảm bảo dùng đúng mật khẩu và WiFi 2.4GHz.\nB3: Thoát app và thử kết nối lại.\nB4: Nếu vẫn không được, liên hệ đội kỹ thuật Ezviz để được hỗ trợ.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "network", question: "Làm sao để reset camera?", answer: "Nhấn giữ nút reset trên camera từ 5–10 giây cho đến khi thiết bị khởi động lại.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "network", question: "Camera hiển thị offline? / Báo ngoại tuyến (loading %)", answer: "Dấu hiệu: app báo offline/ngoại tuyến, hoặc quá trình add dừng ở khoảng 90–99%.\n\nB1: Kiểm tra xem camera có nguồn hay không (xem đèn trạng thái có chớp xanh không). Nếu không thì đổi sang adapter khác; nếu vẫn không được thì kết luận adapter bị hỏng, mang đến bảo hành.\nB2: Kiểm tra WiFi nhà có đang có mạng không. Nếu bị dừng ở bước kết nối (90–99%), thử đưa camera lại gần modem/router rồi cài lại.\nB3: Nếu camera đã có nguồn và mạng ổn định mà vẫn lỗi, rút nguồn camera trong 5 phút rồi cắm lại.\nB4: Nếu vẫn không được, khởi động lại modem/router mạng.\nB5: Nếu vẫn không được, tiếp tục reset lại camera và cài đặt lại (có thể tham khảo cấu hình IP tĩnh trên mạng).\nB6: Nếu vẫn không được, mang camera đến các Trung tâm bảo hành (TTBH).", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "network", question: "Không xem được camera từ xa?", answer: "Dấu hiệu: chỉ xem được khi ở cùng mạng WiFi nhà (nội bộ), ra khỏi nhà thì không xem được.\n\nB1: Tắt và mở lại app.\nB2: Kiểm tra mạng 4G/WiFi trên điện thoại đang xem có kết nối internet ổn định không.\nB3: Kiểm tra camera đã online chưa, đăng nhập đúng tài khoản và đảm bảo thiết bị có kết nối internet.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "account", question: "Làm sao chia sẻ camera cho người khác?", answer: "Vào phần cài đặt thiết bị trong app EZVIZ, chọn 'Chia sẻ thiết bị' và nhập tài khoản người nhận.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "account", question: "Làm sao xóa thiết bị khỏi tài khoản?", answer: "Vào cài đặt thiết bị trong app, chọn 'Xóa thiết bị' để gỡ camera khỏi tài khoản hiện tại.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "account", question: "Quên mật khẩu tài khoản EZVIZ?", answer: "Chọn 'Quên mật khẩu' trên màn hình đăng nhập và làm theo hướng dẫn để đặt lại mật khẩu.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Ứng dụng EZVIZ", category: "account", question: "Tôi đăng nhập tài khoản báo không chính xác", answer: "B1: Kiểm tra xem có chọn đúng loại đăng nhập không (nếu đang chọn Gmail mà tài khoản sử dụng số điện thoại thì cần chuyển sang số điện thoại và ngược lại). Nếu sử dụng số điện thoại thì kiểm tra xem đã chọn đúng đầu số +84 chưa, lưu ý không nhập số 0 đầu số điện thoại vào mục nhập.\nB2: Nếu vẫn báo sai mật khẩu, hãy bấm vào mục Quên mật khẩu để tạo mật khẩu mới.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Ứng dụng EZVIZ", category: "account", question: "Tôi đăng nhập tài khoản nhưng không có thiết bị được kết nối", answer: "B1: Nếu sử dụng số điện thoại thì kiểm tra xem đã chọn đúng đầu số +84 chưa, lưu ý không nhập số 0 đầu số điện thoại vào mục nhập.\nB2: Nhập vào thanh tìm kiếm và gõ tên thiết bị mà bạn đã lưu (ví dụ H6c,...) để tìm kiếm. Nếu tìm thấy thì sắp xếp lại thư mục. Nếu không thấy, liên hệ trang OA để được hỗ trợ.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "alert", question: "Không nhận được thông báo cảnh báo?", answer: "B1: Kiểm tra mục thông báo trong camera xem có đang bị tắt hay không, các tính năng phát hiện thông minh đã bật chưa.\nB2: Nếu vẫn không nhận được, kiểm tra phần cài đặt ở mục Sự kiện (góc trên bên phải) và chọn Cài đặt thông báo đẩy để bật thông báo lên. Hoặc có thể xóa và tải lại app.\n\nNgoài ra, đảm bảo đã bật thông báo trong app EZVIZ và cho phép thông báo trong cài đặt điện thoại.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "storage", question: "Camera không ghi hình?", answer: "Dấu hiệu: không có video để xem lại (playback).\n\nB1: Kiểm tra thẻ nhớ (đã lắp chưa, có báo lỗi không).\nB2: Kiểm tra cài đặt ghi hình trong app (đã bật ghi liên tục/ghi theo chuyển động, lịch ghi hình có đúng khung giờ không).\nB3: Có thể do thẻ nhớ lỗi hoặc chưa format. Hãy format lại thẻ hoặc thay thẻ nhớ mới.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "storage", question: "Camera không nhận thẻ nhớ?", answer: "Dấu hiệu: không lưu được video.\n\nB1: Tháo thẻ nhớ ra và lắp lại cho chắc chân tiếp xúc.\nB2: Do thẻ nhớ không tương thích hoặc bị lỗi. Nên sử dụng thẻ Class 10 chính hãng và thử thay thẻ khác.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "video", question: "Camera bị lag / giật?", answer: "B1: Test tốc độ WiFi bằng điện thoại tại vị trí lắp camera để xác nhận mạng có yếu không.\nB2: Nếu mạng yếu, thử đặt camera/router gần nhau hơn.\nB3: Nguyên nhân do mạng yếu. Hãy giảm độ phân giải hoặc kiểm tra lại kết nối WiFi.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "video", question: "Không nhìn rõ / tối vào ban đêm", answer: "Dấu hiệu: hình ảnh ban đêm bị tối, không nhìn rõ.\n\nB1: Che thử cảm biến ánh sáng trên camera để kiểm tra đèn hồng ngoại (IR) có tự bật lên không.\nB2: Vào app kiểm tra và bật tính năng nhìn ban đêm/hồng ngoại (IR) — mục \"Chế độ nhìn xuyên đêm\" chọn \"Chế độ ban đêm thông minh\" hoặc \"Hồng ngoại\" tùy nhu cầu.\nB3: Nếu đã bật mà vẫn tối, kiểm tra đèn hồng ngoại có bị che khuất (bụi bẩn, vật cản) hoặc phản xạ ngược vào kính/mái che không.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "video", question: "Hình ảnh camera bị mờ?", answer: "B1: Kiểm tra và điều chỉnh độ phân giải camera lên mức cao hơn.\nB2: Nếu đã chỉnh mà vẫn mờ, kiểm tra lại góc xem (quá sáng, bị chắn hồng ngoại,...). Kiểm tra bằng cách cho camera hoạt động ở điều kiện bình thường (một số camera trong nhà không hoạt động tốt khi lắp ngoài trời).\nB3: Nếu vẫn bất thường, camera có thể gặp vấn đề về phần cứng, gửi lên bảo hành.\n\nNgoài ra có thể do ống kính bẩn hoặc cài đặt bitrate thấp — hãy lau lens bằng khăn mềm và điều chỉnh lại chất lượng hình ảnh trong app. Tránh đặt/lắp camera ở nơi ẩm ướt vì có thể ảnh hưởng đến ống kính và cảm biến về lâu dài.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "audio", question: "Không nghe được âm thanh?", answer: "B1: Kiểm tra volume/âm lượng trên app đã bật và kéo đủ lớn chưa.\nB2: Kiểm tra đã bật quyền micro trong app và trên điện thoại. Nếu đã bật mà vẫn không nghe được, tắt rồi bật lại tính năng audio trong cài đặt camera.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "audio", question: "Không nói chuyện được qua camera?", answer: "B1: Test thử nút mic (đàm thoại) trên app xem có phản hồi không.\nB2: Cấp quyền micro cho app EZVIZ trong cài đặt điện thoại.\nB3: Kiểm tra quyền micro/loa trên camera và đảm bảo thiết bị không bị lỗi phần cứng.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "ptz", question: "Camera không quay (PTZ)?", answer: "Dấu hiệu: camera đứng yên, không phản hồi lệnh xoay.\n\nB1: Thử điều khiển xoay trực tiếp trên app để xác nhận camera có phản hồi không.\nB2: Nếu không phản hồi, thử reset lại thiết bị.\nB3: Có thể do lỗi motor hoặc phần mềm. Nếu reset vẫn lỗi, cần bảo hành.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "alert", question: "Camera báo động sai liên tục?", answer: "Do độ nhạy phát hiện cao hoặc môi trường nhiễu. Hãy giảm độ nhạy và thiết lập vùng cảnh báo.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "power", question: "Nguồn chập chờn (lúc lên lúc không)", answer: "Dấu hiệu: camera lúc có nguồn lúc mất, không ổn định.\n\nB1: Lắc nhẹ dây nguồn tại các điểm cắm để kiểm tra tiếp xúc có lỏng không.\nB2: Thử đổi sang dây nguồn khác.\nB3: Nếu vẫn chập chờn, thay dây nguồn mới hoặc mang đến bảo hành.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "power", question: "Camera bị nóng khi sử dụng", answer: "Dấu hiệu: sờ vào thân camera thấy nóng.\n\nB1: Tắt nguồn và để camera nguội tự nhiên.\nB2: Kiểm tra vị trí lắp đặt — tránh đặt camera ở nơi bí, nắng chiếu trực tiếp; nên đặt/lắp ở nơi thoáng mát.\nLưu ý: camera hơi ấm khi hoạt động liên tục (đặc biệt ban đêm bật hồng ngoại) là bình thường; chỉ đáng lo khi nóng bất thường kèm theo lỗi hình ảnh/tự tắt.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "network", question: "Không tìm thấy tín hiệu WiFi phát ra từ camera khi cài đặt", answer: "Dấu hiệu: điện thoại không tìm thấy camera trong danh sách thiết bị/mạng khi đang cài đặt.\n\nB1: Reset lại camera.\nB2: Chờ 1–2 phút sau khi reset để camera khởi động xong và phát tín hiệu trở lại rồi thử tìm lại.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "power", question: "Camera không lên nguồn? / Đèn không sáng", answer: "Dấu hiệu: không lên đèn, không có phản hồi khi cắm điện.\n\nB1: Kiểm tra xem camera có nguồn hay không (xem đèn trạng thái có chớp xanh không). Thử đổi sang ổ cắm/ổ điện khác để loại trừ do nguồn điện nhà.\nB2: Nếu không, thử đổi sang adapter/dây nguồn khác cùng thông số. Nếu đổi adapter khác vẫn không được thì kết luận adapter/dây nguồn bị hỏng, mang thiết bị đến bảo hành.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "network", question: "Làm sao cập nhật firmware camera?", answer: "Vào phần cài đặt thiết bị trong app EZVIZ và chọn cập nhật firmware nếu có phiên bản mới.", link: "https://www.youtube.com/@hieutech" },
+      { model: "ALL Model", category: "account", question: "Xóa liên kết tài khoản Ezviz trên camera", answer: "B1: Xác định xem trong app có nút \"Đăng ký hủy liên kết\" hay không.\nB2: Nếu không có nút này, nhắn tin qua Zalo OA Ezviz với cú pháp: Số SN + hình ảnh thiết bị để được hỗ trợ xóa từ xa. Nếu có nút này, tiến hành rút nguồn camera trong 5 phút rồi bấm vào nút \"Đăng ký hủy liên kết\" để xóa thiết bị.\n\n(Áp dụng cho trường hợp không thể xóa thiết bị khỏi tài khoản cũ.)", link: "https://www.youtube.com/@hieutech" },
+      { model: "DL06", category: "lock", question: "Lỗi mở cửa từ bên ngoài mà không cần nhập mật khẩu?", answer: "Vị trí chốt cây ty không phù hợp", link: "https://youtube.com/shorts/llAwb2VXyBI?si=JobZH6Oztv5jRi_q" },
+      { model: "DL06", category: "lock", question: "Chốt trẻ em không hoạt động sau khi thay đổi tay nắm cửa", answer: "Thao tác điều chỉnh chốt cố định như video", link: "https://www.youtube.com/shorts/DgyArT-TgWk" },
+      { model: "DL50FVS", category: "lock", question: "Chốt motor khóa lỗi, tự đóng ra đóng vào", answer: "Lỗi lắp đặt, xem video xử lý", link: "https://www.youtube.com/watch?v=NGg7BN4IiKg&pp=0gcJCT4LAYcqIYzv" },
+      { model: "Smartlock", category: "lock", question: "Khóa lắp xong, không tự khóa, mở được từ bên ngoài", answer: "Lỗi lắp đặt, xem video xử lý", link: "https://www.youtube.com/watch?v=jyMsmaJ7IWo" },
+      { model: "DL06&DL06 Pro", category: "lock", question: "Cách đổi chiều chốt lõi khóa", answer: "Xem video hướng dẫn", link: "https://www.youtube.com/watch?v=bEMzq2JrmJ4" },
+      { model: "ALL Model", category: "account", question: "Cách kiểm tra quyền truy cập vào thiết bị", answer: "Xem video hướng dẫn", link: "https://www.youtube.com/shorts/mXtVc96Cd9A" },
+      { model: "Camera", category: "alert", question: "Cách vẽ vùng phát hiện", answer: "Xem video hướng dẫn", link: "https://www.youtube.com/shorts/_l2CrJ7uKpE" },
+      { model: "Camera", category: "network", question: "Cách kết nối wifi mới", answer: "Xem video hướng dẫn", link: "https://www.youtube.com/shorts/S2sgqlGBaQs" },
+      { model: "Smartlock", category: "lock", question: "Cách reset về cài đặt gốc khóa thông minh", answer: "Xem video hướng dẫn", link: "https://www.youtube.com/shorts/E4n1jJgN-Js" },
+      { model: "Lỗi mạng/WiFi", category: "network", question: "Mất kết nối / Ngoại tuyến / Không kết nối được với điện thoại, WiFi", answer: "Lỗi phổ biến nhất. Bao gồm: mất kết nối, ngoại tuyến, ko kết nối vào app được, báo offline, thiết bị ngoại tuyến, không hoạt động, ko load xem được.\n\nCách xử lý (tuần tự theo các bước, nếu bước 1 không được thì đến bước 2, không được nữa thì đến bước 3...):\n1. Kiểm tra và cập nhật phiên bản mới nhất, nếu đã là phiên bản mới nhất thì reset camera.\nLý do: sau 1 thời gian dài không cập nhật, một số tính năng có thể gặp trục trặc vì không còn đồng bộ với hệ thống dữ liệu chung của Ezviz nên cần cập nhật phiên bản mới. Reset cũng giúp camera khôi phục lại trạng thái ban đầu nếu trong quá trình sử dụng xảy ra những lỗi nhỏ khiến dữ liệu mất đồng bộ.\n2. Kiểm tra môi trường wifi.\nCheck tín hiệu mạng tại vùng lắp đặt → nếu không được thì tháo camera xuống để gắn gần nguồn mạng theo dõi → nếu vẫn không được thì thử nguồn mạng khác (hotspot điện thoại,...).\nLý do: sau 1 thời gian, có thể do số lượng thiết bị sử dụng wifi tăng lên (khách lắp thêm nhiều camera khác, thêm TV, điện thoại) làm giảm tín hiệu wifi. Nếu kéo camera gần nguồn mạng hoặc dùng hotspot điện thoại mà bắt được thì khả năng sóng wifi của khách đang yếu hơn bình thường, có thể tư vấn khách nâng cấp nguồn mạng hoặc lắp camera ở vị trí gần mạng wifi hơn.\n3. Áp dụng bảo hành.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Lỗi mạng/WiFi", category: "network", question: "Lỗi kết nối sau khi thay đổi mạng / Đổi WiFi / Đổi điện thoại", answer: "Khách hàng đổi mật khẩu WiFi, đổi nhà mạng hoặc đổi điện thoại mới dẫn đến mất kết nối. Bao gồm: đổi wifi, đổi mật khẩu, đổi điện thoại.\n\nCách xử lý (tuần tự theo các bước, nếu bước 1 không được thì đến bước 2, không được nữa thì đến bước 3...):\nCó thể tham khảo video hướng dẫn cách đổi wifi cho camera.\n1. Reset camera\nNhấn giữ nút reset trên camera đến khi thiết bị báo đã reset → dùng app Ezviz quét lại mã QR code của camera → tiến hành cài đặt lại bước chọn WiFi → camera sẽ yêu cầu nhập mã xác thực thiết bị, đây là dãy 6 chữ cái in hoa dưới đáy camera còn gọi là Verification Code → tiếp tục đến khi hoàn thành.\n2. Trường hợp khách đổi tài khoản\nNếu khách đổi qua tài khoản khác trên app Ezviz: rút điện camera (để camera offline) trong 3-5 phút, dùng tài khoản mới quét lại mã QR Code dưới đáy camera để xóa liên kết cũ và cài đặt lại như một camera mới.", link: "https://www.youtube.com/shorts/S2sgqlGBaQs" },
+      { model: "Lỗi hình ảnh/lưu trữ", category: "storage", question: "Không xem lại được video / Không lưu trữ / Lỗi thẻ nhớ", answer: "Lỗi liên quan đến lưu trữ và xem lại dữ liệu. Bao gồm: không xem lại được, không lưu, không lưu trữ, không nhận thẻ nhớ, lỗi thẻ nhớ, không định dạng được thẻ.\n\nCách xử lý (tuần tự theo các bước, nếu bước 1 không được thì đến bước 2, không được nữa thì đến bước 3...):\n1. Kiểm tra và cập nhật phiên bản mới nhất, nếu đã là phiên bản mới nhất thì reset camera.\nLý do: sau 1 thời gian dài không cập nhật, một số tính năng có thể gặp trục trặc vì không còn đồng bộ với hệ thống dữ liệu chung của Ezviz nên cần cập nhật phiên bản mới. Reset cũng giúp camera khôi phục lại trạng thái ban đầu nếu trong quá trình sử dụng xảy ra những lỗi nhỏ khiến dữ liệu mất đồng bộ.\n2. Định dạng lại thẻ nhớ\nVào mục Cài đặt → chọn Danh sách bảo ghi → định dạng lại thẻ nhớ → nếu không được thì thử 1 thẻ nhớ khác thay thế → nếu thẻ khác dùng được thì do thẻ cũ đã hư.\n3. Áp dụng bảo hành.\n\nLưu ý: nếu thẻ mới cũng không nhận/khởi tạo không thành công thì khả năng cao là camera bị lỗi (không phải do thẻ). Thẻ nhớ phải là thẻ chính hãng — hàng trôi nổi khả năng gặp sự cố rất cao.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Lỗi hình ảnh/lưu trữ", category: "video", question: "Lỗi về màu sắc / Hình ảnh (mờ, chói, trắng đen, không màu)", answer: "Các vấn đề về chất lượng hình ảnh. Bao gồm: mất màu, bị mờ, bị chói, trắng đen, đèn xanh đỏ, hồng ngoại, ngược hình ảnh, đèn vàng, mờ màn hình.\n\nCách xử lý (tuần tự theo các bước, nếu bước 1 không được thì đến bước 2, không được nữa thì đến bước 3...):\n1. Reset lại camera để cấu hình về lại trạng thái ban đầu.\n2. Kiểm tra lại mục Cài đặt hiện tại\nMục \"Chuyển đổi ngày/đêm\" → chọn \"Tự động (đề xuất)\".\nĐộ nhạy chuyển đổi ngày/đêm: độ nhạy càng cao thì sự chênh lệch ánh sáng càng dễ kích hoạt camera bật đèn trợ sáng.\nMục \"Chế độ nhìn xuyên đêm\" → chọn \"Chế độ ban đêm thông minh\".\n3. Áp dụng bảo hành.\n\nBổ sung theo từng dấu hiệu cụ thể:\n- Hình bị lóa/trắng/nhòe: kiểm tra xem camera có đang bị ánh sáng chiếu trực tiếp vào ống kính không (đèn, nắng, đèn pha xe...), thử đổi vị trí/góc lắp camera.\n- Hình bị ngược (lộn ngược/lật): vào app kiểm tra mục cài đặt xoay/lật hình ảnh và chỉnh lại cho đúng chiều lắp đặt thực tế.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Lỗi tính năng camera", category: "account", question: "Camera bị khóa / Mã hóa / Yêu cầu nhập mật khẩu", answer: "Lỗi liên quan đến bảo mật, mật khẩu. Bao gồm: bị khóa, mã hóa, bắt đăng nhập, quên mật khẩu.\n\nCách xử lý (tuần tự theo các bước, nếu bước 1 không được thì đến bước 2, không được nữa thì đến bước 3...):\nMã xác thực là mã được tạo ngay sau khi cài đặt camera vào app, hệ thống sẽ cho phép người dùng tạo mã xác thực mới. Nếu khách đã tạo mã xác thực mới mà không nhớ thì chỉ cần reset lại camera là thiết bị sẽ quay lại mặc định 6 chữ cái Verification Code.\n1. Tìm và nhập mã xác thực\nMã xác thực còn gọi là Verification Code, gồm 6 chữ cái in hoa nằm ở đáy thiết bị.\nCó thể vào mục Cài đặt, chọn Thông tin thiết bị, kéo xuống bên dưới sẽ thấy Mã xác nhận (bấm vào biểu tượng con mắt để hiển thị).\n2. Tắt yêu cầu mã xác thực mới theo yêu cầu của người dùng\nChọn Cài đặt → Cài đặt riêng tư → Tắt \"Mã hóa Video\" hoặc chọn Đổi mật khẩu.\nKhi đã tắt Mã hóa Video thì camera chia sẻ cho các tài khoản người dùng mà không còn yêu cầu mã hóa nữa, cho phép xem hình trực tiếp từ camera.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Lỗi tính năng camera", category: "ptz", question: "Camera tự động xoay / Xoay lung tung / Quay vào tường", answer: "Lỗi cơ chế xoay của camera. Bao gồm: tự xoay, quay vào tường, xoay lung tung.\n\nCách xử lý (tuần tự theo các bước, nếu bước 1 không được thì đến bước 2, không được nữa thì đến bước 3...):\n1. Tắt chế độ Tự động tuần tra\nVào mục Cài đặt → Cài đặt PTZ → Tự động tuần tra (tắt).\n2. Nếu khách hàng muốn sử dụng tính năng theo dõi tự động thì cần cài đặt Góc quay mặc định. Sau khi theo dõi đối tượng, camera sẽ tự động quay về Góc quay mặc định sau 30 giây.\nVào mục Cài đặt → Cài đặt trước PTZ → Tùy chỉnh cài đặt trước → Cài đặt trước → Điều chỉnh góc quay mong muốn trên app, sau đó lưu lại → trong giao diện Cài đặt trước PTZ chọn Lưu vị trí góc xoay hiện tại làm mặc định.\n\nNếu đã kiểm tra các mục trên mà camera vẫn xoay bất thường (tự quay vào tường / không xoay về đúng vị trí cũ):\nB1. Vào phần Cài đặt PTZ để hiệu chuẩn lại thiết bị (do khi lắp đặt, nếu chỉnh trực tiếp trên camera bằng tay có thể gây lệch vị trí).\nB2. Vào phần Cài đặt vị trí đặt trước và cài đặt lại vị trí đặt trước.\nB3. Kiểm tra và cập nhật firmware mới nhất nếu vẫn gặp lỗi.", link: "https://www.youtube.com/shorts/VwVrllt8y_s" },
+      { model: "Lỗi tính năng camera", category: "ptz", question: "Camera không xoay được (kẹt, không điều khiển được)", answer: "Lỗi khi camera không thể xoay hoặc chỉ xoay được một phần. Bao gồm: không xoay, kẹt, không quay.\n\nCách xử lý (tuần tự theo các bước, nếu bước 1 không được thì đến bước 2, không được nữa thì đến bước 3...):\nThông thường nếu khách hàng dùng tay xoay camera sẽ làm cho góc xoay bị lệch so với ghi nhớ góc xoay của thiết bị trên app. Khi đó, xoay bằng app sẽ không còn khớp nữa.\n1. Hiệu chuẩn lại góc quay\nCài đặt → Cài đặt PTZ → Hiệu chuẩn PTZ.\n2. Kiểm tra và cập nhật phiên bản mới nhất, nếu đã là phiên bản mới nhất thì reset lại camera.\nLý do: sau 1 thời gian dài không cập nhật, một số tính năng có thể gặp trục trặc vì không còn đồng bộ với hệ thống dữ liệu chung của Ezviz nên cần cập nhật phiên bản mới. Reset cũng giúp camera khôi phục lại trạng thái ban đầu nếu trong quá trình sử dụng xảy ra những lỗi nhỏ khiến dữ liệu mất đồng bộ.\n3. Bảo hành máy.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Lỗi tính năng camera", category: "audio", question: "Lỗi âm thanh (không nghe được, bị hú, rè)", answer: "Các vấn đề về âm thanh, đàm thoại. Bao gồm: không nghe tiếng, bị hú, âm thanh nhỏ, tạp âm, kêu tít tít.\n\nGiải thích: Camera khi ở gần thiết bị đang xem trực tiếp trên điện thoại sẽ có hiện tượng nhiễu sóng do không gian kín tạo ra tiếng vọng khi nghe trên app Ezviz. Di chuyển ra xa camera thì sẽ bình thường.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Lỗi tính năng camera", category: "alert", question: "Lỗi không nhận dạng được chuyển động / Không báo động", answer: "Camera không phát hiện hoặc không báo khi có người/chuyển động. Bao gồm: không báo động, không phát hiện người.\n\nCách xử lý:\nVào Cài đặt → Dò tìm thông minh → Chọn \"Áp dụng\" phát hiện người/âm thanh hoặc thay đổi hình ảnh tùy theo nhu cầu của khách hàng.\nSau đó vào lại mục Cài đặt → Thông báo tin nhắn → bật tính năng Nhận Tin nhắn Thiết bị.\nNgoài ra, có thể Lên kế hoạch lời nhắn của thiết bị (theo khung thời gian mình muốn, hoặc khoảng thời gian hiển thị thông báo,...).", link: "https://www.youtube.com/@hieutech" },
+      { model: "Lỗi App điều khiển", category: "account", question: "Lỗi chia sẻ thiết bị / Thêm thiết bị phụ", answer: "Không thể chia sẻ camera cho người dùng khác, kết nối tivi.\n\nCách xử lý (tuần tự theo các bước, nếu bước 1 không được thì đến bước 2, không được nữa thì đến bước 3...):\n1. Kiểm tra và cập nhật phiên bản mới nhất, nếu đã là phiên bản mới nhất thì reset lại camera.\nLý do: sau 1 thời gian dài không cập nhật, một số tính năng có thể gặp trục trặc vì không còn đồng bộ với hệ thống dữ liệu chung của Ezviz nên cần cập nhật phiên bản mới. Reset cũng giúp camera khôi phục lại trạng thái ban đầu nếu trong quá trình sử dụng xảy ra những lỗi nhỏ khiến dữ liệu mất đồng bộ.\n2. Chia sẻ thiết bị\nLưu ý, khi khách chia sẻ thiết bị, tài khoản được chia sẻ sẽ hiển thị thông báo nhận được chia sẻ và cần được đồng ý.\n3. Đổi tài khoản khác\nCài đặt camera vào 1 tài khoản khác và thử chia sẻ. Nếu do tài khoản cũ bị lỗi thì xóa thiết bị này ra, và vào lại tài khoản mới bằng chính số điện thoại hoặc email đã đăng ký tài khoản vừa xóa.\n4. Bảo hành.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Lỗi App điều khiển", category: "account", question: "Lỗi app ứng dụng liên quan đến OTP", answer: "Những trường hợp đăng nhập cần mã OTP xác thực hoặc bấm nút Quên mật khẩu để cấp lại nhưng hệ thống không gửi mã.\n- Tài khoản là Số điện thoại:\n+ Kiểm tra số điện thoại có đăng ký, thường người dùng sẽ không nhớ rõ là số họ tạo có số 0 ngay đầu hay không, vì nếu có hoặc không thì App sẽ tính là 2 tài khoản khác nhau. Ví dụ: 123xxx và 0123xxx được tính là 2 tài khoản khác nhau. Nên nếu như không nhận được mã OTP thì thử bỏ số 0 ngay đầu hoặc thêm ngược lại.\n+ Thử dùng 1 điện thoại khác để lấy lại mã.\n- Tài khoản là Email:\n+ Xem có liên kết với số điện thoại nào không để không làm theo cách trên.\n+ Nếu không liên kết thì chuyển sang 1 điện thoại khác để lấy lại mã.\n\nCách xử lý nhanh (tuần tự theo bước):\nB1. Kiểm tra số điện thoại nhập có đúng không (dùng đầu số +84 và bỏ số 0 ở đầu số điện thoại khi nhập).\nB2. Nếu vẫn không nhận được OTP, thử dùng điện thoại khác để yêu cầu mã (có thể do cài đặt quyền thông báo/tin nhắn trên điện thoại chính đang chặn).\nB3. Nếu vẫn không được, liên hệ Zalo OA Ezviz để được hỗ trợ.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Lỗi App điều khiển", category: "app", question: "Lỗi app ứng dụng liên quan đến thời gian trên app", answer: "1. Nếu camera bị lỗi thời gian, vào Cài đặt, mục Thông tin thiết bị, kéo chỉnh thông tin Múi giờ/Định dạng thời gian. Có thể reset lại camera và/hoặc cập nhật phiên bản mới cho camera để camera đồng bộ.\n2. Nếu muốn chỉnh cách hiển thị dòng thời gian lưu trữ trên lịch sử ghi hình, ở trang chính, chọn mục Tài khoản (bên dưới), vào Cài đặt, chọn Thiết lập bố cục, chỉnh kiểu dáng thời gian, chọn đồng bộ để áp dụng thời gian.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Lỗi App điều khiển", category: "alert", question: "Liên quan đến thông báo đẩy (spam thông báo, thông báo quá thường xuyên)", answer: "A. Nếu là spam thông báo của một camera bất kỳ:\nVào Cài đặt → Dò tìm thông minh → Nếu chọn áp dụng \"Phát hiện thay đổi hình ảnh\" thì mọi chuyển động thay đổi trong khung hình đều sẽ kích hoạt thông báo (người, thú nuôi, quạt máy, rèm cửa bay, TV đang phát sóng chương trình,...). Chỉ cần chọn áp dụng \"Phát hiện người\", hoặc cẩn trọng hơn nữa thì chọn \"Phát hiện âm thanh bất thường\" để giảm bớt các thông báo không cần thiết.\n\nNếu vẫn muốn giữ phát hiện chuyển động, vào mục Thông báo tin nhắn → muốn nhận Tin nhắn Thiết bị thì bật, không muốn nhận thì tắt → chọn Khoảng thời gian nhắn tin của Thiết bị (tối đa 30 phút, toàn bộ thông báo sẽ được dồn lại và gửi 1 lần sau 30 phút hoặc sau khoảng thời gian khách mong muốn).\n\nNgoài ra, có thể Lên kế hoạch lời nhắc (ví dụ chỉ đẩy thông báo trong khung giờ 8h tối đến 6h sáng, khung giờ khác thì không).\n\nLưu ý về thông báo ứng dụng EZVIZ: nếu tắt tính năng thông báo, thiết bị vẫn ghi nhận sự kiện nhưng cần mở app Ezviz để kiểm tra, thiết bị sẽ không đẩy tin nhắn ra màn hình điện thoại nữa.\n\nB. Nếu là spam thông báo do tài khoản:\nỞ trang chủ tài khoản, chọn mục Sự kiện (bên dưới) → Cài đặt → Cài đặt thông báo đẩy → chọn Thông báo tự kiểm tra (kiểm tra và test khả năng thông báo của app) hoặc chọn Không làm phiền — khi đó chỉ kiểm tra được các sự kiện trong Thư viện nhưng sẽ không nhận được các thông báo đẩy.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Lỗi App điều khiển", category: "app", question: "Lỗi ứng dụng (app) (thoát, đơ, không tải được)", answer: "Sự cố liên quan đến ứng dụng trên điện thoại, đăng nhập, tự đăng xuất, hiển thị camera trên App.\n\nVào App bị lag, đơ, không tải được:\n- Thử thoát ra khỏi App và mở lại App sau đó kiểm tra tình trạng.\n- Vào Cài đặt của điện thoại > Ứng dụng > App Ezviz > Xóa dữ liệu Cache > vào lại App kiểm tra.\n- Vào CH Play hoặc App Store để kiểm tra cập nhật App lên phiên bản mới nhất.\n- Xóa App và tải lại nếu tất cả các cách trên không hiệu quả.\n- Thử dùng 1 điện thoại khác mở App để xem có bị lag, đơ,... không. Nếu điện thoại đó không có hiện tượng này thì có thể do phiên bản điện thoại cũ không còn tương thích với App nữa, cần nâng cấp phần mềm điện thoại.\n\nSự cố liên quan đến hiển thị camera trên App (nhiều lúc vào App không thấy camera mà chỉ có màn hình trống):\n- Load lại màn hình chính của App (kéo thả trong màn hình chính để App làm mới).\n- Kiểm tra lại trong mục Tài khoản xem có đúng Số điện thoại, Email.\n- Tắt App mở lại.\n- Đăng xuất tài khoản và đăng nhập lại.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Lỗi thiết bị", category: "power", question: "Camera không có tín hiệu / Không lên nguồn / Chết nguồn", answer: "Lỗi về nguồn điện hoặc tín hiệu cơ bản. Bao gồm: không có tín hiệu, ko lên nguồn, không sáng đèn, ko sạc được.\n\nCách xử lý: Bảo hành.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Lỗi thiết bị", category: "power", question: "Lỗi cài đặt lại / Reset / Kết nối lại không được", answer: "Khách hàng đã thử reset nhưng không thành công. Bao gồm: reset, cài đặt lại, nhấn nút reset không phản hồi.\n\nCách tự kiểm tra trước khi bảo hành:\nB1: Giữ nút reset liên tục trong 10–15 giây (không nhấn nhả) đến khi thiết bị có phản hồi (đèn đổi trạng thái/khởi động lại).\nB2: Thử lại nhiều lần, đảm bảo nhấn đúng vị trí nút reset.\nB3: Nếu vẫn không phản hồi: Bảo hành.", link: "https://www.youtube.com/@hieutech" },
+      { model: "ALL Model", category: "network", question: "Tôi lỡ bấm vào nút xóa thiết bị", answer: "Do đã xóa thiết bị nên cần phải quét lại mã QR trên camera để kết nối lại (có thể quét từ xa nếu đã lưu sẵn mã QR).", link: "https://www.youtube.com/@hieutech" },
+      { model: "ALL Model", category: "network", question: "Tôi bấm nâng cấp thiết bị mà báo không thành công", answer: "Đầu tiên phải xét xem camera có gặp lỗi gì trong quá trình sử dụng không. Nếu không thì chưa cần phải cập nhật, vì phiên bản cập nhật thường nhắm vào các thiết bị đang gặp lỗi — không phải thiết bị của bạn.\nNếu muốn cập nhật lên phiên bản mới thì cần đảm bảo app đang ở phiên bản cao nhất, đồng thời đảm bảo mạng ổn định thì mới tiến hành cập nhật.\nNếu vẫn không được thì hãy liên hệ Ezviz để được hỗ trợ.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "alert", question: "Tôi bật nhiều tính năng phát hiện thông minh không được", answer: "Do giới hạn về phần cứng, các tính năng phát hiện thông minh có thể không hoạt động đồng thời được — hãy lựa chọn tính năng theo thứ tự ưu tiên cần dùng.", link: "https://www.youtube.com/@hieutech" },
+      { model: "ALL Model", category: "network", question: "Tôi có thể nâng cấp phần mềm ở đâu", answer: "Vào mục Thông tin thiết bị trong app — nếu thiết bị có phiên bản mới, bạn sẽ thấy tùy chọn cập nhật tại đây.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "storage", question: "Thẻ nhớ tôi không lưu hoặc chỉ lưu được 1 đoạn ngắn", answer: "Bước 1: Xác định xem thiết bị đã bật ghi hình 24/7 chưa (nếu chưa hãy bật lên). Nếu chỉ muốn ghi hình theo sự kiện thì cần bật tính năng phát hiện lên.\nBước 2: Nếu đã thao tác như trên mà thiết bị vẫn bị hụt thời lượng lưu trữ thì cần kiểm tra lại thẻ nhớ (có thể thẻ bị lỗi).", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "app", question: "Camera của tôi bị sai ngày giờ", answer: "Bước 1: Xác định xem thiết bị có đang kết nối với đầu ghi không. Nếu có, hãy gỡ liên kết đầu ghi và kiểm tra lại; nếu gỡ liên kết xong mà camera hiển thị giờ bình thường thì lỗi là do đầu ghi.\nNếu gỡ liên kết đầu ghi mà vẫn sai giờ thì chuyển sang Bước 2.\nBước 2: Tiến hành chỉnh lại múi giờ +7 ở mục Thông tin thiết bị để kiểm tra. Nếu vẫn không đúng thì hãy reset và kết nối lại từ đầu (để loại trừ yếu tố do cài đặt).\nBước 3: Nếu thực hiện các bước trên vẫn không được, hãy kiểm tra và thay pin CMOS cho camera (loại pin CR1220) — có thể pin này đã hết.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "audio", question: "Camera của tôi xem lại bản ghi hình không có âm thanh", answer: "Có thể bạn đang tắt tính năng ghi âm thanh ở camera.\nCách xử lý: vào phần Cài đặt → Cài đặt âm thanh → bật tính năng âm thanh lên.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "video", question: "Hình ảnh camera của tôi bị cháy sáng, sáng quá mức", answer: "Hãy vào phần Cài đặt → Cài đặt hình ảnh → bật/tắt WDR sao cho phù hợp, sau đó chọn lại chế độ màu sắc hình ảnh cho phù hợp.\nLưu ý: camera trong nhà khi dùng cho khu vực ngoài trời thì hiện tượng cháy sáng là bình thường.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "video", question: "Làm thế nào để tắt đèn LED của camera vào ban đêm", answer: "Bạn đang bật tính năng nhìn màu ban đêm (Color Night Vision) nên đèn LED sẽ sáng.\nĐể tắt, hãy vào phần Cài đặt → Cài đặt hình ảnh → chuyển sang chế độ nhìn xuyên đêm đen trắng.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "video", question: "Tại sao camera chỉ ghi hình trắng đen vào ban đêm mà không có màu?", answer: "Bạn đang bật chế độ nhìn xuyên đêm đen trắng.\nĐể chuyển sang có màu, hãy vào phần Cài đặt → Cài đặt hình ảnh → chuyển sang chế độ nhìn xuyên đêm có màu.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "video", question: "Camera của tôi hình ảnh bị lật ngược", answer: "Cách xử lý: vào phần Cài đặt → Cài đặt hình ảnh → chọn tính năng Lật hình ảnh.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "ptz", question: "Camera của tôi không xoay theo dõi người được", answer: "Bạn đang tắt tính năng theo dõi đối tượng.\nCách xử lý:\nBước 1: đảm bảo thiết bị đã bật chế độ nhận diện đối tượng ở mục Phát hiện thông minh.\nBước 2: vào phần Cài đặt → Cài đặt PTZ → bật mục theo dõi (tracking).", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "video", question: "Tôi không tắt được đèn LED trên camera", answer: "Bước 1: kiểm tra mục đèn pha ở giao diện camera có đang bật hay không (biểu tượng đèn pin) — nếu đang bật hãy tắt đi.\nBước 2: nếu là ban đêm, hãy vào phần Cài đặt → Cài đặt hình ảnh → chuyển sang chế độ nhìn xuyên đêm đen trắng.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "account", question: "Mật khẩu mã hóa camera của tôi là gì", answer: "Mật khẩu mặc định là 6 chữ cái viết hoa ở đáy camera, có thể xem lại thông tin này ở mục Thông tin thiết bị trên app.\nTrường hợp khách hàng đã tự đặt mật khẩu mã hóa riêng thì cần nhập đúng mật khẩu đó. Nếu quên mật khẩu, bắt buộc phải reset thiết bị để cài đặt lại từ đầu.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "alert", question: "Tại sao không có biểu tượng người/xe cộ trên hình ảnh thumbnail camera", answer: "Bạn cần bật tính năng phát hiện thông minh và bật thông báo trên thiết bị.", link: "https://www.youtube.com/@hieutech" },
+      { model: "Camera WiFi", category: "video", question: "Tại sao camera không hiện hình ảnh xem trước trên video", answer: "Do tình trạng mạng hiện tại không đủ để load hình ảnh xem trước đầy đủ cho video. Điều này không ảnh hưởng đến chất lượng video khi xem lại.\n--> Cải thiện chất lượng mạng có thể xử lý được vấn đề này.", link: "https://www.youtube.com/@hieutech" }
+    ];
+    faqsData.forEach((f, i) => f._id = i);
 
     // DATA VIDEOS
     const productsData = [
@@ -712,7 +754,7 @@
             name: 'EZVIZ C6N 1080p (2MP)',
             category: 'Camera Wi-Fi Trong Nhà',
             type: 'camera',
-            image: 'https://s3.amazonaws.com/mfs.ezvizlife.com/dc14ac15c970017dfb11d0a9ee02e919.jpg',
+            image: 'https://mfs.ezvizlife.com/dc14ac15c970017dfb11d0a9ee02e919.jpg',
             shortDesc: 'Camera Wi-Fi quay quét thông minh, tầm nhìn 360 độ, độ phân giải 1080p. Bảo vệ an ninh ngày và đêm với tính năng hồng ngoại.',
             specs: {
                 'Cảm biến hình ảnh': '1/4" Progressive Scan CMOS',
@@ -733,7 +775,7 @@
             name: 'EZVIZ C3W Pro (4MP)',
             category: 'Camera Wi-Fi Ngoài Trời',
             type: 'camera',
-            image: 'https://s3.amazonaws.com/mfs.ezvizlife.com/332b25470b53fd28e87fc3c066d79e63.jpg',
+            image: 'https://mfs.ezvizlife.com/332b25470b53fd28e87fc3c066d79e63.jpg',
             shortDesc: 'Camera ngoài trời có khả năng ghi hình màu ban đêm, tích hợp AI phát hiện con người và chuẩn chống nước IP67.',
             specs: {
                 'Cảm biến hình ảnh': '1/2.7" Progressive Scan CMOS',
@@ -754,7 +796,7 @@
             name: 'EZVIZ C8C',
             category: 'Camera PTZ Ngoài Trời',
             type: 'camera',
-            image: 'https://s3.amazonaws.com/mfs.ezvizlife.com/c0d509b6990574cab9b1addcbbe19858.jpg',
+            image: 'https://mfs.ezvizlife.com/c0d509b6990574cab9b1addcbbe19858.jpg',
             shortDesc: 'Camera Wi-Fi quay quét ngoài trời đầu tiên của EZVIZ. Xóa bỏ điểm mù với tầm nhìn 360 độ và phát hiện người bằng AI.',
             specs: {
                 'Cảm biến hình ảnh': '1/2.7" Progressive Scan CMOS',
@@ -775,7 +817,7 @@
             name: 'EZVIZ BC1C (eLife)',
             category: 'Camera Dùng Pin',
             type: 'camera',
-            image: 'https://s3.amazonaws.com/mfs.ezvizlife.com/337ccf5255cffbb6006045265e1c255e.jpg',
+            image: 'https://mfs.ezvizlife.com/337ccf5255cffbb6006045265e1c255e.jpg',
             shortDesc: 'Camera pin sạc không dây 100%, pin dung lượng cao sử dụng lên đến 210 ngày, tích hợp sẵn bộ nhớ eMMC 32GB.',
             specs: {
                 'Cảm biến hình ảnh': '1/2.8" 2-Megapixel Advanced CMOS',
@@ -1010,25 +1052,131 @@
             }
         },
         {
-            id: 'h6c-c6n-g1-2k',
-            name: 'EZVIZ H6c/C6N G1 2K',
+            id: 'h6c-g1-2k',
+            name: 'EZVIZ H6c G1 2K',
             category: 'Camera Wi-Fi xoay quét trong nhà',
             type: 'camera',
             image: 'https://mfs.ezvizlife.com/fcb5fdba125fb573d325134a0bdf6440.jpg',
             video: 'https://www.youtube.com/watch?v=SIxP7QeRRJg&t=55s',
-            shortDesc: 'Thế hệ camera xoay quét (pan-tilt) trong nhà mới của EZVIZ với thiết kế mới, quan sát màu ban đêm, phát hiện chuyển động người bằng AI và màn chắn riêng tư vật lý.',
+            shortDesc: 'Thế hệ camera xoay quét (pan-tilt) trong nhà mới của EZVIZ, độ phân giải 2K, quan sát màu ban đêm và màn chắn riêng tư vật lý. Cùng dòng H6c G1 còn có bản 3K và 4K.',
             specs: {
                 'Cảm biến hình ảnh': 'F2.0, 1/2.7" CMOS quét tuần tự',
-                'Độ phân giải': '2304 × 1296 (2K/4MP); dòng H6c/C6N G1 còn có bản 3MP, 5MP và 8MP',
+                'Độ phân giải': '2304 × 1296 (2K); cùng dòng H6c G1 còn có bản 3K (2880×1620) và 4K (3840×2160)',
+                'Ống kính / Góc quan sát': '4mm F2.0, chéo 98°, ngang 83°, dọc 44°',
+                'Góc xoay Pan/Tilt': '350° ngang, 85° dọc',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Smart Color Night Vision có đèn tích hợp, khẩu độ lớn F2.0, tối đa 10m',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 802.11a/b/g/n 2.4GHz; cổng RJ45 10/100M; hỗ trợ ghép nối Bluetooth',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'DC 5V/1A qua Type-C, tối đa 5W',
+                'Chuẩn chống nước & bụi': 'Không có chuẩn chống nước & bụi',
+                'Tính năng chính': 'Thế hệ mới của dòng camera indoor bán chạy nhất EZVIZ (hơn 7 triệu chiếc H6c bán ra toàn cầu 2022-2024), thiết kế lại đạt nhiều giải thưởng thiết kế quốc tế; Độ phân giải 2K, khẩu độ lớn F2.0 bắt sáng tốt trong điều kiện thiếu sáng; Smart Color Night Vision có đèn tích hợp cho hình ảnh màu ban đêm thay vì IR đen trắng, tầm 10m; AI phát hiện chuyển động/hình dáng người (Human Detection) kết hợp Smart Tracking tự động bám chủ thể; Auto-Patrol Mode tuần tra tự động theo vùng tùy chỉnh; Đàm thoại 2 chiều bằng nút chạm; WDR cân bằng sáng tối; Màn trập riêng tư vật lý (Physical Privacy Shutter); Nén H.264/H.265 giảm 50% dung lượng lưu trữ và băng thông; Mã hóa đầu cuối AES, truyền dữ liệu TLS'
+            }
+        },
+        {
+            id: 'h6c-g1-3k',
+            name: 'EZVIZ H6c G1 3K',
+            category: 'Camera Wi-Fi xoay quét trong nhà',
+            type: 'camera',
+            image: 'https://mfs.ezvizlife.com/2a59a782e5f57405d18c43d49508a20e.png',
+            shortDesc: 'Bản nâng cấp độ phân giải 3K của dòng H6c G1, hình ảnh sắc nét hơn, cùng các tính năng AI phát hiện người và quan sát màu ban đêm. Cùng dòng còn có bản 2K và 4K.',
+            specs: {
+                'Cảm biến hình ảnh': '1/3" CMOS quét tuần tự',
+                'Độ phân giải': '2880 × 1620 (3K); cùng dòng H6c G1 còn có bản 2K (2304×1296) và 4K (3840×2160)',
+                'Ống kính / Góc quan sát': '4mm F1.6, chéo 105°, ngang 88°, dọc 46°',
+                'Góc xoay Pan/Tilt': '350° ngang, 85° dọc',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Smart Color Night Vision có đèn tích hợp, khẩu độ lớn F1.6, tối đa 10m',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 6 (802.11a/b/g/n) 2.4GHz; cổng RJ45 10/100M',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'DC 5V/2A qua Type-C, tối đa 8W',
+                'Chuẩn chống nước & bụi': 'Không có chuẩn chống nước & bụi',
+                'Tính năng chính': 'Bản nâng cấp độ phân giải 3K (2880×1620) của dòng H6c G1 — "bản làm lại của H6c yêu thích" theo EZVIZ, chi tiết sắc nét hơn hẳn bản 2K; Cảm biến 1/3" khẩu độ F1.6 lớn hơn cho ánh sáng yếu; Smart Color Night Vision có đèn tích hợp, tầm 10m; AI Smart Human Detection, Auto-Zoom Tracking tự động bám và phóng to chủ thể; Auto-Patrol Mode; Đàm thoại 2 chiều bằng nút chạm; WDR cân bằng sáng tối; Wi-Fi 6, màn trập riêng tư vật lý; giảm 50% dung lượng lưu trữ/băng thông; Mã hóa đầu cuối AES, truyền dữ liệu TLS; hơn 7 triệu chiếc dòng H6c đã bán ra toàn cầu (2022-2024)'
+            }
+        },
+        {
+            id: 'h6c-g1-4k',
+            name: 'EZVIZ H6c G1 4K',
+            category: 'Camera Wi-Fi xoay quét trong nhà',
+            type: 'camera',
+            image: 'https://mfs.ezvizlife.com/f3865858cb3ceb69767f32edd7ad308f.png',
+            shortDesc: 'Bản độ phân giải 4K thực cao cấp nhất dòng H6c G1, bổ sung phát hiện thú cưng và cảnh báo tiếng động lớn. Cùng dòng còn có bản 2K và 3K.',
+            specs: {
+                'Cảm biến hình ảnh': '1/3" CMOS quét tuần tự',
+                'Độ phân giải': '3840 × 2160 (4K thực); cùng dòng H6c G1 còn có bản 2K (2304×1296) và 3K (2880×1620)',
+                'Ống kính / Góc quan sát': '4mm F1.6, chéo 110°, ngang 92°, dọc 51°',
+                'Góc xoay Pan/Tilt': '350° ngang, 85° dọc',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Smart Color Night Vision có đèn tích hợp, khẩu độ lớn F1.6, tối đa 10m',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 6 băng tần kép (2.4/5GHz) 802.11a/b/g/n; cổng RJ45 10/100M',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'DC 5V/2A qua Type-C, tối đa 8W',
+                'Chuẩn chống nước & bụi': 'Không có chuẩn chống nước & bụi',
+                'Tính năng chính': 'Bản độ phân giải 4K thực (3840×2160, "True 4K") cao cấp nhất dòng H6c G1; Cảm biến 1/3" khẩu độ F1.6, Smart Color Night Vision tầm 10m; AI phát hiện hình dáng người và thú cưng (Human & Pet Detection), Auto-Zoom Tracking; True WDR cân bằng sáng tối; Phát hiện tiếng động lớn (Loud Noise Detection); Auto-Patrol Mode, đàm thoại 2 chiều bằng nút chạm; Wi-Fi 6 băng tần kép ổn định hơn; Màn trập riêng tư vật lý; giảm 50% dung lượng lưu trữ/băng thông so với 4K thông thường; Mã hóa đầu cuối AES, truyền dữ liệu TLS'
+            }
+        },
+        {
+            id: 'c6n-g1-2k',
+            name: 'EZVIZ C6N G1 2K',
+            category: 'Camera Wi-Fi xoay quét trong nhà',
+            type: 'camera',
+            image: 'https://mfs.ezvizlife.com/225f293dee06112b85a49ed88664335c.png',
+            video: 'https://www.youtube.com/watch?v=SIxP7QeRRJg&t=55s',
+            shortDesc: 'Camera xoay quét (pan-tilt) trong nhà thế hệ mới của EZVIZ dòng C6N G1, độ phân giải 2K, cùng thế hệ thiết kế với H6c G1. Cùng dòng còn có bản 3K và 4K.',
+            specs: {
+                'Cảm biến hình ảnh': 'F2.0, 1/2.7" CMOS quét tuần tự',
+                'Độ phân giải': '2304 × 1296 (2K); cùng dòng C6N G1 còn có bản 3K (2880×1620) và 4K (3840×2160)',
                 'Ống kính / Góc quan sát': '4mm F2.0, chéo 98°, ngang 83°',
                 'Góc xoay Pan/Tilt': '350° ngang, 85° dọc',
-                'Hồng ngoại / Quan sát màu ban đêm': 'Tối đa 10m',
+                'Hồng ngoại / Quan sát màu ban đêm': 'IR-cut lọc hồng ngoại tự động chuyển đổi, tối đa 10m',
                 'Màn hình': '—',
-                'Kết nối mạng': 'Wi-Fi 802.11a/b/g/n; cổng RJ45 10/100M',
-                'Lưu trữ': 'MicroSD tối đa 512GB; hỗ trợ lưu trữ đám mây',
+                'Kết nối mạng': 'Wi-Fi 802.11b/g/n 2.4GHz; cổng RJ45',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
                 'Nguồn điện / Pin': 'DC 5V/1A, tối đa 5W',
                 'Chuẩn chống nước & bụi': 'Không có chuẩn chống nước & bụi',
-                'Tính năng chính': 'Thế hệ camera indoor bán chạy nhất của EZVIZ (hơn 7 triệu chiếc bán ra toàn cầu), nhiều giải thiết kế quốc tế; Độ phân giải 2K, khẩu độ lớn F2.0 bắt sáng tốt trong điều kiện thiếu sáng; Smart Color Night Vision với đèn tích hợp cho màu sắc chân thực thay vì ảnh IR đen trắng, tầm 10m; AI Smart Human Detection + Smart Tracking bám nét chủ thể, phát hiện tiếng động lớn, Auto-Patrol Mode; Màn trập riêng tư vật lý (Physical Privacy Shutter) che ống kính hoàn toàn; Xoay 350° ngang/85° dọc, hỗ trợ cả Wi-Fi và Ethernet, nén H.265 giảm 50% dung lượng file'
+                'Tính năng chính': 'Model CS-C6N-R200-1L3WFL — cùng thế hệ "Next-Generation Pan & Tilt" với H6c G1, dòng C6N đã bán hơn 7 triệu chiếc toàn cầu (2022-2024); Độ phân giải 2K, khẩu độ F2.0; Smart Color Night Vision có đèn tích hợp, tầm 10m; AI phát hiện hình dáng người (Human Shape Detection) + Smart Tracking; Auto-Patrol Mode; Đàm thoại 2 chiều bằng nút chạm; WDR cân bằng sáng tối; Màn trập riêng tư vật lý (motor hóa); Giảm 50% dung lượng lưu trữ/băng thông; Mã hóa đầu cuối AES, truyền dữ liệu TLS'
+            }
+        },
+        {
+            id: 'c6n-g1-3k',
+            name: 'EZVIZ C6N G1 3K',
+            category: 'Camera Wi-Fi xoay quét trong nhà',
+            type: 'camera',
+            image: 'https://mfs.ezvizlife.com/2a59a782e5f57405d18c43d49508a20e.png',
+            shortDesc: 'Bản nâng cấp độ phân giải 3K của dòng C6N G1, hình ảnh sắc nét hơn. Cùng dòng còn có bản 2K và 4K.',
+            specs: {
+                'Cảm biến hình ảnh': '1/3" CMOS quét tuần tự',
+                'Độ phân giải': '2880 × 1620 (3K); cùng dòng C6N G1 còn có bản 2K (2304×1296) và 4K (3840×2160)',
+                'Ống kính / Góc quan sát': '4mm F1.6, chéo 105°, ngang 88°, dọc 46°',
+                'Góc xoay Pan/Tilt': '350° ngang, 85° dọc',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Smart Color Night Vision có đèn tích hợp, khẩu độ lớn F1.6, tối đa 10m',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 6 băng tần kép (802.11a/b/g/n/ac/ax) 2.4GHz',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'DC 5V/2A qua Type-C, tối đa 8W',
+                'Chuẩn chống nước & bụi': 'Không có chuẩn chống nước & bụi',
+                'Tính năng chính': 'Bản 3K (2880×1620) của dòng C6N G1, cảm biến 1/3" khẩu độ F1.6; Smart Color Night Vision tầm 10m; AI Smart Human Detection, Auto-Zoom Tracking; Auto-Patrol Mode; Đàm thoại 2 chiều bằng nút chạm; WDR cân bằng sáng tối; Wi-Fi 6 băng tần kép; Màn trập riêng tư vật lý; giảm 50% dung lượng lưu trữ/băng thông so với thông thường; Mã hóa đầu cuối AES, truyền dữ liệu TLS'
+            }
+        },
+        {
+            id: 'c6n-g1-4k',
+            name: 'EZVIZ C6N G1 4K',
+            category: 'Camera Wi-Fi xoay quét trong nhà',
+            type: 'camera',
+            image: 'https://mfs.ezvizlife.com/f3865858cb3ceb69767f32edd7ad308f.png',
+            shortDesc: 'Bản độ phân giải 4K thực cao cấp nhất dòng C6N G1, bổ sung phát hiện thú cưng và cảnh báo tiếng động lớn. Cùng dòng còn có bản 2K và 3K.',
+            specs: {
+                'Cảm biến hình ảnh': '1/3" CMOS quét tuần tự',
+                'Độ phân giải': '3840 × 2160 (4K thực); cùng dòng C6N G1 còn có bản 2K (2304×1296) và 3K (2880×1620)',
+                'Ống kính / Góc quan sát': '4mm F1.6, chéo 110°, ngang 92°, dọc 51°',
+                'Góc xoay Pan/Tilt': '350° ngang, 85° dọc',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Smart Color Night Vision có đèn tích hợp, khẩu độ lớn F1.6, tối đa 10m',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 6 băng tần kép (2.4/5GHz) 802.11a/b/g/n',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'DC 5V/2A, tối đa 8W',
+                'Chuẩn chống nước & bụi': 'Không có chuẩn chống nước & bụi',
+                'Tính năng chính': 'Bản 4K thực (3840×2160) cao cấp nhất dòng C6N G1, cảm biến 1/3" khẩu độ F1.6; AI phát hiện hình dáng người và thú cưng (Human & Pet Detection), hỗ trợ cảm biến PIR; Auto-Zoom Tracking; True WDR cân bằng sáng tối; Phát hiện tiếng động lớn (Loud Noise Detection); Auto-Patrol Mode; Đàm thoại 2 chiều bằng nút chạm; Wi-Fi 6 băng tần kép (2.4/5GHz); Màn trập riêng tư vật lý; Giảm 50% dung lượng lưu trữ/băng thông; Mã hóa đầu cuối AES, truyền dữ liệu TLS'
             }
         },
         {
@@ -1711,14 +1859,18 @@
 
     // STATE
     let activeTab = 'products';
-    let expandedFaq = null;
+    let faqView = 'categories'; // 'categories' | 'issues' | 'detail' | 'search'
+    let faqActiveCategory = null;
+    let faqActiveEntryId = null;
     let calcMode = 'storage';
     let resolution = '1080p';
     let calculatorSection = 'storage';
     let data4gResolution = '2MP (Full HD)';
     let data4gViewMode = 'intermittent';
     let currentCatalogSearchQuery = '';
+    let currentCatalogCategory = null;
     let compareList = [];
+    let currentVideoCategory = null;
 
     let lockState = {
       step: 1, selectedLock: '', lockType: null, doorStatus: '', result: null
@@ -1800,71 +1952,106 @@
     }
 
     // CATALOG (TRA CỨU THÔNG SỐ SP)
+    const CATALOG_TYPE_META = {
+      camera: { label: 'Camera', icon: 'camera' },
+      doorbell: { label: 'Chuông cửa hình', icon: 'bell' },
+      peephole: { label: 'Mắt thần thông minh', icon: 'eye' },
+      babymonitor: { label: 'Camera trông trẻ', icon: 'baby' },
+      lock: { label: 'Khóa cửa thông minh', icon: 'lock' },
+      nvr: { label: 'Đầu ghi (NVR)', icon: 'server' },
+      smarthome: { label: 'Smart Home / Hub', icon: 'house' }
+    };
+    const CATALOG_TYPE_ORDER = ['camera', 'doorbell', 'peephole', 'babymonitor', 'lock', 'nvr', 'smarthome'];
+
+    function catalogCardHTML(product) {
+      const isSelected = compareList.includes(product.id);
+      const compareDisabled = isCompareDisabled(product);
+      return `
+      <div onclick="renderCatalogDetail('${product.id}')" class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden cursor-pointer hover:shadow-lg transition-all flex flex-col group">
+        <div class="h-48 overflow-hidden relative bg-gray-100 flex items-center justify-center">
+          <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-blue-700 shadow-sm">
+            ${product.category}
+          </div>
+          <label onclick="event.stopPropagation()" title="${compareDisabled ? 'Chỉ so sánh được các sản phẩm cùng loại (tối đa 2)' : ''}" class="absolute top-3 right-3 flex items-center gap-1.5 backdrop-blur-sm px-2.5 py-1 rounded-full text-xs font-semibold shadow-sm select-none ${isSelected ? 'bg-blue-600 text-white' : 'bg-white/90 text-gray-600'} ${compareDisabled ? 'opacity-40 cursor-not-allowed' : 'cursor-pointer hover:bg-blue-50'}">
+            <input type="checkbox" class="w-3.5 h-3.5 accent-blue-600" ${isSelected ? 'checked' : ''} ${compareDisabled ? 'disabled' : ''} onchange="toggleCompare('${product.id}', event)">
+            So sánh
+          </label>
+          ${product.video ? `
+          <a href="${product.video}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="absolute bottom-3 right-3 flex items-center gap-1 bg-red-600/90 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-semibold shadow-sm hover:bg-red-700 transition-colors">
+            <i data-lucide="youtube" class="w-3.5 h-3.5"></i> Video HD
+          </a>` : ''}
+        </div>
+        <div class="p-5 flex-grow flex flex-col">
+          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">${product.name}</h3>
+          <p class="text-gray-600 text-sm line-clamp-3 mb-4 flex-grow">${product.shortDesc}</p>
+          <div class="mt-auto pt-4 border-t border-gray-100 flex items-center text-blue-600 text-sm font-medium">
+            Xem chi tiết kỹ thuật <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+          </div>
+        </div>
+      </div>
+    `;
+    }
+
+    function selectCatalogCategory(type) {
+      currentCatalogCategory = type;
+      renderCatalogList();
+    }
+
     function renderCatalogList() {
       const container = document.getElementById('tab-catalog');
-      const filteredProducts = ezvizProducts.filter(p => 
+      const filteredProducts = ezvizProducts.filter(p =>
         p.name.toLowerCase().includes(currentCatalogSearchQuery.toLowerCase()) ||
         p.category.toLowerCase().includes(currentCatalogSearchQuery.toLowerCase())
       );
 
-      let productsHTML = '';
-      if (filteredProducts.length === 0) {
-        productsHTML = `
-          <div class="col-span-full py-16 text-center bg-white rounded-xl border border-dashed border-gray-300">
+      const groups = CATALOG_TYPE_ORDER
+        .map(type => ({ type, items: filteredProducts.filter(p => p.type === type) }))
+        .filter(g => g.items.length > 0);
+
+      if (!groups.some(g => g.type === currentCatalogCategory)) {
+        currentCatalogCategory = groups.length > 0 ? groups[0].type : null;
+      }
+
+      const chipsHTML = groups.map(g => `
+        <button onclick="selectCatalogCategory('${g.type}')" class="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold border-2 transition-all ${g.type === currentCatalogCategory ? 'bg-blue-600 border-blue-600 text-white shadow-sm' : 'bg-white border-gray-200 text-gray-600 hover:border-blue-300'}">
+          <i data-lucide="${CATALOG_TYPE_META[g.type].icon}" class="w-4 h-4"></i>
+          ${CATALOG_TYPE_META[g.type].label}
+          <span class="text-xs font-medium ${g.type === currentCatalogCategory ? 'text-blue-100' : 'text-gray-400'}">(${g.items.length})</span>
+        </button>
+      `).join('');
+
+      const activeGroup = groups.find(g => g.type === currentCatalogCategory);
+      const productsHTML = !activeGroup ? `
+          <div class="py-16 text-center bg-white rounded-xl border border-dashed border-gray-300">
             <div class="flex justify-center text-gray-400 mb-4"><i data-lucide="search-x" class="w-12 h-12"></i></div>
             <h3 class="text-lg font-medium text-gray-900">Không tìm thấy sản phẩm nào</h3>
             <p class="text-gray-500 mt-1">Thử sử dụng các từ khóa khác hoặc kiểm tra lại chính tả.</p>
           </div>
-        `;
-      } else {
-        productsHTML = filteredProducts.map(product => {
-          const isSelected = compareList.includes(product.id);
-          const compareDisabled = isCompareDisabled(product);
-          return `
-          <div onclick="renderCatalogDetail('${product.id}')" class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden cursor-pointer hover:shadow-lg transition-all flex flex-col group">
-            <div class="h-48 overflow-hidden relative bg-gray-100 flex items-center justify-center">
-              <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-blue-700 shadow-sm">
-                ${product.category}
-              </div>
-              <label onclick="event.stopPropagation()" title="${compareDisabled ? 'Chỉ so sánh được các sản phẩm cùng loại (tối đa 2)' : ''}" class="absolute top-3 right-3 flex items-center gap-1.5 backdrop-blur-sm px-2.5 py-1 rounded-full text-xs font-semibold shadow-sm select-none ${isSelected ? 'bg-blue-600 text-white' : 'bg-white/90 text-gray-600'} ${compareDisabled ? 'opacity-40 cursor-not-allowed' : 'cursor-pointer hover:bg-blue-50'}">
-                <input type="checkbox" class="w-3.5 h-3.5 accent-blue-600" ${isSelected ? 'checked' : ''} ${compareDisabled ? 'disabled' : ''} onchange="toggleCompare('${product.id}', event)">
-                So sánh
-              </label>
-              ${product.video ? `
-              <a href="${product.video}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="absolute bottom-3 right-3 flex items-center gap-1 bg-red-600/90 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-semibold shadow-sm hover:bg-red-700 transition-colors">
-                <i data-lucide="youtube" class="w-3.5 h-3.5"></i> Video HD
-              </a>` : ''}
-            </div>
-            <div class="p-5 flex-grow flex flex-col">
-              <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">${product.name}</h3>
-              <p class="text-gray-600 text-sm line-clamp-3 mb-4 flex-grow">${product.shortDesc}</p>
-              <div class="mt-auto pt-4 border-t border-gray-100 flex items-center text-blue-600 text-sm font-medium">
-                Xem chi tiết kỹ thuật <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
-              </div>
-            </div>
+        ` : `
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            ${activeGroup.items.map(catalogCardHTML).join('')}
           </div>
         `;
-        }).join('');
-      }
 
       container.innerHTML = `
         <div class="mb-8">
           <h1 class="text-3xl font-bold text-gray-900 mb-2">Tra cứu Thông số Kỹ thuật</h1>
           <p class="text-gray-500">Xem danh sách, tìm kiếm và xem thông số kỹ thuật chi tiết của các thiết bị EZVIZ.</p>
         </div>
-        <div class="relative mb-8 max-w-2xl">
+        <div class="relative mb-6 max-w-2xl">
           <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <i data-lucide="search" class="w-5 h-5 text-gray-400"></i>
           </div>
-          <input type="text" id="catalog-search" 
-            class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-xl bg-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm" 
+          <input type="text" id="catalog-search"
+            class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-xl bg-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm"
             placeholder="Tìm kiếm theo tên thiết bị hoặc danh mục..."
             value="${currentCatalogSearchQuery}">
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          ${productsHTML}
+        <div class="flex gap-3 mb-8 flex-wrap">
+          ${chipsHTML}
         </div>
+        ${productsHTML}
       `;
 
       // Gắn sự kiện cho input tìm kiếm
@@ -1874,7 +2061,7 @@
         const val = searchInput.value;
         searchInput.value = '';
         searchInput.value = val;
-        
+
         searchInput.addEventListener('input', (e) => {
           currentCatalogSearchQuery = e.target.value;
           renderCatalogList();
@@ -2126,65 +2313,221 @@
       }, 3000);
     }
 
-    // FAQ
-    function filterFaqs() {
-      const term = document.getElementById('faq-search').value.toLowerCase();
-      const filtered = faqsData.filter(f => f.question.toLowerCase().includes(term) || f.model.toLowerCase().includes(term));
-      renderFaqs(filtered, term);
-    }
+    // FAQ — điều hướng 3 tầng: Nhóm lỗi chung → Lỗi cụ thể → Giải pháp
+    function faqCategoryById(id) { return faqCategories.find(c => c.id === id); }
 
-    function renderFaqs(faqs, term) {
-      const container = document.getElementById('faq-list');
-      if (faqs.length === 0) {
-        container.innerHTML = `<div class="text-center py-12 bg-white rounded-xl border border-dashed border-gray-300"><p class="text-gray-500">Không tìm thấy kết quả phù hợp cho "${term || ''}"</p></div>`;
+    function filterFaqs() {
+      const term = document.getElementById('faq-search').value.trim().toLowerCase();
+      if (term === '') {
+        faqView = (faqView === 'search') ? 'categories' : faqView;
+        renderFaqRoot();
         return;
       }
-      container.innerHTML = faqs.map((faq, i) => `
-        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow">
-          <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(${i})">
-            <div class="pr-4">
-              <span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded mb-2">${faq.model}</span>
-              <h3 class="text-lg font-medium text-gray-900">${faq.question}</h3>
-            </div>
-            <div class="text-gray-400 flex-shrink-0"><i data-lucide="${expandedFaq === i ? 'chevron-up' : 'chevron-down'}" class="w-6 h-6"></i></div>
-          </button>
-          ${expandedFaq === i ? `
-          <div class="px-6 pb-5 pt-2 border-t border-gray-100 bg-gray-50">
-            <div class="flex items-start gap-3">
-              <i data-lucide="info" class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0"></i>
-              <div class="text-gray-700 whitespace-pre-line"><span class="font-semibold block mb-1">Cách xử lý / Giải thích:</span>${faq.answer}</div>
-            </div>
-            ${faq.link ? `<div class="mt-4 ml-8"><a href="${faq.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-red-600 font-medium hover:text-red-700 bg-red-50 px-3 py-2 rounded-lg border border-red-100"><i data-lucide="youtube" class="w-4 h-4"></i> Xem video hướng dẫn</a></div>` : ''}
-          </div>` : ''}
-        </div>
-      `).join('');
+      faqView = 'search';
+      renderFaqRoot();
+    }
+
+    function openFaqCategory(catId) {
+      faqActiveCategory = catId;
+      faqView = 'issues';
+      document.getElementById('faq-search').value = '';
+      renderFaqRoot();
+    }
+
+    function openFaqDetail(id) {
+      faqActiveEntryId = id;
+      faqView = 'detail';
+      renderFaqRoot();
+    }
+
+    function faqBackToCategories() {
+      faqView = 'categories';
+      faqActiveCategory = null;
+      faqActiveEntryId = null;
+      document.getElementById('faq-search').value = '';
+      renderFaqRoot();
+    }
+
+    function faqBackToIssues() {
+      faqView = 'issues';
+      faqActiveEntryId = null;
+      renderFaqRoot();
+    }
+
+    function renderFaqRoot() {
+      renderFaqBreadcrumb();
+      if (faqView === 'search') {
+        const term = document.getElementById('faq-search').value.trim().toLowerCase();
+        const filtered = faqsData.filter(f => f.question.toLowerCase().includes(term) || f.model.toLowerCase().includes(term) || (faqCategoryById(f.category)?.label || '').toLowerCase().includes(term));
+        renderFaqIssueCards(filtered, `Không tìm thấy kết quả phù hợp cho "${term}"`, true);
+      } else if (faqView === 'issues') {
+        const filtered = faqsData.filter(f => f.category === faqActiveCategory);
+        renderFaqIssueCards(filtered, 'Nhóm lỗi này chưa có dữ liệu.', false);
+      } else if (faqView === 'detail') {
+        renderFaqDetail(faqsData.find(f => f._id === faqActiveEntryId));
+      } else {
+        renderFaqCategoryGrid();
+      }
+    }
+
+    function renderFaqBreadcrumb() {
+      const el = document.getElementById('faq-breadcrumb');
+      if (faqView === 'categories' || faqView === 'search') { el.innerHTML = ''; return; }
+      const cat = faqCategoryById(faqActiveCategory);
+      let html = `<button onclick="faqBackToCategories()" class="text-blue-600 hover:text-blue-700 font-medium">Tất cả nhóm lỗi</button>`;
+      if (faqView === 'issues') {
+        html += `<i data-lucide="chevron-right" class="w-3.5 h-3.5"></i><span class="text-gray-700 font-medium">${cat.label}</span>`;
+      } else if (faqView === 'detail') {
+        html += `<i data-lucide="chevron-right" class="w-3.5 h-3.5"></i><button onclick="faqBackToIssues()" class="text-blue-600 hover:text-blue-700 font-medium">${cat.label}</button><i data-lucide="chevron-right" class="w-3.5 h-3.5"></i><span class="text-gray-700 font-medium truncate max-w-[240px]">Giải pháp</span>`;
+      }
+      el.innerHTML = html;
       lucide.createIcons();
     }
 
-    function toggleFaq(i) { expandedFaq = expandedFaq === i ? null : i; filterFaqs(); }
+    function renderFaqCategoryGrid() {
+      const container = document.getElementById('faq-list');
+      container.innerHTML = `
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          ${faqCategories.map(cat => {
+            const count = faqsData.filter(f => f.category === cat.id).length;
+            return `
+            <button onclick="openFaqCategory('${cat.id}')" class="text-left bg-white border-2 border-gray-200 hover:border-blue-500 hover:bg-blue-50 rounded-2xl p-5 flex items-start gap-4 transition-all group">
+              <div class="w-11 h-11 rounded-xl bg-blue-50 group-hover:bg-blue-100 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="${cat.icon}" class="w-5 h-5 text-blue-600"></i>
+              </div>
+              <div class="min-w-0">
+                <div class="flex items-center gap-2">
+                  <h3 class="font-semibold text-gray-900">${cat.label}</h3>
+                  <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full flex-shrink-0">${count}</span>
+                </div>
+                <p class="text-sm text-gray-500 mt-1 leading-snug">${cat.desc}</p>
+              </div>
+            </button>
+          `; }).join('')}
+        </div>
+      `;
+      lucide.createIcons();
+    }
+
+    function renderFaqIssueCards(faqs, emptyMsg, showCategoryBadge) {
+      const container = document.getElementById('faq-list');
+      if (faqs.length === 0) {
+        container.innerHTML = `<div class="text-center py-12 bg-white rounded-xl border border-dashed border-gray-300"><p class="text-gray-500">${emptyMsg}</p></div>`;
+        return;
+      }
+      container.innerHTML = `
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          ${faqs.map(faq => `
+            <button onclick="openFaqDetail(${faq._id})" class="h-full bg-white border border-gray-200 rounded-xl px-5 py-4 text-left flex flex-col justify-between gap-3 shadow-sm hover:shadow hover:border-blue-300 transition-all">
+              <div class="min-w-0">
+                <div class="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                  <span class="inline-block px-2 py-0.5 bg-blue-100 text-blue-800 text-xs font-semibold rounded">${faq.model}</span>
+                  ${showCategoryBadge ? `<span class="inline-block px-2 py-0.5 bg-gray-100 text-gray-500 text-xs font-medium rounded">${faqCategoryById(faq.category)?.label || ''}</span>` : ''}
+                </div>
+                <h3 class="text-sm font-medium text-gray-900 leading-snug">${faq.question}</h3>
+              </div>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-gray-400 flex-shrink-0 self-end"></i>
+            </button>
+          `).join('')}
+        </div>
+      `;
+      lucide.createIcons();
+    }
+
+    function renderFaqDetail(faq) {
+      const container = document.getElementById('faq-list');
+      if (!faq) { container.innerHTML = ''; return; }
+      const cat = faqCategoryById(faq.category);
+      container.innerHTML = `
+        <div class="bg-white border border-gray-200 rounded-2xl shadow-sm p-6">
+          <div class="flex items-center gap-2 mb-3 flex-wrap">
+            <span class="inline-block px-2.5 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded">${faq.model}</span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded"><i data-lucide="${cat?.icon || 'tag'}" class="w-3.5 h-3.5"></i>${cat?.label || ''}</span>
+          </div>
+          <h2 class="text-xl font-bold text-gray-900 mb-4">${faq.question}</h2>
+          <div class="flex items-start gap-3 bg-blue-50 border border-blue-100 rounded-xl p-4">
+            <i data-lucide="info" class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0"></i>
+            <div class="text-gray-800 whitespace-pre-line leading-relaxed"><span class="font-semibold block mb-1">Cách xử lý / Giải thích:</span>${faq.answer}</div>
+          </div>
+          ${faq.link ? `<div class="mt-4"><a href="${faq.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-red-600 font-medium hover:text-red-700 bg-red-50 px-3 py-2 rounded-lg border border-red-100"><i data-lucide="youtube" class="w-4 h-4"></i> Xem video hướng dẫn</a></div>` : ''}
+          <button onclick="faqBackToIssues()" class="mt-6 inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-blue-600 font-medium">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i> Quay lại danh sách lỗi
+          </button>
+        </div>
+      `;
+      lucide.createIcons();
+    }
 
     // PRODUCTS (VIDEOS)
+    const VIDEO_TYPE_META = {
+      'Camera': 'camera',
+      'Chuông hình': 'bell',
+      'Smartlock': 'lock',
+      'Smart Home': 'house',
+      'Đầu ghi': 'server',
+      'Router': 'wifi',
+      'Phần mềm': 'monitor',
+      'Giải pháp': 'lightbulb'
+    };
+    const VIDEO_TYPE_ORDER = ['Camera', 'Chuông hình', 'Smartlock', 'Smart Home', 'Đầu ghi', 'Router', 'Phần mềm', 'Giải pháp'];
+
     function filterProducts() {
       const term = document.getElementById('product-search').value.toLowerCase();
       const filtered = productsData.filter(p => p.model.toLowerCase().includes(term) || p.type.toLowerCase().includes(term));
       renderProducts(filtered);
     }
 
+    function selectVideoCategory(type) {
+      currentVideoCategory = type;
+      filterProducts();
+    }
+
+    function videoCardHTML(p) {
+      const isYT = p.link.includes('youtube.com') || p.link.includes('youtu.be');
+      return `
+      <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
+        <div class="flex justify-end items-start mb-4">
+          <i data-lucide="${isYT ? 'youtube' : 'link'}" class="w-5 h-5 ${isYT ? 'text-red-500' : 'text-blue-500'} opacity-70 group-hover:opacity-100"></i>
+        </div>
+        <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">${p.model}</h3>
+        <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+          <i data-lucide="video" class="w-4 h-4"></i> Xem tài liệu / Video
+        </a>
+      </div>`;
+    }
+
     function renderProducts(prods) {
-      document.getElementById('product-list').innerHTML = prods.map(p => {
-        const isYT = p.link.includes('youtube.com') || p.link.includes('youtu.be');
-        return `
-        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col h-full group">
-          <div class="flex justify-between items-start mb-4">
-            <span class="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">${p.type}</span>
-            <i data-lucide="${isYT ? 'youtube' : 'link'}" class="w-5 h-5 ${isYT ? 'text-red-500' : 'text-blue-500'} opacity-70 group-hover:opacity-100"></i>
+      const chipsEl = document.getElementById('product-category-chips');
+      const listEl = document.getElementById('product-list');
+
+      const groups = VIDEO_TYPE_ORDER
+        .map(type => ({ type, items: prods.filter(p => p.type === type) }))
+        .filter(g => g.items.length > 0);
+
+      if (!groups.some(g => g.type === currentVideoCategory)) {
+        currentVideoCategory = groups.length > 0 ? groups[0].type : null;
+      }
+
+      chipsEl.innerHTML = groups.map(g => `
+        <button onclick="selectVideoCategory('${g.type}')" class="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold border-2 transition-all ${g.type === currentVideoCategory ? 'bg-blue-600 border-blue-600 text-white shadow-sm' : 'bg-white border-gray-200 text-gray-600 hover:border-blue-300'}">
+          <i data-lucide="${VIDEO_TYPE_META[g.type] || 'folder'}" class="w-4 h-4"></i>
+          ${g.type}
+          <span class="text-xs font-medium ${g.type === currentVideoCategory ? 'text-blue-100' : 'text-gray-400'}">(${g.items.length})</span>
+        </button>
+      `).join('');
+
+      const activeGroup = groups.find(g => g.type === currentVideoCategory);
+      listEl.innerHTML = !activeGroup ? `
+          <div class="py-16 text-center bg-white rounded-xl border border-dashed border-gray-300">
+            <div class="flex justify-center text-gray-400 mb-4"><i data-lucide="search-x" class="w-12 h-12"></i></div>
+            <h3 class="text-lg font-medium text-gray-900">Không tìm thấy tài liệu / video nào</h3>
+            <p class="text-gray-500 mt-1">Thử sử dụng các từ khóa khác hoặc kiểm tra lại chính tả.</p>
           </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-4 flex-grow">${p.model}</h3>
-          <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="mt-auto w-full inline-flex justify-center items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
-            <i data-lucide="video" class="w-4 h-4"></i> Xem tài liệu / Video
-          </a>
-        </div>`;
-      }).join('');
+        ` : `
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            ${activeGroup.items.map(videoCardHTML).join('')}
+          </div>
+        `;
       lucide.createIcons();
     }
 
@@ -2462,7 +2805,7 @@
     }
 
     // INIT APP
-    filterFaqs();
+    renderFaqRoot();
     filterProducts();
     initCalculator();
     initData4gCalculator();
