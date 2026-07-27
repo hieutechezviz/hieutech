@@ -194,19 +194,19 @@
           </div>
           <div class="hidden lg:flex space-x-1 overflow-x-auto">
             <button onclick="switchTab('faq')" id="nav-faq" class="nav-btn flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 whitespace-nowrap">
-              <i data-lucide="wrench" class="w-4 h-4"></i> Hỗ trợ&Lỗi
+              <i data-lucide="wrench" class="w-4 h-4"></i> Hỗ trợ & Lỗi
             </button>
             <button onclick="switchTab('catalog')" id="nav-catalog" class="nav-btn flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 whitespace-nowrap">
-              <i data-lucide="cpu" class="w-4 h-4"></i> Thông số SP
+              <i data-lucide="cpu" class="w-4 h-4"></i> Tra cứu Thông số
             </button>
             <button onclick="switchTab('products')" id="nav-products" class="nav-btn flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium bg-blue-50 text-blue-700 whitespace-nowrap">
               <i data-lucide="video" class="w-4 h-4"></i> Video Hướng dẫn
             </button>
             <button onclick="switchTab('calculator')" id="nav-calculator" class="nav-btn flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 whitespace-nowrap">
-              <i data-lucide="calculator" class="w-4 h-4"></i> Tính lưu trữ/Data
+              <i data-lucide="calculator" class="w-4 h-4"></i> Tính lưu trữ
             </button>
             <button onclick="switchTab('lock')" id="nav-lock" class="nav-btn flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 whitespace-nowrap">
-              <i data-lucide="lock" class="w-4 h-4"></i> Chọn Khóa
+              <i data-lucide="lock" class="w-4 h-4"></i> Đánh giá Khóa
             </button>
             <button onclick="switchTab('installer')" id="nav-installer" class="nav-btn flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 whitespace-nowrap">
               <i data-lucide="users" class="w-4 h-4"></i> Tìm Thợ
@@ -226,10 +226,10 @@
           <i data-lucide="video" class="w-5 h-5 mb-1"></i> Video
         </button>
         <button onclick="switchTab('calculator')" id="mnav-calculator" class="mobile-nav flex-none w-[72px] flex flex-col items-center py-3 text-[11px] font-medium text-gray-500 border-t-2 border-transparent">
-          <i data-lucide="calculator" class="w-5 h-5 mb-1"></i> Lưu trữ/Data
+          <i data-lucide="calculator" class="w-5 h-5 mb-1"></i> Lưu trữ
         </button>
         <button onclick="switchTab('lock')" id="mnav-lock" class="mobile-nav flex-none w-[72px] flex flex-col items-center py-3 text-[11px] font-medium text-gray-500 border-t-2 border-transparent">
-          <i data-lucide="lock" class="w-5 h-5 mb-1"></i> Chọn Khóa
+          <i data-lucide="lock" class="w-5 h-5 mb-1"></i> Khóa
         </button>
         <button onclick="switchTab('installer')" id="mnav-installer" class="mobile-nav flex-none w-[72px] flex flex-col items-center py-3 text-[11px] font-medium text-gray-500 border-t-2 border-transparent">
           <i data-lucide="users" class="w-5 h-5 mb-1"></i> Tìm thợ
@@ -2238,7 +2238,7 @@
                 <button class="bg-blue-600 text-white px-6 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-sm shadow-blue-200 flex items-center gap-2">
                   <i data-lucide="download" class="w-4 h-4"></i> Tải Datasheet
                 </button>
-                <button onclick="copyToClipboard('${product.name}')" class="bg-white text-gray-700 border border-gray-300 px-6 py-2.5 rounded-lg font-medium hover:bg-gray-50 hover:text-blue-600 transition-colors flex items-center gap-2">
+                <button onclick="copyToClipboard('${product.name}', 'Đã copy tên sản phẩm!')" class="bg-white text-gray-700 border border-gray-300 px-6 py-2.5 rounded-lg font-medium hover:bg-gray-50 hover:text-blue-600 transition-colors flex items-center gap-2">
                   <i data-lucide="copy" class="w-4 h-4"></i> Copy Tên SP
                 </button>
               </div>
@@ -2266,19 +2266,19 @@
       lucide.createIcons();
     }
 
-    function copyToClipboard(text) {
+    function copyToClipboard(text, message = 'Đã copy!') {
       // Cách 1: Sử dụng thư viện chuẩn clipboard
       if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(text).then(() => {
-          showToast('Đã copy tên sản phẩm!');
-        }).catch(err => copyToClipboardFallback(text));
+          showToast(message);
+        }).catch(err => copyToClipboardFallback(text, message));
       } else {
         // Cách 2: Sử dụng fallback cho môi trường iFrame
-        copyToClipboardFallback(text);
+        copyToClipboardFallback(text, message);
       }
     }
 
-    function copyToClipboardFallback(text) {
+    function copyToClipboardFallback(text, message = 'Đã copy!') {
       let textArea = document.createElement("textarea");
       textArea.value = text;
       textArea.style.position = "fixed";
@@ -2289,7 +2289,7 @@
       textArea.select();
       try {
         document.execCommand('copy');
-        showToast('Đã copy tên sản phẩm!');
+        showToast(message);
       } catch (err) {
         console.error('Lỗi khi copy', err);
       }
@@ -2311,6 +2311,12 @@
         toast.style.transition = 'all 0.3s ease';
         setTimeout(() => toast.remove(), 300);
       }, 3000);
+    }
+
+    function copyFaqAnswer(id) {
+      const faq = faqsData.find(f => f._id === id);
+      if (!faq) return;
+      copyToClipboard(faq.answer, 'Đã copy phương án xử lý!');
     }
 
     // FAQ — điều hướng 3 tầng: Nhóm lỗi chung → Lỗi cụ thể → Giải pháp
@@ -2447,7 +2453,15 @@
           <h2 class="text-xl font-bold text-gray-900 mb-4">${faq.question}</h2>
           <div class="flex items-start gap-3 bg-blue-50 border border-blue-100 rounded-xl p-4">
             <i data-lucide="info" class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0"></i>
-            <div class="text-gray-800 whitespace-pre-line leading-relaxed"><span class="font-semibold block mb-1">Cách xử lý / Giải thích:</span>${faq.answer}</div>
+            <div class="flex-grow min-w-0">
+              <div class="flex items-center justify-between gap-3 mb-1">
+                <span class="font-semibold text-gray-800">Cách xử lý / Giải thích:</span>
+                <button onclick="copyFaqAnswer(${faq._id})" class="flex-shrink-0 inline-flex items-center gap-1.5 text-xs font-medium text-blue-700 bg-white border border-blue-200 px-2.5 py-1.5 rounded-lg hover:bg-blue-100 transition-colors">
+                  <i data-lucide="copy" class="w-3.5 h-3.5"></i> Copy
+                </button>
+              </div>
+              <div class="text-gray-800 whitespace-pre-line leading-relaxed">${faq.answer}</div>
+            </div>
           </div>
           ${faq.link ? `<div class="mt-4"><a href="${faq.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-red-600 font-medium hover:text-red-700 bg-red-50 px-3 py-2 rounded-lg border border-red-100"><i data-lucide="youtube" class="w-4 h-4"></i> Xem video hướng dẫn</a></div>` : ''}
           <button onclick="faqBackToIssues()" class="mt-6 inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-blue-600 font-medium">
