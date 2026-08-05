@@ -194,7 +194,7 @@
           </div>
           <div class="hidden lg:flex space-x-1 overflow-x-auto">
             <button onclick="switchTab('faq')" id="nav-faq" class="nav-btn flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 whitespace-nowrap">
-              <i data-lucide="wrench" class="w-4 h-4"></i> Hỗ trợ & Lỗi
+              <i data-lucide="wrench" class="w-4 h-4"></i> Hỗ trợ&Lỗi
             </button>
             <button onclick="switchTab('catalog')" id="nav-catalog" class="nav-btn flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-100 whitespace-nowrap">
               <i data-lucide="cpu" class="w-4 h-4"></i> Tra cứu SP
@@ -746,16 +746,18 @@
       { model: "GT&HD Cấu hình Beansview D220", link: "https://www.youtube.com/watch?v=3ke8ui9Rd-A&t=62s", type: "Camera" },
       { model: "GT&HD Cấu hình Beansview D320", link: "https://www.youtube.com/watch?v=4gpeU6U5Nmw&t=9s", type: "Camera" },
       { model: "GT&HD Cấu hình CB8C LITE", link: "https://www.youtube.com/watch?v=2L5HPTpN9iA&t=60s", type: "Camera" },
-      { model: "GT&HD Cấu hình DL20FVS", link: "https://www.youtube.com/watch?v=hOSUM1OA5y8", type: "Smartlock" }
+      { model: "GT&HD Cấu hình DL20FVS", link: "https://www.youtube.com/watch?v=hOSUM1OA5y8", type: "Smartlock" },
+      { model: "GT&HD Cấu hình TY1 G1 2K", link: "https://www.youtube.com/watch?v=bojH0LTCp_Q", type: "Camera" }
     ];
 
     // DATA CATALOG (THÔNG SỐ KỸ THUẬT)
     const ezvizProducts = [
         {
             id: 'c6n-2mp',
+            officialUrl: 'https://www.ezviz.com/product/C6N/9046',
             name: 'EZVIZ C6N 1080p (2MP)',
             category: 'Camera Wi-Fi Trong Nhà',
-            type: 'camera',
+            type: 'camera-indoor',
             image: 'https://mfs.ezvizlife.com/dc14ac15c970017dfb11d0a9ee02e919.jpg',
             shortDesc: 'Camera Wi-Fi quay quét thông minh, tầm nhìn 360 độ, độ phân giải 1080p. Bảo vệ an ninh ngày và đêm với tính năng hồng ngoại.',
             specs: {
@@ -774,9 +776,10 @@
         },
         {
             id: 'c3w-pro',
+            officialUrl: 'https://www.ezviz.com/product/C3W-Pro/29909',
             name: 'EZVIZ C3W Pro (4MP)',
             category: 'Camera Wi-Fi Ngoài Trời',
-            type: 'camera',
+            type: 'camera-outdoor',
             image: 'https://mfs.ezvizlife.com/332b25470b53fd28e87fc3c066d79e63.jpg',
             shortDesc: 'Camera ngoài trời có khả năng ghi hình màu ban đêm, tích hợp AI phát hiện con người và chuẩn chống nước IP67.',
             specs: {
@@ -795,9 +798,10 @@
         },
         {
             id: 'c8c',
+            officialUrl: 'https://www.ezviz.com/product/c8c+1080p/58028',
             name: 'EZVIZ C8C',
             category: 'Camera PTZ Ngoài Trời',
-            type: 'camera',
+            type: 'camera-outdoor',
             image: 'https://mfs.ezvizlife.com/c0d509b6990574cab9b1addcbbe19858.jpg',
             shortDesc: 'Camera Wi-Fi quay quét ngoài trời đầu tiên của EZVIZ. Xóa bỏ điểm mù với tầm nhìn 360 độ và phát hiện người bằng AI.',
             specs: {
@@ -816,14 +820,15 @@
         },
         {
             id: 'bc1c',
+            officialUrl: 'https://www.ezviz.com/product/EZVIZ-eLife/37791',
             name: 'EZVIZ BC1C (eLife)',
             category: 'Camera Dùng Pin',
-            type: 'camera',
+            type: 'camera-battery',
             image: 'https://mfs.ezvizlife.com/337ccf5255cffbb6006045265e1c255e.jpg',
-            shortDesc: 'Camera pin sạc không dây 100%, pin dung lượng cao sử dụng lên đến 210 ngày, tích hợp sẵn bộ nhớ eMMC 32GB.',
+            shortDesc: 'Camera pin sạc không dây 100%, pin dung lượng cao sử dụng lên đến 210 ngày, tích hợp sẵn bộ nhớ eMMC 32GB. Cùng thân máy CS-BC1C còn có bản 2K+ tên thương mại "EZVIZ eLife 2K+" (pin lớn hơn, chưa có thẻ riêng); bản 4K thế hệ mới hơn xem tại "EZVIZ BC1c 4K".',
             specs: {
                 'Cảm biến hình ảnh': '1/2.8" 2-Megapixel Advanced CMOS',
-                'Độ phân giải': '1920 × 1080',
+                'Độ phân giải': '1920 × 1080; cùng thân máy CS-BC1C còn có bản 2K+ (2560×1440, 4MP, pin 10.400mAh — tên thương mại "EZVIZ eLife 2K+")',
                 'Ống kính / Góc quan sát': '—',
                 'Góc xoay Pan/Tilt': '—',
                 'Hồng ngoại / Quan sát màu ban đêm': 'Ghi hình màu ban đêm, hồng ngoại 10m',
@@ -836,7 +841,140 @@
             }
         },
         {
+            id: 'cb1',
+            officialUrl: 'https://www.ezviz.com/product/cb1/47474',
+            name: 'EZVIZ CB1',
+            category: 'Camera Wi-Fi Dùng Pin Trong Nhà',
+            type: 'camera-battery',
+            image: 'https://mfs.ezvizlife.com/eed05b451006b2c09a7d4f0a93a96e9c.jpg',
+            shortDesc: 'Camera Wi-Fi dùng pin nhỏ gọn, lắp đặt hoàn toàn không dây, độ phân giải 1080p, giá phải chăng, dùng tới 40 ngày/lần sạc.',
+            specs: {
+                'Cảm biến hình ảnh': '1/3" 2-Megapixel Progressive Scan CMOS',
+                'Độ phân giải': '1920 × 1080 (1080p)',
+                'Ống kính / Góc quan sát': '2.8mm F2.2, chéo 113°, ngang 90°, dọc 50°',
+                'Góc xoay Pan/Tilt': '—',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Tối đa 5m',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 802.11b/g/n 2.4GHz',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'Pin sạc 1.600mAh (dùng tới 40 ngày/lần sạc); sạc qua DC 5V/1A',
+                'Chuẩn chống nước & bụi': 'Không có chuẩn chống nước & bụi',
+                'Tính năng chính': 'Camera pin không dây hoàn toàn (100% wire-free), nhỏ gọn, giá phải chăng, dùng tới 40 ngày/lần sạc; Cảm biến PIR kết hợp AI phát hiện hình dáng người (Smart Human Detection); Đàm thoại 2 chiều; Sleep Mode bảo vệ riêng tư; Đế gắn nam châm xoay 360° dễ lắp đặt; Nén H.265 giảm ~50% dung lượng lưu trữ so với H.264'
+            }
+        },
+        {
+            id: 'cb2',
+            officialUrl: 'https://www.ezviz.com/product/CB2/47560',
+            name: 'EZVIZ CB2',
+            category: 'Camera Wi-Fi Dùng Pin Trong Nhà',
+            type: 'camera-battery',
+            image: 'https://mfs.ezvizlife.com/6de8e49ca226709fd7d099792c8b0066.jpg',
+            shortDesc: 'Camera Wi-Fi dùng pin siêu nhỏ gọn (cỡ lòng bàn tay), độ phân giải 1080p, thời lượng pin tới 50 ngày, phù hợp trông trẻ/thú cưng trong nhà. Khác với "EZVIZ CB2 4G" (kết nối 4G) đã có trong catalog.',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.8" 2-Megapixel Progressive Scan CMOS',
+                'Độ phân giải': '1920 × 1080 (1080p)',
+                'Ống kính / Góc quan sát': '4mm F1.6, góc nhìn 100°',
+                'Góc xoay Pan/Tilt': '—',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Tối đa 5m, lọc IR-cut tự động chuyển đổi',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 802.11b/g/n 2.4GHz',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'Pin sạc 2.000mAh (dùng tới 50 ngày/lần sạc); sạc qua DC 5V/1A (mua riêng)',
+                'Chuẩn chống nước & bụi': 'Không có chuẩn chống nước & bụi',
+                'Tính năng chính': 'Camera pin siêu nhỏ gọn cỡ lòng bàn tay, phù hợp làm camera trông trẻ/thú cưng trong nhà; AI phát hiện chuyển động người (Smart Human Detection) qua cảm biến PIR; Đàm thoại 2 chiều; Đế nam châm lực hút mạnh hơn 200% so với thế hệ trước, dễ xoay chỉnh hướng; Có 2 tùy chọn màu sắc; Tích hợp Google Assistant & Amazon Alexa; Nén H.265'
+            }
+        },
+        {
+            id: 'bc2',
+            officialUrl: 'https://www.ezviz.com/product/bc2/39984',
+            name: 'EZVIZ BC2',
+            category: 'Camera Wi-Fi Dùng Pin Trong Nhà',
+            type: 'camera-battery',
+            image: 'https://mfs.ezvizlife.com/f3a01257b73ffbcf49b15ab88cc5fd1f.jpg',
+            shortDesc: 'Camera Wi-Fi dùng pin mini, độ phân giải 1080p, thời lượng pin tới 50 ngày — cùng phân khúc với EZVIZ CB2, khác tên thương mại theo thị trường.',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.8" 2-Megapixel Progressive Scan CMOS',
+                'Độ phân giải': '1920 × 1080 (1080p)',
+                'Ống kính / Góc quan sát': '4mm F1.6, góc nhìn tối đa 100° (chéo 85°, ngang 46° theo trang chính thức)',
+                'Góc xoay Pan/Tilt': '—',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Tối đa 5m, độ nhạy sáng tối thiểu 0.1 Lux',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 802.11b/g/n 2.4GHz',
+                'Lưu trữ': 'MicroSD tối đa 256GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'Pin sạc 2.000mAh (dùng tới 50 ngày/lần sạc)',
+                'Chuẩn chống nước & bụi': 'Không có chuẩn chống nước & bụi',
+                'Tính năng chính': 'Camera pin mini thiết kế hiện đại; AI phát hiện chuyển động người qua cảm biến PIR (Smart Human Detection); Đàm thoại 2 chiều; Lọc IR-cut tự động chuyển ngày/đêm; Mã hóa AES 128-bit và giao thức truyền TLS; Tích hợp Google Assistant & Amazon Alexa'
+            }
+        },
+        {
+            id: 'eb5-4k',
+            officialUrl: 'https://www.ezviz.com/product/eb5-4k/54971',
+            name: 'EZVIZ EB5 4K',
+            category: 'Camera Ngoài Trời Dùng Pin, Năng Lượng Mặt Trời (AOV)',
+            type: 'camera-battery',
+            image: 'https://mfs.ezvizlife.com/6c6d1b0d46c7d0bd9f33761dc51e67f3.png',
+            shortDesc: 'Camera ngoài trời dùng pin độ phân giải 4K thực, tích hợp sẵn tấm pin năng lượng mặt trời 1.4W, công nghệ AOV ghi hình gần như liên tục 24/7.',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.7" 8-Megapixel Progressive Scan CMOS',
+                'Độ phân giải': '3840 × 2160 (4K)',
+                'Ống kính / Góc quan sát': '2.8mm F1.6, chéo 135°, ngang 113°, dọc 60°',
+                'Góc xoay Pan/Tilt': '—',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại 15m; quan sát màu ban đêm 15m với đèn spotlight tích hợp',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 6 (802.11b/g/n/ax) 2.4GHz',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'Pin sạc 10.400mAh (dùng tới 180 ngày không cần sạc); tích hợp tấm pin năng lượng mặt trời 1.4W (đầy sau ~2 giờ nắng/ngày); sạc qua DC 5V/2A',
+                'Chuẩn chống nước & bụi': 'IP65',
+                'Tính năng chính': 'Công nghệ Always-On Video (AOV) ghi hình gần như liên tục 24/7; AI phát hiện người/phương tiện xa tới 25m ban ngày, 12m ban đêm; Tích hợp sẵn tấm pin mặt trời 1.4W, không cần sạc thủ công; Active Defense với còi báo động + đèn spotlight nháy; Color Night Vision với đèn spotlight kép; Nén H.265 giảm ~50% dung lượng lưu trữ/băng thông; Wi-Fi 6 không cần hub; tích hợp Google Assistant & Amazon Alexa'
+            }
+        },
+        {
+            id: 'cb5-4k',
+            officialUrl: 'https://www.ezviz.com/product/cb5-4k/51827',
+            name: 'EZVIZ CB5 4K',
+            category: 'Camera Ngoài Trời Dùng Pin, Năng Lượng Mặt Trời (AOV)',
+            type: 'camera-battery',
+            image: 'https://mfs.ezvizlife.com/d38dc0f3290c79608ce376b325f1ee9d.png',
+            shortDesc: 'Camera ngoài trời dùng pin độ phân giải 4K thực, tích hợp sẵn tấm pin năng lượng mặt trời, cùng thế hệ AOV với EZVIZ EB5 4K — khác tên thương mại theo thị trường.',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.7" 8-Megapixel Progressive Scan CMOS',
+                'Độ phân giải': '3840 × 2160 (4K)',
+                'Ống kính / Góc quan sát': '2.8mm F1.6, chéo 135°, ngang 113°, dọc 60°',
+                'Góc xoay Pan/Tilt': '—',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại 15m; quan sát màu ban đêm 15m với đèn spotlight tích hợp',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 6 (802.11b/g/n/ax) 2.4GHz',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'Pin sạc 10.400mAh (dùng tới 180 ngày không cần sạc); tích hợp tấm pin năng lượng mặt trời 1.4W (đầy sau ~2 giờ nắng/ngày); sạc qua DC 5V/2A',
+                'Chuẩn chống nước & bụi': 'IP65',
+                'Tính năng chính': 'Công nghệ Always-On Video (AOV) ghi hình gần như liên tục 24/7; AI phát hiện người/phương tiện; Tích hợp sẵn tấm pin mặt trời, không cần sạc thủ công; Active Defense với còi báo động + đèn spotlight nháy; Color Night Vision; Nén H.265 giảm ~50% dung lượng lưu trữ/băng thông; Wi-Fi 6 không cần hub; tích hợp Google Assistant & Amazon Alexa'
+            }
+        },
+        {
+            id: 'bc1c-4k',
+            officialUrl: 'https://www.ezviz.com/product/bc1c+4k/48946',
+            name: 'EZVIZ BC1c 4K',
+            category: 'Camera Dùng Pin 4K Đa Năng (Trong/Ngoài Trời)',
+            type: 'camera-battery',
+            image: 'https://mfs.ezvizlife.com/419447a6fc278fcf2bc56c2c7b35c27a.jpg',
+            shortDesc: 'Thế hệ camera pin 4K mới nhất dòng BC1C/eLife của EZVIZ, chuẩn chống nước IP65 dùng được cả ngoài trời, pin 10.400mAh dùng tới 180 ngày/lần sạc. Cùng dòng có bản 1080p (EZVIZ BC1C/eLife) và bản 2K+ (EZVIZ eLife 2K+) đã ghi chú trong thẻ "EZVIZ BC1C (eLife)".',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.7" 8-Megapixel Progressive Scan CMOS',
+                'Độ phân giải': '3840 × 2160 (4K); cùng dòng còn có bản 1080p và 2K+ (xem thẻ "EZVIZ BC1C (eLife)")',
+                'Ống kính / Góc quan sát': '2.8mm F1.6, chéo 135°, ngang 113°, dọc 60°',
+                'Góc xoay Pan/Tilt': '—',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại 15m; quan sát màu ban đêm 15m với 2 đèn spotlight',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 6 (802.11b/g/n/ax) 2.4GHz, bảo mật WPA3-Personal',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'Pin sạc 10.400mAh (dùng tới 180 ngày/lần sạc); tương thích tấm pin năng lượng mặt trời EZVIZ (bản Type-C, bán riêng); sạc qua DC 5V/2A',
+                'Chuẩn chống nước & bụi': 'IP65',
+                'Tính năng chính': 'Thế hệ camera pin 4K mới thuộc dòng "Always-On Protection" của EZVIZ; AI phát hiện hình dáng người/phương tiện, không cần trả phí thuê bao; Color Night Vision với 2 đèn spotlight + 2 đèn hồng ngoại; Active Defense còi báo động + đèn nháy; Gắn nam châm hoặc vít, tương thích tấm pin mặt trời; Wi-Fi 6 không cần hub; Chứng nhận bảo mật ISO/IEC 27001; tích hợp Google Assistant & Amazon Alexa'
+            }
+        },
+        {
             id: 'db2',
+            officialUrl: 'https://www.ezviz.com/product/db2-3mp/38579',
             name: 'EZVIZ DB2 (Battery)',
             category: 'Chuông Cửa Hình Ảnh',
             type: 'doorbell',
@@ -857,9 +995,10 @@
         },
         {
             id: 'eb8-4g',
+            officialUrl: 'https://www.ezviz.com/product/EB8-4G/46565',
             name: 'EZVIZ EB8 4G',
             category: 'Camera 4G ngoài trời xoay quét dùng pin',
-            type: 'camera',
+            type: 'camera-battery',
             image: 'https://mfs.ezvizlife.com/79884a856537c49323cfd84acea92af1.jpg',
             video: 'https://www.youtube.com/watch?v=LTXNoKeYYdw',
             shortDesc: 'Camera 4G xoay quét dùng pin, hoạt động độc lập không cần Wi-Fi, phù hợp lắp đặt ở khu vực ngoài trời không có mạng, tích hợp đèn cảnh báo và định vị GPS.',
@@ -879,9 +1018,10 @@
         },
         {
             id: 'h90-c90',
+            officialUrl: 'https://www.ezviz.com/product/h90-dual-2k%E2%81%BA/62160',
             name: 'EZVIZ H90/C90 Dual',
             category: 'Camera Wi-Fi 2 ống kính xoay quét ngoài trời',
-            type: 'camera',
+            type: 'camera-outdoor',
             image: 'https://mfs.ezvizlife.com/a803c5bc69b84641d88324f99e0e4a05.jpg',
             video: 'https://www.youtube.com/watch?v=JdvF17yQZ3I&t=91s',
             shortDesc: 'Camera Wi-Fi hai ống kính xoay độc lập trong một thân máy, cho phép giám sát đồng thời hai khu vực rộng hoặc quay cùng một sự kiện với chi tiết vượt trội; C90 dạng cầu, H90 dạng UFO.',
@@ -901,9 +1041,10 @@
         },
         {
             id: 'h80f',
+            officialUrl: 'https://www.ezviz.com/product/h80f+multi+2k%E2%81%BA/62547',
             name: 'EZVIZ H80f Multi',
             category: 'Camera Wi-Fi 3 ống kính zoom ngoài trời',
-            type: 'camera',
+            type: 'camera-outdoor',
             image: 'https://mfs.ezvizlife.com/0de849521e0aea22fd00c13a512694ca.png',
             video: 'https://www.youtube.com/watch?v=uFDp2YJHOTY&t=364s',
             shortDesc: 'Camera ngoài trời 3 ống kính 2K+ đầu tiên của EZVIZ, kết hợp góc rộng và zoom quang 12x để vừa bao quát vừa nhìn cận cảnh chi tiết, tích hợp AI phát hiện người/phương tiện và tự động zoom bám theo.',
@@ -923,9 +1064,10 @@
         },
         {
             id: 'h7c-c7',
+            officialUrl: 'https://www.ezviz.com/product/H7c-Dual/53812',
             name: 'EZVIZ H7c/C7 Dual',
             category: 'Camera Wi-Fi 2 ống kính trong nhà',
-            type: 'camera',
+            type: 'camera-indoor',
             image: 'https://mfs.ezvizlife.com/b23107954fb48e726d7bf79a7591227d.png',
             video: 'https://www.youtube.com/watch?v=3YYBxAelWps&t=85s',
             shortDesc: 'Camera 2 ống kính 2K+ hoạt động độc lập hoặc phối hợp để bao quát toàn diện không gian trong nhà từ trên xuống dưới, hỗ trợ Wi-Fi 6 băng tần kép và phát hiện hình dáng người bằng AI.',
@@ -945,9 +1087,10 @@
         },
         {
             id: 's10',
+            officialUrl: 'https://www.ezviz.com/product/s10/68505',
             name: 'EZVIZ S10',
             category: 'Camera gọi video thông minh có màn hình',
-            type: 'camera',
+            type: 'camera-indoor',
             image: 'https://mfs.ezvizlife.com/fd05498b2fe4561e7332565ac602757d.png',
             video: 'https://www.youtube.com/watch?v=tn4vOj4rSR0&t=7s',
             shortDesc: 'Camera gọi video thông minh đầu tiên của EZVIZ, kết hợp giám sát an ninh với màn hình cảm ứng 4 inch, gọi video hai chiều và album ảnh điện tử để kết nối gia đình.',
@@ -967,9 +1110,10 @@
         },
         {
             id: 'cb2-4g',
+            officialUrl: 'https://www.ezviz.com/product/cb2+4g/58788',
             name: 'EZVIZ CB2 4G',
             category: 'Camera 4G pin nhỏ gọn',
-            type: 'camera',
+            type: 'camera-battery',
             image: 'https://mfs.ezvizlife.com/7122dae4c80d0c3e689a036efe860120.png',
             video: 'https://www.youtube.com/watch?v=KWqT7OGaG98&t=21s',
             shortDesc: 'Camera 4G dùng pin nhỏ gọn cỡ lòng bàn tay, phù hợp cho khu vực không có Wi-Fi hoặc nguồn điện, hỗ trợ quay liên tục cả ngày (Always-On Video) và phát hiện người bằng AI.',
@@ -989,9 +1133,10 @@
         },
         {
             id: 'h8x',
+            officialUrl: 'https://www.ezviz.com/product/H8x-2K%E2%81%BA/60814',
             name: 'EZVIZ H8x 2K+',
             category: 'Camera Wi-Fi xoay quét ngoài trời',
-            type: 'camera',
+            type: 'camera-outdoor',
             image: 'https://mfs.ezvizlife.com/537af58d5d29e0219257e903b07aada2.png',
             video: 'https://www.youtube.com/watch?v=D3g7Oo2qsg4&t=35s',
             shortDesc: 'Camera ngoài trời xoay quét với công nghệ ColorFULL cho hình ảnh màu sắc sống động ngay cả trong điều kiện ánh sáng cực yếu mà không cần đèn hỗ trợ, tích hợp AI phát hiện người/xe và tự động zoom bám theo.',
@@ -1011,9 +1156,10 @@
         },
         {
             id: 'c60p',
+            officialUrl: 'https://www.ezviz.com/product/c60p-dual-mix-2k/60600',
             name: 'EZVIZ C60p Dual Mix 2K',
             category: 'Camera Wi-Fi 2 ống kính trong nhà',
-            type: 'camera',
+            type: 'camera-indoor',
             image: 'https://mfs.ezvizlife.com/4d84c88ae62b56d0fdffb8eda7e0c3ee.jpg',
             video: 'https://www.youtube.com/watch?v=xKD0tL08Cb8&t=512s',
             shortDesc: 'Camera trong nhà 2 ống kính ghép hình để tạo góc nhìn siêu rộng, giảm điểm mù, xoay quét 360° và hỗ trợ Wi-Fi 6, phát hiện hình dáng người bằng AI.',
@@ -1033,9 +1179,10 @@
         },
         {
             id: 'h9c',
+            officialUrl: 'https://www.ezviz.com/product/h9c+dual+2k/52810',
             name: 'EZVIZ H9c Dual',
             category: 'Camera Wi-Fi 2 ống kính xoay quét ngoài trời',
-            type: 'camera',
+            type: 'camera-outdoor',
             image: 'https://mfs.ezvizlife.com/073776431d630895e1e9d72b079ae733.jpg',
             video: 'https://www.youtube.com/watch?v=zM5necvSct4&t=194s',
             shortDesc: 'Camera ngoài trời 2 ống kính phối hợp hoạt động để bảo vệ khu vực rộng lớn với hiệu quả tương đương hệ thống nhiều camera, có các phiên bản độ phân giải 2K, 3K và 4G.',
@@ -1055,9 +1202,10 @@
         },
         {
             id: 'h6c-g1-2k',
+            officialUrl: 'https://www.ezviz.com/product/h6c+g1+2k/293403',
             name: 'EZVIZ H6c G1 2K',
             category: 'Camera Wi-Fi xoay quét trong nhà',
-            type: 'camera',
+            type: 'camera-indoor',
             image: 'https://mfs.ezvizlife.com/fcb5fdba125fb573d325134a0bdf6440.jpg',
             video: 'https://www.youtube.com/watch?v=SIxP7QeRRJg&t=55s',
             shortDesc: 'Thế hệ camera xoay quét (pan-tilt) trong nhà mới của EZVIZ, độ phân giải 2K, quan sát màu ban đêm và màn chắn riêng tư vật lý. Cùng dòng H6c G1 còn có bản 3K và 4K.',
@@ -1077,9 +1225,10 @@
         },
         {
             id: 'h6c-g1-3k',
+            officialUrl: 'https://www.ezviz.com/product/h6c+g1+3k/189927',
             name: 'EZVIZ H6c G1 3K',
             category: 'Camera Wi-Fi xoay quét trong nhà',
-            type: 'camera',
+            type: 'camera-indoor',
             image: 'https://mfs.ezvizlife.com/2a59a782e5f57405d18c43d49508a20e.png',
             shortDesc: 'Bản nâng cấp độ phân giải 3K của dòng H6c G1, hình ảnh sắc nét hơn, cùng các tính năng AI phát hiện người và quan sát màu ban đêm. Cùng dòng còn có bản 2K và 4K.',
             specs: {
@@ -1098,9 +1247,10 @@
         },
         {
             id: 'h6c-g1-4k',
+            officialUrl: 'https://www.ezviz.com/product/h6c-g1-4k/70921',
             name: 'EZVIZ H6c G1 4K',
             category: 'Camera Wi-Fi xoay quét trong nhà',
-            type: 'camera',
+            type: 'camera-indoor',
             image: 'https://mfs.ezvizlife.com/f3865858cb3ceb69767f32edd7ad308f.png',
             shortDesc: 'Bản độ phân giải 4K thực cao cấp nhất dòng H6c G1, bổ sung phát hiện thú cưng và cảnh báo tiếng động lớn. Cùng dòng còn có bản 2K và 3K.',
             specs: {
@@ -1119,9 +1269,10 @@
         },
         {
             id: 'c6n-g1-2k',
+            officialUrl: 'https://www.ezviz.com/product/c6n+g1+2k/293591',
             name: 'EZVIZ C6N G1 2K',
             category: 'Camera Wi-Fi xoay quét trong nhà',
-            type: 'camera',
+            type: 'camera-indoor',
             image: 'https://mfs.ezvizlife.com/225f293dee06112b85a49ed88664335c.png',
             video: 'https://www.youtube.com/watch?v=SIxP7QeRRJg&t=55s',
             shortDesc: 'Camera xoay quét (pan-tilt) trong nhà thế hệ mới của EZVIZ dòng C6N G1, độ phân giải 2K, cùng thế hệ thiết kế với H6c G1. Cùng dòng còn có bản 3K và 4K.',
@@ -1141,9 +1292,10 @@
         },
         {
             id: 'c6n-g1-3k',
+            officialUrl: 'https://www.ezviz.com/product/c6n+g1+3k/189684',
             name: 'EZVIZ C6N G1 3K',
             category: 'Camera Wi-Fi xoay quét trong nhà',
-            type: 'camera',
+            type: 'camera-indoor',
             image: 'https://mfs.ezvizlife.com/2a59a782e5f57405d18c43d49508a20e.png',
             shortDesc: 'Bản nâng cấp độ phân giải 3K của dòng C6N G1, hình ảnh sắc nét hơn. Cùng dòng còn có bản 2K và 4K.',
             specs: {
@@ -1162,9 +1314,10 @@
         },
         {
             id: 'c6n-g1-4k',
+            officialUrl: 'https://www.ezviz.com/product/c6n-g1-4k/71072',
             name: 'EZVIZ C6N G1 4K',
             category: 'Camera Wi-Fi xoay quét trong nhà',
-            type: 'camera',
+            type: 'camera-indoor',
             image: 'https://mfs.ezvizlife.com/f3865858cb3ceb69767f32edd7ad308f.png',
             shortDesc: 'Bản độ phân giải 4K thực cao cấp nhất dòng C6N G1, bổ sung phát hiện thú cưng và cảnh báo tiếng động lớn. Cùng dòng còn có bản 2K và 3K.',
             specs: {
@@ -1183,9 +1336,10 @@
         },
         {
             id: 'cb8c-lite',
+            officialUrl: 'https://www.ezviz.com/product/cb8-lite/65506',
             name: 'EZVIZ CB8 Lite',
             category: 'Camera Wi-Fi pin xoay quét ngoài trời',
-            type: 'camera',
+            type: 'camera-battery',
             image: 'https://mfs.ezvizlife.com/1f91fa50f8eae901de860c954e0b2773.png',
             video: 'https://www.youtube.com/watch?v=2L5HPTpN9iA&t=60s',
             shortDesc: 'Camera dùng pin xoay quét ngoài trời với công nghệ AOV (quay liên tục cả ngày) cho thời lượng pin dài và khoảng cách phát hiện xa hơn, hỗ trợ tấm pin năng lượng mặt trời EZVIZ và đèn spotlight cảnh báo.',
@@ -1205,6 +1359,7 @@
         },
         {
             id: 'cp3',
+            officialUrl: 'https://www.ezviz.com/product/cp3/56724',
             name: 'EZVIZ CP3',
             category: 'Chuông cửa hình dùng pin kèm chuông trong nhà',
             type: 'doorbell',
@@ -1226,6 +1381,7 @@
         },
         {
             id: 'hp7',
+            officialUrl: 'https://www.ezviz.com/product/hp7/46757',
             name: 'EZVIZ HP7',
             category: 'Chuông cửa hình / Intercom màn hình',
             type: 'doorbell',
@@ -1247,6 +1403,7 @@
         },
         {
             id: 'x5s',
+            officialUrl: 'https://www.ezviz.com/product/x5s/1377',
             name: 'EZVIZ X5S',
             category: 'Đầu ghi hình NVR không dây',
             type: 'nvr',
@@ -1267,6 +1424,7 @@
         },
         {
             id: 'hp2',
+            officialUrl: 'https://www.ezviz.com/product/hp2/54485',
             name: 'EZVIZ HP2',
             category: 'Mắt thần cửa thông minh (peephole) dùng pin',
             type: 'peephole',
@@ -1288,6 +1446,7 @@
         },
         {
             id: 'hp4-peephole',
+            officialUrl: 'https://www.ezviz.com/product/hp4/48540',
             name: 'EZVIZ HP4',
             category: 'Chuông cửa mắt thần thông minh (peephole doorbell)',
             type: 'peephole',
@@ -1309,6 +1468,7 @@
         },
         {
             id: 'homegate-a3',
+            officialUrl: 'https://www.ezviz.com/product/a3-home-gateway/40264',
             name: 'EZVIZ A3 Home Gateway',
             category: 'Trung tâm điều khiển nhà thông minh (Hub Zigbee)',
             type: 'smarthome',
@@ -1328,9 +1488,10 @@
         },
         {
             id: 'e4p',
+            officialUrl: 'https://www.ezviz.com/product/e4p/65325',
             name: 'EZVIZ E4p',
             category: 'Camera Wi-Fi toàn cảnh 360° (mắt cá)',
-            type: 'camera',
+            type: 'camera-indoor',
             image: 'https://mfs.ezvizlife.com/ac7e48ea50e2760d086607bd071e5f15.png',
             video: 'https://www.youtube.com/watch?v=Ylupt5kqrbI&t=35s',
             shortDesc: 'Camera Wi-Fi toàn cảnh 360° dạng mắt cá, độ phân giải 3K+, thiết kế UFO gắn tường/trần bằng đế nam châm, tích hợp AI phát hiện người và phát hiện âm thanh bất thường. Lưu ý: trên ezviz.com đây là dòng camera, không phải router.',
@@ -1350,6 +1511,7 @@
         },
         {
             id: 'dl05',
+            officialUrl: 'https://www.ezviz.com/product/dl05/49610',
             name: 'EZVIZ DL05',
             category: 'Khóa cửa thông minh vân tay',
             type: 'lock',
@@ -1373,6 +1535,7 @@
         },
         {
             id: 'dl50fvs',
+            officialUrl: 'https://www.ezviz.com/product/dl50fvs/55733',
             name: 'EZVIZ DL50FVS',
             category: 'Khóa cửa thông minh nhận diện khuôn mặt',
             type: 'lock',
@@ -1396,6 +1559,7 @@
         },
         {
             id: 'dl03',
+            officialUrl: 'https://www.ezviz.com/product/dl03/61869',
             name: 'EZVIZ DL03',
             category: 'Khóa cửa thông minh (khóa chốt rim lock)',
             type: 'lock',
@@ -1419,6 +1583,7 @@
         },
         {
             id: 'dl04',
+            officialUrl: 'https://www.ezviz.com/product/dl04/57823',
             name: 'EZVIZ DL04',
             category: 'Khóa cửa thông minh (khóa chốt deadbolt)',
             type: 'lock',
@@ -1442,6 +1607,7 @@
         },
         {
             id: 'dl06-pro',
+            officialUrl: 'https://www.ezviz.com/product/dl06+pro/66414',
             name: 'EZVIZ DL06 Pro',
             category: 'Khóa cửa thông minh vân tay 2 mặt',
             type: 'lock',
@@ -1465,6 +1631,7 @@
         },
         {
             id: 'dl20fvs',
+            officialUrl: 'https://www.ezviz.com/product/dl20fvs-plus/275273',
             name: 'EZVIZ DL20FVS Plus',
             category: 'Khóa cửa tay gạt thông minh nhận diện khuôn mặt & tĩnh mạch lòng bàn tay',
             type: 'lock',
@@ -1488,9 +1655,10 @@
         },
         {
             id: 'h6c-base',
+            officialUrl: 'https://www.ezviz.com/product/h6c/43027',
             name: 'EZVIZ H6C',
             category: 'Camera Wi-Fi xoay quét trong nhà',
-            type: 'camera',
+            type: 'camera-indoor',
             image: 'https://mfs.ezvizlife.com/30641be87a5f77e69e993bfce0059448.jpg',
             shortDesc: 'EZVIZ H6c là camera Wi-Fi xoay quét thông minh trong nhà, độ phân giải 1080P, linh hoạt lắp đặt làm camera giám sát trẻ em, thú cưng hoặc tăng cường an ninh cho ngôi nhà.',
             specs: {
@@ -1509,9 +1677,10 @@
         },
         {
             id: 'ty1',
+            officialUrl: 'https://www.ezviz.com/product/ty1+3mp/37489',
             name: 'EZVIZ TY1',
             category: 'Camera Wi-Fi xoay quét trong nhà',
-            type: 'camera',
+            type: 'camera-indoor',
             image: 'https://mfs.ezvizlife.com/e461ae9ad919813d2bfc698b297116a6.jpg',
             shortDesc: 'EZVIZ TY1 là camera Wi-Fi xoay quét trong nhà với góc nhìn 360°, tính năng bám theo chuyển động thông minh và đàm thoại 2 chiều giúp kết nối, bảo vệ gia đình mọi lúc.',
             specs: {
@@ -1530,9 +1699,10 @@
         },
         {
             id: 'h6c-pro',
+            officialUrl: 'https://www.ezviz.com/product/h6c+pro+2k%E2%81%BA/48977',
             name: 'EZVIZ H6C Pro',
             category: 'Camera Wi-Fi xoay quét trong nhà',
-            type: 'camera',
+            type: 'camera-indoor',
             image: 'https://mfs.ezvizlife.com/a04cafdae45a1cbfefd3a3b9a8347c6a.jpg',
             shortDesc: 'EZVIZ H6c Pro mang tầm nhìn toàn cảnh trong nhà với độ phân giải 2K+ (4MP), chế độ tuần tra tự động xóa điểm mù, nhận diện hình dáng người và bám theo chuyển động, phù hợp giám sát người già, trẻ nhỏ.',
             specs: {
@@ -1551,9 +1721,10 @@
         },
         {
             id: 'h6-base',
+            officialUrl: 'https://www.ezviz.com/product/h6/47949',
             name: 'EZVIZ H6',
             category: 'Camera Wi-Fi thông minh trong nhà',
-            type: 'camera',
+            type: 'camera-indoor',
             image: 'https://mfs.ezvizlife.com/28cba5e33ba1710373cecf957a190362.jpg',
             shortDesc: 'EZVIZ H6 là camera Wi-Fi thông minh trong nhà độ phân giải 3K với ống kính Starlight cho hình ảnh màu ban đêm, tích hợp AI nhận diện người & thú cưng và điều khiển bằng cử chỉ vẫy tay.',
             specs: {
@@ -1571,15 +1742,16 @@
             }
         },
         {
-            id: 'c6c',
-            name: 'EZVIZ C6C',
+            id: 'c6c-4k',
+            officialUrl: 'https://www.ezviz.com/product/c6c-4k/55046',
+            name: 'EZVIZ C6C 4K',
             category: 'Camera Wi-Fi xoay quét trong nhà',
-            type: 'camera',
-            image: 'https://mfs.ezvizlife.com/595b2d94cf186052888b1da922c7c155.png',
-            shortDesc: 'EZVIZ C6c 4K là camera Wi-Fi xoay quét trong nhà độ phân giải 4K Ultra HD, hỗ trợ Wi-Fi 6, night vision màu thông minh, tự động bám theo chuyển động và tương thích trợ lý ảo Google/Alexa.',
+            type: 'camera-indoor',
+            image: 'https://mfs.ezvizlife.com/171d3b7678f29960c63062a68cb3dc03_middle.png',
+            shortDesc: 'EZVIZ C6c 4K là camera Wi-Fi xoay quét trong nhà độ phân giải 4K Ultra HD, hỗ trợ Wi-Fi 6, night vision màu thông minh, tự động bám theo chuyển động và tương thích trợ lý ảo Google/Alexa. Cùng dòng còn có bản C6c 2K (xem thẻ riêng "EZVIZ C6C 2K").',
             specs: {
                 'Cảm biến hình ảnh': '1/2.7" Progressive Scan CMOS, F1.6',
-                'Độ phân giải': '4K Ultra HD (3840×2160, ~8MP); dòng này còn có bản 1080P/720P',
+                'Độ phân giải': '4K Ultra HD (3840×2160, ~8MP); cùng dòng C6c còn có bản 2K (2304×1296, xem thẻ "EZVIZ C6C 2K")',
                 'Ống kính / Góc quan sát': '4mm F1.6, góc nhìn: ngang 106°, dọc 90°, chéo 48°',
                 'Góc xoay Pan/Tilt': 'Ngang (Pan) 340°; dọc (Tilt) 130°',
                 'Hồng ngoại / Quan sát màu ban đêm': 'Smart Color Night Vision tới 6m (đèn spotlight tích hợp, khẩu độ F1.6); hồng ngoại đen trắng tới 10m',
@@ -1592,10 +1764,144 @@
             }
         },
         {
+            id: 'c6c-2k',
+            officialUrl: 'https://www.ezviz.com/product/c6c-2k/53445',
+            name: 'EZVIZ C6C 2K',
+            category: 'Camera Wi-Fi xoay quét trong nhà',
+            type: 'camera-indoor',
+            image: 'https://mfs.ezvizlife.com/1a7171085bb36e3f191a706f1890ee42_middle.png',
+            shortDesc: 'Camera Wi-Fi xoay quét trong nhà độ phân giải 2K, cảm biến starlight cho ánh sáng yếu. Cùng dòng còn có bản 4K (xem thẻ "EZVIZ C6C 4K").',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.7" Progressive Scan CMOS, F2.0',
+                'Độ phân giải': '2304 × 1296 (2K); cùng dòng C6c còn có bản 4K (xem thẻ "EZVIZ C6C 4K")',
+                'Ống kính / Góc quan sát': '4mm F2.0, ngang 100°, dọc 84°, chéo 46°',
+                'Góc xoay Pan/Tilt': 'Ngang (Pan) 340°; dọc (Tilt) 130°',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Tối đa 10m; cảm biến starlight cho hình ảnh rõ nét trong điều kiện thiếu sáng',
+                'Màn hình': 'Không có (điều khiển qua ứng dụng EZVIZ)',
+                'Kết nối mạng': 'Wi-Fi 802.11b/g/n 2.4GHz',
+                'Lưu trữ': 'Khe thẻ nhớ microSD tối đa 512GB; hỗ trợ EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'DC 5V/1A qua Type-C, công suất tối đa 5W',
+                'Chuẩn chống nước & bụi': 'Không có chuẩn chống nước & bụi',
+                'Tính năng chính': 'Bản độ phân giải 2K của dòng C6c, cảm biến starlight bắt sáng tốt trong điều kiện thiếu sáng; AI phát hiện hình dáng người, tự động bám theo chuyển động; đàm thoại 2 chiều; màn chắn riêng tư vật lý; tích hợp Google Assistant & Amazon Alexa; nén H.265 giảm ~50% dung lượng lưu trữ'
+            }
+        },
+        {
+            id: 'e6',
+            officialUrl: 'https://www.ezviz.com/product/e6/42953',
+            name: 'EZVIZ E6',
+            category: 'Camera Wi-Fi xoay quét trong nhà',
+            type: 'camera-indoor',
+            image: 'https://mfs.ezvizlife.com/3a2a117c80e1ed071c6d01bc99291ffd_middle.png',
+            shortDesc: 'Camera Wi-Fi xoay quét trong nhà độ phân giải 3K, camera đầu tiên của EZVIZ tương thích Apple HomeKit, hỗ trợ Wi-Fi băng tần kép và phát hiện tiếng sủa/kêu của thú cưng.',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.7" Progressive Scan CMOS',
+                'Độ phân giải': '2880 × 1620 (3K)',
+                'Ống kính / Góc quan sát': '4mm F2.0, ngang 87°, dọc 48°, chéo 103°',
+                'Góc xoay Pan/Tilt': 'Ngang (Pan) 350°; dọc (Tilt) 75°',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Tối đa 10m',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi băng tần kép 2.4GHz/5GHz (802.11a/b/g/n/ac)',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'DC 5V/2A, công suất tối đa 8W',
+                'Chuẩn chống nước & bụi': 'Không có chuẩn chống nước & bụi',
+                'Tính năng chính': 'Camera đầu tiên của EZVIZ tương thích Apple HomeKit; AI phát hiện người và thú cưng, tự động zoom bám theo chuyển động tới 4x; phát hiện tiếng sủa/kêu của thú cưng (Bark & Meow Detection); đàm thoại 2 chiều kích hoạt bằng cử chỉ tay (dấu V); âm thanh Hi-Fi với micro khử tiếng ồn; màn chắn riêng tư vật lý; tích hợp Google Assistant & Amazon Alexa; nén H.265 giảm ~50% dung lượng lưu trữ'
+            }
+        },
+        {
+            id: 'c6n-pro-2k',
+            officialUrl: 'https://www.ezviz.com/product/c6n-pro-2k/61288',
+            name: 'EZVIZ C6N Pro 2K',
+            category: 'Camera Wi-Fi xoay quét trong nhà',
+            type: 'camera-indoor',
+            image: 'https://mfs.ezvizlife.com/728642a8ede01c201b5f0f2dd1c4960f_middle.png',
+            shortDesc: 'Camera Wi-Fi xoay quét trong nhà độ phân giải 2K, tuần tra tự động 360° tùy chỉnh, đàm thoại 2 chiều bằng nút chạm vật lý.',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.7" Progressive Scan CMOS',
+                'Độ phân giải': '2304 × 1296 (2K)',
+                'Ống kính / Góc quan sát': '4mm F1.6, ngang 82°, dọc 48°, chéo 98°',
+                'Góc xoay Pan/Tilt': 'Ngang (Pan) 340°; dọc (Tilt) 55°',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại tối đa 10m; Smart Color Night Vision tối đa 5m',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 802.11a/b/g/n 2.4GHz',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'DC 5V/1A qua Type-C, công suất tối đa 5W',
+                'Chuẩn chống nước & bụi': 'Không có chuẩn chống nước & bụi',
+                'Tính năng chính': '"Patrol to protect, touch to connect" — tuần tra tự động 360° với chế độ Patrol tùy chỉnh; AI phát hiện hình dáng người, phát hiện tiếng động lớn; đàm thoại 2 chiều bằng nút chạm vật lý; Sleep Mode bảo vệ riêng tư'
+            }
+        },
+        {
+            id: 'ty1-g1-2k',
+            officialUrl: 'https://www.ezviz.com/product/ty1-g1-2k/293704',
+            name: 'EZVIZ TY1 G1 2K',
+            category: 'Camera Wi-Fi xoay quét trong nhà',
+            type: 'camera-indoor',
+            image: 'https://mfs.ezvizlife.com/6db2fa3f1de8f333c6a28fbf2caa2d02_middle.png',
+            video: 'https://www.youtube.com/watch?v=bojH0LTCp_Q',
+            shortDesc: 'Thế hệ mới của dòng TY1 (G1), camera Wi-Fi xoay quét trong nhà độ phân giải 2K, cùng thiết kế thế hệ mới với H6c G1/C6N G1.',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.8" Progressive Scan CMOS',
+                'Độ phân giải': '2304 × 1296 (2K)',
+                'Ống kính / Góc quan sát': '4mm F2.0, chéo 98°, ngang 83°, dọc 44°',
+                'Góc xoay Pan/Tilt': 'Ngang (Pan) 350°; dọc (Tilt) 85°',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Smart Color Night Vision có đèn tích hợp, khẩu độ lớn F2.0, tối đa 10m',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 802.11b/g/n 2.4GHz; cổng RJ45 10/100M',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'DC 5V/1A, tối đa 5W',
+                'Chuẩn chống nước & bụi': 'Không có chuẩn chống nước & bụi',
+                'Tính năng chính': 'Thế hệ thiết kế mới (G1) của dòng TY1, cùng phần cứng/thiết kế với H6c G1 và C6N G1; Độ phân giải 2K, khẩu độ lớn F2.0; Smart Color Night Vision có đèn tích hợp; AI Smart Human Detection; Màn trập riêng tư vật lý (Physical Privacy Shutter); Đàm thoại 2 chiều; Nén H.265 giảm ~50% dung lượng lưu trữ/băng thông'
+            }
+        },
+        {
+            id: 'ty1-pro',
+            officialUrl: 'https://www.ezviz.com/product/ty1-pro-2k%E2%81%BA/49061',
+            name: 'EZVIZ TY1 Pro',
+            category: 'Camera Wi-Fi xoay quét trong nhà',
+            type: 'camera-indoor',
+            image: 'https://mfs.ezvizlife.com/8cc212e7fd8a8f3c3974c53f40b12a1f_middle.png',
+            shortDesc: 'Camera Wi-Fi xoay quét trong nhà độ phân giải 2K+ (4MP), tuần tra tự động, đàm thoại 2 chiều, tự động zoom bám theo chuyển động. Cùng dòng TY1 Pro còn có các bản 2K, 3K và 4K.',
+            specs: {
+                'Cảm biến hình ảnh': 'F1.6, 1/3" Progressive Scan CMOS',
+                'Độ phân giải': '2560 × 1440 (2K+/4MP); cùng dòng TY1 Pro còn có bản 2K, 3K và 4K',
+                'Ống kính / Góc quan sát': '4mm, ngàm M12',
+                'Góc xoay Pan/Tilt': 'Ngang (Pan) 340°; dọc (Tilt) 55°',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại tối đa 10m; Smart Color Night Vision, công nghệ giảm nhiễu 3D DNR',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi băng tần kép 2.4GHz/5GHz (802.11a/b/g/n); cổng RJ45',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'DC 5V/2A qua Type-C, công suất tối đa 8W',
+                'Chuẩn chống nước & bụi': 'Không có chuẩn chống nước & bụi',
+                'Tính năng chính': 'Tuần tra tự động 360° với chế độ Patrol tùy chỉnh; AI Smart Human Shape Detection, Auto-Zoom Tracking tự động bám và phóng to tới 4x; Smart Color Night Vision; phát hiện tiếng động lớn (Loud Noise Detection); đàm thoại 2 chiều; Sleep Mode bảo vệ riêng tư; nén H.265 giảm ~50% dung lượng lưu trữ/băng thông'
+            }
+        },
+        {
+            id: 'cp1-pro',
+            officialUrl: 'https://www.ezviz.com/product/cp1-pro-2k%E2%81%BA/48987',
+            name: 'EZVIZ CP1 Pro',
+            category: 'Camera Wi-Fi xoay quét trong nhà',
+            type: 'camera-indoor',
+            image: 'https://mfs.ezvizlife.com/f459455379d2f89a42aa134f7a164555_middle.png',
+            shortDesc: 'Camera Wi-Fi xoay quét trong nhà độ phân giải 2K+ (4MP), thường dùng làm camera rời đi kèm khóa cửa thông minh EZVIZ (như DL06). Cùng dòng CP1 Pro còn có các bản 2K và 4K.',
+            specs: {
+                'Cảm biến hình ảnh': '1/3" Progressive Scan CMOS',
+                'Độ phân giải': '2560 × 1440 (2K+/4MP); cùng dòng CP1 Pro còn có bản 2K và 4K',
+                'Ống kính / Góc quan sát': '4mm F1.6',
+                'Góc xoay Pan/Tilt': 'Ngang (Pan) 340°; dọc (Tilt) 55°',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại tối đa 10m; Smart Color Night Vision tối đa 5m',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi băng tần kép 2.4GHz/5GHz (802.11a/b/g/n)',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'DC 5V/2A qua Type-C, công suất tối đa 8W',
+                'Chuẩn chống nước & bụi': 'Không có chuẩn chống nước & bụi',
+                'Tính năng chính': 'Tuần tra tự động 360° trong độ phân giải 2K+; AI phát hiện chuyển động/người, Auto-Zoom Tracking tới 4x; phát hiện tiếng động lớn; đàm thoại 2 chiều; nén H.265 giảm ~50% dung lượng lưu trữ/băng thông; thường dùng làm camera giám sát rời đi kèm khóa cửa thông minh EZVIZ (DL06, DL06 Pro...)'
+            }
+        },
+        {
             id: 'ty7-dual',
+            officialUrl: 'https://www.ezviz.com/product/ty7+dual+2k%E2%81%BA/56498',
             name: 'EZVIZ TY7 Dual',
             category: 'Camera trong nhà 2 ống kính Pan/Tilt',
-            type: 'camera',
+            type: 'camera-indoor',
             image: 'https://mfs.ezvizlife.com/137947897d85c857a76c8dc818c64baa.png',
             shortDesc: 'EZVIZ TY7 Dual kết hợp một ống kính góc rộng cố định và một ống kính Pan/Tilt trong cùng một thân máy, mang lại vùng quan sát gần như không điểm mù cho không gian trong nhà.',
             specs: {
@@ -1614,6 +1920,7 @@
         },
         {
             id: 'bm1',
+            officialUrl: 'https://www.ezviz.com/product/BM1/42147',
             name: 'EZVIZ BM1',
             category: 'Camera trông trẻ (Baby Monitor)',
             type: 'babymonitor',
@@ -1635,9 +1942,10 @@
         },
         {
             id: 'h3c-color',
+            officialUrl: 'https://www.ezviz.com/product/H3c-Color/42859',
             name: 'EZVIZ H3C Color',
             category: 'Camera ngoài trời quan sát màu ban đêm',
-            type: 'camera',
+            type: 'camera-outdoor',
             image: 'https://mfs.ezvizlife.com/5b063c778a449cee7517c688c4642028.jpg',
             shortDesc: 'EZVIZ H3c Color mang lại hình ảnh sắc nét 1080p với khả năng quay màu vào ban đêm nhờ 2 đèn spotlight tích hợp, cùng vỏ chống chịu thời tiết IP67 và AI phát hiện hình dạng người.',
             specs: {
@@ -1656,11 +1964,12 @@
         },
         {
             id: 'eb3',
-            name: 'EZVIZ EB3',
+            officialUrl: 'https://www.ezviz.com/product/eb3+4g/59788',
+            name: 'EZVIZ EB3 4G',
             category: 'Camera 4G ngoài trời dùng pin, hỗ trợ năng lượng mặt trời (AOV)',
-            type: 'camera',
+            type: 'camera-battery',
             image: 'https://mfs.ezvizlife.com/c05277ef68fd8d78a4fd5d99035b5258.png',
-            shortDesc: 'EZVIZ EB3 4G là camera ngoài trời dùng pin, kết nối hoàn toàn qua mạng 4G (không cần Wi-Fi), tích hợp công nghệ Always-On Video (AOV) ghi hình liên tục dạng time-lapse xen kẽ ghi hình chuyển động, có thể mở rộng thời lượng dùng pin bằng tấm pin mặt trời EZVIZ.',
+            shortDesc: 'EZVIZ EB3 4G là camera ngoài trời dùng pin, kết nối hoàn toàn qua mạng 4G (không cần Wi-Fi), tích hợp công nghệ Always-On Video (AOV) ghi hình liên tục dạng time-lapse xen kẽ ghi hình chuyển động, có thể mở rộng thời lượng dùng pin bằng tấm pin mặt trời EZVIZ. Cùng dòng còn có bản kết nối Wi-Fi (xem thẻ "EZVIZ EB3 (bản Wi-Fi)").',
             specs: {
                 'Cảm biến hình ảnh': '1/2.8" Progressive Scan CMOS 3 Megapixel',
                 'Độ phân giải': '2K (2304×1296, 3MP)',
@@ -1676,10 +1985,55 @@
             }
         },
         {
+            id: 'eb3-wifi',
+            officialUrl: 'https://www.ezviz.com/product/eb3aov-version/54355',
+            name: 'EZVIZ EB3 (bản Wi-Fi)',
+            category: 'Camera Ngoài Trời Dùng Pin, Năng Lượng Mặt Trời (AOV)',
+            type: 'camera-battery',
+            image: 'https://mfs.ezvizlife.com/c05277ef68fd8d78a4fd5d99035b5258.png',
+            shortDesc: 'Bản kết nối Wi-Fi của dòng EB3, dùng pin, hỗ trợ năng lượng mặt trời (AOV), độ phân giải 2K. Khác với "EZVIZ EB3 4G" (kết nối SIM 4G) đã có sẵn trong catalog — cùng thân máy, khác module kết nối.',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.8" Progressive Scan CMOS 3 Megapixel',
+                'Độ phân giải': '2K (2304×1296, 3MP)',
+                'Ống kính / Góc quan sát': '2.8mm F1.6; chéo 130°, ngang 108°, dọc 56°',
+                'Góc xoay Pan/Tilt': '—',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại 15m; quan sát màu ban đêm 15m',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 6 (802.11b/g/n/ax) 2.4GHz',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'Pin sạc 5.200mAh (dùng tới 120 ngày/lần sạc), tương thích tấm pin năng lượng mặt trời EZVIZ (bán riêng); sạc qua DC 5V/2A, công suất tối đa 10W',
+                'Chuẩn chống nước & bụi': 'IP65',
+                'Tính năng chính': 'Bản kết nối Wi-Fi của dòng EB3 (khác với EZVIZ EB3 4G dùng SIM 4G đã có trong catalog); Công nghệ Always-On Video (AOV) ghi hình gần như liên tục; AI phát hiện người/phương tiện; Active Defense còi báo động + đèn spotlight; Color Night Vision; Wi-Fi 6 không cần hub; Nén H.265 giảm ~50% dung lượng lưu trữ/băng thông'
+            }
+        },
+        {
+            id: 'cb3',
+            officialUrl: 'https://www.ezviz.com/product/cb3aov-version/62035',
+            name: 'EZVIZ CB3 (bản Wi-Fi)',
+            category: 'Camera Ngoài Trời Dùng Pin, Năng Lượng Mặt Trời (AOV)',
+            type: 'camera-battery',
+            image: 'https://mfs.ezvizlife.com/3b3a199280a63ac29cbd928eed7d48f1.png',
+            shortDesc: 'Camera ngoài trời dùng pin, hỗ trợ năng lượng mặt trời (AOV), độ phân giải 2K — cùng phân khúc với EZVIZ EB3 (bản Wi-Fi), khác tên thương mại theo thị trường. Cùng dòng còn có bản CB3 4G (kết nối SIM 4G, chưa có trong catalog).',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.8" Progressive Scan CMOS 3 Megapixel',
+                'Độ phân giải': '2K (2304×1296, 3MP)',
+                'Ống kính / Góc quan sát': '2.8mm F1.6; chéo 130°, ngang 108°, dọc 56°',
+                'Góc xoay Pan/Tilt': '—',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại 15m; quan sát màu ban đêm 15m',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 6 (802.11b/g/n) 2.4GHz',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'Pin sạc 5.200mAh (dùng tới 120 ngày/lần sạc), tương thích tấm pin năng lượng mặt trời EZVIZ; sạc qua DC 5V/2A',
+                'Chuẩn chống nước & bụi': 'IP65',
+                'Tính năng chính': 'Công nghệ Always-On Video (AOV) ghi hình gần như liên tục 24/7; AI phát hiện người/phương tiện; Active Defense còi báo động + đèn spotlight kép; Color Night Vision; Wi-Fi 6 không cần hub, tương thích tấm pin mặt trời EZVIZ; Nén H.265 giảm ~50% dung lượng lưu trữ/băng thông; tích hợp Google Assistant & Amazon Alexa'
+            }
+        },
+        {
             id: 'hb8c',
+            officialUrl: 'https://www.ezviz.com/product/hb8-lite-kit/68985',
             name: 'EZVIZ HB8C',
             category: 'Camera Pan/Tilt ngoài trời dùng pin, hỗ trợ năng lượng mặt trời (AOV)',
-            type: 'camera',
+            type: 'camera-battery',
             image: 'https://mfs.ezvizlife.com/225f293dee06112b85a49ed88664335c.png',
             shortDesc: 'EZVIZ HB8C (model CS-HB8c, tên thương mại "HB8 Lite" trên ezviz.com) là camera Pan/Tilt dùng pin cho khu vực ngoài trời không có nguồn điện sẵn, tích hợp Always-On Video 2.0 để ghi hình gần như cả ngày mà vẫn tiết kiệm pin.',
             specs: {
@@ -1698,9 +2052,10 @@
         },
         {
             id: 'h8c-4g',
+            officialUrl: 'https://www.ezviz.com/product/h8c+4g/51967',
             name: 'EZVIZ H8c 4G',
             category: 'Camera 4G ngoài trời xoay Pan/Tilt',
-            type: 'camera',
+            type: 'camera-outdoor',
             image: 'https://mfs.ezvizlife.com/65ad4620a6c23d669041a5e94f5f01a2.png',
             shortDesc: 'Camera xoay Pan/Tilt kết nối 4G (không hỗ trợ Wi-Fi), mang lại khả năng bảo vệ liên tục tại các khu vực không có mạng Wi-Fi ổn định như trang trại, nhà nghỉ dưỡng hay công trường xây dựng.',
             specs: {
@@ -1719,9 +2074,10 @@
         },
         {
             id: 'h8c-pro',
+            officialUrl: 'https://www.ezviz.com/product/H8c-Pro-3K/55562',
             name: 'EZVIZ H8C Pro',
             category: 'Camera Wi-Fi ngoài trời xoay Pan/Tilt cao cấp',
-            type: 'camera',
+            type: 'camera-outdoor',
             image: 'https://mfs.ezvizlife.com/5e1bac3c96c5d4d4e0915b5e26c28f0f.png',
             shortDesc: 'Camera xoay Pan/Tilt ngoài trời thế hệ Pro, cho video 360 độ sắc nét, phát hiện người/phương tiện bằng AI và khả năng chống chịu thời tiết bền bỉ.',
             specs: {
@@ -1740,9 +2096,10 @@
         },
         {
             id: 'h8-base',
+            officialUrl: 'https://www.ezviz.com/product/h8+pro+3k/43242',
             name: 'EZVIZ H8',
             category: 'Camera Wi-Fi ngoài trời xoay Pan/Tilt',
-            type: 'camera',
+            type: 'camera-outdoor',
             image: 'https://mfs.ezvizlife.com/470ecfd527d167aa2b8a090529229fe5.png',
             shortDesc: 'Camera xoay Pan/Tilt ngoài trời với độ phân giải 3K sắc nét, thu hẹp điểm mù nhờ tầm nhìn bao quát 360 độ, tích hợp AI phát hiện người và phương tiện.',
             specs: {
@@ -1761,9 +2118,10 @@
         },
         {
             id: 'h80x-dual',
+            officialUrl: 'https://www.ezviz.com/product/h80x-dual/61002',
             name: 'EZVIZ H80X Dual',
             category: 'Camera Wi-Fi ngoài trời 2 ống kính xoay Pan/Tilt',
-            type: 'camera',
+            type: 'camera-outdoor',
             image: 'https://mfs.ezvizlife.com/89c4010aecda21bbab03657b0e58af14.png',
             shortDesc: 'Camera 2 ống kính (4K + 1080p) kết hợp mang lại hình ảnh siêu nét, công nghệ ColorFULL cho hình ảnh màu sống động ngay cả trong điều kiện thiếu sáng mà không cần bật đèn hỗ trợ.',
             specs: {
@@ -1782,9 +2140,10 @@
         },
         {
             id: 'h9c-dual-4g',
+            officialUrl: 'https://www.ezviz.com/product/h9c-dual-4g/195024',
             name: 'EZVIZ H9C Dual 4G',
             category: 'Camera 4G & Wi-Fi ngoài trời 2 ống kính xoay Pan/Tilt',
-            type: 'camera',
+            type: 'camera-outdoor',
             image: 'https://mfs.ezvizlife.com/5bd5ca3b27e03bbd74d1d3a50ec9f10c.png',
             shortDesc: 'Phiên bản 2 ống kính hỗ trợ song song 4G và Wi-Fi 6, tự động chuyển sang 4G khi Wi-Fi chập chờn, đảm bảo giám sát liên tục kể cả ở khu vực xa xôi hoặc mạng không ổn định.',
             specs: {
@@ -1802,7 +2161,734 @@
             }
         },
         {
+            id: 'h4',
+            officialUrl: 'https://www.ezviz.com/product/h4/48107',
+            name: 'EZVIZ H4',
+            category: 'Camera Wi-Fi Ngoài Trời',
+            type: 'camera-outdoor',
+            image: 'https://mfs.ezvizlife.com/bd3a0f89476539a78adf6bf7fbabb566_middle.png',
+            shortDesc: 'Camera Wi-Fi ngoài trời độ phân giải 2K, chuẩn chống nước IP67, nhiều tùy chọn tiêu cự ống kính, phát hiện người/phương tiện bằng AI.',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.7" Progressive Scan CMOS',
+                'Độ phân giải': '2304 × 1296 (2K)',
+                'Ống kính / Góc quan sát': 'Tùy chọn 2.8mm (ngang 106°), 4mm (ngang 86°) hoặc 6mm (ngang 52°)',
+                'Góc xoay Pan/Tilt': '—',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Tối đa 30m; Color Night Vision tự động chuyển chế độ thông minh',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 802.11b/g/n 2.4GHz, ăng-ten kép (tầm phủ tới 200m)',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'DC 12V/1A, tối đa 8W',
+                'Chuẩn chống nước & bụi': 'IP67',
+                'Tính năng chính': 'AI phát hiện người/phương tiện, phòng thủ chủ động với còi báo động và đèn nháy; Color Night Vision tự động chuyển chế độ; thu âm 2 micro tăng cường tầm xa tới 15m; đàm thoại 2 chiều; nén H.265 giảm ~50% dung lượng lưu trữ; tích hợp Google Assistant & Amazon Alexa; mã hóa đầu cuối, vùng riêng tư tùy chỉnh'
+            }
+        },
+        {
+            id: 'h3',
+            officialUrl: 'https://www.ezviz.com/product/h3-3k/41343',
+            name: 'EZVIZ H3 3K',
+            category: 'Camera Wi-Fi Ngoài Trời',
+            type: 'camera-outdoor',
+            image: 'https://mfs.ezvizlife.com/8ceae9cb41fbcd7ad070d4d46fb78872_middle.png',
+            shortDesc: 'Camera Wi-Fi ngoài trời độ phân giải 3K, thân hợp kim nhôm bền bỉ, chuẩn chống nước IP67, nhận diện cử chỉ vẫy tay. Cùng dòng còn có bản 2K.',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.7" Progressive Scan CMOS',
+                'Độ phân giải': '2880 × 1620 (3K); cùng dòng H3 còn có bản 2K',
+                'Ống kính / Góc quan sát': '2.8mm F2.0 (chéo 114°) hoặc 4mm F2.0 (chéo 95°)',
+                'Góc xoay Pan/Tilt': '—',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Tối đa 30m; có chế độ Color Night Vision',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 802.11b/g/n 2.4GHz',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'DC 12V/1A, tối đa 8W',
+                'Chuẩn chống nước & bụi': 'IP67',
+                'Tính năng chính': 'Thân vỏ hợp kim nhôm bền bỉ; AI phát hiện người/phương tiện; nhận diện và điều khiển bằng cử chỉ vẫy tay (Waving-Hand Recognition); Color Night Vision; phòng thủ chủ động còi báo động + đèn nháy; nén H.265; tích hợp Google Assistant & Amazon Alexa'
+            }
+        },
+        {
+            id: 'h3c',
+            officialUrl: 'https://www.ezviz.com/product/h3c-3k/58642',
+            name: 'EZVIZ H3c 3K',
+            category: 'Camera Wi-Fi Ngoài Trời',
+            type: 'camera-outdoor',
+            image: 'https://mfs.ezvizlife.com/666fb8042746f72c2fb19c948a107b59_middle.png',
+            shortDesc: 'Camera Wi-Fi ngoài trời độ phân giải 3K, chuẩn chống nước IP67, chip AI tích hợp phân loại chuyển động chính xác hơn. Khác với "EZVIZ H3C Color" (đã có trong catalog); cùng dòng H3c còn có bản 2K và 2K+.',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.7" Progressive Scan CMOS',
+                'Độ phân giải': '2880 × 1620 (3K); cùng dòng H3c còn có bản 2K và 2K+',
+                'Ống kính / Góc quan sát': '4mm F1.6 (ngang 87°) hoặc 2.8mm F1.6 (ngang 103°)',
+                'Góc xoay Pan/Tilt': '—',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Tối đa 30m; quan sát màu ban đêm với 2 đèn spotlight tới 30m',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 802.11b/g/n 2.4GHz',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'DC 12V/1A, tối đa 9W',
+                'Chuẩn chống nước & bụi': 'IP67',
+                'Tính năng chính': 'Chip AI tích hợp phân loại chuyển động chính xác hơn (người/phương tiện); nhận diện và điều khiển bằng cử chỉ vẫy tay; phòng thủ chủ động còi báo động + đèn nháy; đàm thoại 2 chiều với cảnh báo giọng nói tùy chỉnh; nén H.265; tích hợp Google Assistant & Amazon Alexa'
+            }
+        },
+        {
+            id: 'outpro',
+            officialUrl: 'https://www.ezviz.com/product/ezviz-outpro/38156',
+            name: 'EZVIZ OutPro',
+            category: 'Camera Wi-Fi Ngoài Trời',
+            type: 'camera-outdoor',
+            image: 'https://mfs.ezvizlife.com/666fb8042746f72c2fb19c948a107b59_middle.png',
+            shortDesc: 'Camera Wi-Fi ngoài trời độ phân giải 2K, chuẩn chống nước IP67 — cùng phần cứng với dòng C3TN (model CS-C3TN), khác tên thương mại theo thị trường.',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.7" Progressive Scan CMOS 3 Megapixel',
+                'Độ phân giải': '2304 × 1296 (2K)',
+                'Ống kính / Góc quan sát': '2.8mm F2.0, ngang 109°, chéo 126°',
+                'Góc xoay Pan/Tilt': '—',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Tối đa 30m (đen trắng); quan sát màu ban đêm với 2 đèn spotlight',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 802.11b/g/n 2.4GHz',
+                'Lưu trữ': 'MicroSD tối đa 256GB',
+                'Nguồn điện / Pin': 'DC 12V/1A, tối đa 6W',
+                'Chuẩn chống nước & bụi': 'IP67',
+                'Tính năng chính': 'Model CS-C3TN — cùng dòng phần cứng với EZVIZ C3TN, chỉ khác tên thương mại theo thị trường; AI phát hiện hình dáng người; Color Night Vision với 2 đèn spotlight; phòng thủ chủ động còi báo động + đèn nháy; đàm thoại 2 chiều; chuẩn IP67; nén H.265/H.264'
+            }
+        },
+        {
+            id: 'c3tn',
+            officialUrl: 'https://www.ezviz.com/product/c3tn/38067',
+            name: 'EZVIZ C3TN',
+            category: 'Camera Wi-Fi Ngoài Trời',
+            type: 'camera-outdoor',
+            image: 'https://mfs.ezvizlife.com/545c08ca972d4a2c9dbb3b235c000387_middle.png',
+            shortDesc: 'Camera Wi-Fi ngoài trời độ phân giải 1080p, chuẩn chống nước IP67, giá phải chăng. Cùng dòng còn có bản "C3TN Color" (quan sát màu ban đêm, chưa có trong catalog) và "EZVIZ OutPro" (cùng phần cứng, khác tên thương mại).',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.7" Progressive Scan CMOS',
+                'Độ phân giải': '1920 × 1080 (1080p)',
+                'Ống kính / Góc quan sát': '2.8mm F2.0, ngang 106°, chéo 122°',
+                'Góc xoay Pan/Tilt': '—',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Tối đa 30m với 2 đèn hồng ngoại',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 802.11b/g/n 2.4GHz',
+                'Lưu trữ': 'MicroSD tối đa 256GB; hỗ trợ lưu trữ đám mây',
+                'Nguồn điện / Pin': 'DC 12V/1A, tối đa 6W',
+                'Chuẩn chống nước & bụi': 'IP67',
+                'Tính năng chính': 'Camera ngoài trời giá phải chăng, hình ảnh 1080p sắc nét với 2 đèn hồng ngoại; phát hiện chuyển động gửi thông báo; đàm thoại 2 chiều với micro khử tiếng ồn; mã hóa AES 128-bit, giao thức truyền TLS, xác thực nhiều bước; nén H.265 giảm ~50% dung lượng lưu trữ/băng thông; hỗ trợ lưu trữ tại chỗ và đám mây'
+            }
+        },
+        {
+            id: 'c9c-dual',
+            officialUrl: 'https://www.ezviz.com/product/c9c-dual-3k/283762',
+            name: 'EZVIZ C9c Dual 3K',
+            category: 'Camera Wi-Fi 2 ống kính xoay quét ngoài trời',
+            type: 'camera-outdoor',
+            image: 'https://mfs.ezvizlife.com/86831795672a8a23f85050502cb647c4_middle.png',
+            shortDesc: 'Camera Wi-Fi 2 ống kính ngoài trời độ phân giải 3K, ống góc rộng cố định phối hợp ống Pan/Tilt xoay motor hóa, Wi-Fi 6, quan sát màu ban đêm xa tới 40m. Cùng dòng còn có bản 2K.',
+            specs: {
+                'Cảm biến hình ảnh': '1/3" Progressive Scan CMOS (2 ống kính)',
+                'Độ phân giải': '2880 × 1620 (3K) mỗi ống kính; cùng dòng C9c Dual còn có bản 2K',
+                'Ống kính / Góc quan sát': 'Ống trên (góc rộng, xoay tay 0-240°): 2.8mm, chéo 110°; Ống dưới (Pan-Tilt motor hóa): 6mm, chéo 60°',
+                'Góc xoay Pan/Tilt': 'Ống trên: xoay tay 240°, tilt cố định 15°; Ống dưới: Pan 350°, Tilt 80°',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại đen trắng 30m; quan sát màu ban đêm tới 40m với 4 đèn spotlight (2 mỗi ống kính)',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 6 băng tần kép (802.11a/b/g/n/ac/ax) 2.4GHz/5GHz',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'DC 12V/1.5A, tối đa 18W',
+                'Chuẩn chống nước & bụi': 'IP65 (thiết kế chống chịu thời tiết theo chuẩn Weatherproof của EZVIZ)',
+                'Tính năng chính': 'Co-Detection: 2 ống kính phối hợp AI phát hiện người/phương tiện, ống Pan-Tilt tự động tracking theo chuyển động; Color night vision xa tới 40m với 4 đèn spotlight; Active Defense còi báo động + đèn nháy; xem liên kết 1 chạm giữa góc rộng và cận cảnh; 2 chế độ tuần tra tự động; Wi-Fi 6 băng tần kép; chế độ tiết kiệm điện năng (1fps lúc yên tĩnh, tăng fps khi có sự kiện); không cần thuê bao cho tính năng AI'
+            }
+        },
+        {
+            id: 'h8c',
+            officialUrl: 'https://www.ezviz.com/product/h8c/43162',
+            name: 'EZVIZ H8c',
+            category: 'Camera Wi-Fi 2 ống kính ngoài trời',
+            type: 'camera-outdoor',
+            image: 'https://mfs.ezvizlife.com/98853e93607e47bb3847e4b9a6ab80ad_middle.png',
+            shortDesc: 'Camera Wi-Fi 2 ống kính ngoài trời độ phân giải 1080p, bản tiêu chuẩn của dòng H8c — khác với "H8c 4G" (kết nối 4G) và "H8C Pro" (cao cấp hơn) đã có trong catalog. Cùng dòng H8c còn có bản 2K và 2K+.',
+            specs: {
+                'Cảm biến hình ảnh': '1/3" Progressive Scan CMOS',
+                'Độ phân giải': '1920 × 1080 (1080p); cùng dòng H8c còn có bản 2K và 2K+',
+                'Ống kính / Góc quan sát': 'Ống kính kép: 4mm F2.0 (ngang 89°) và 6mm F2.0 (ngang 52°)',
+                'Góc xoay Pan/Tilt': 'Pan 350°, Tilt 80°',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Tối đa 30m; chế độ màu, đen trắng và Smart tự động chuyển đổi',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 802.11b/g/n 2.4GHz',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'DC 12V/1A, tối đa 12W',
+                'Chuẩn chống nước & bụi': 'IP65 (thiết kế chống chịu thời tiết theo chuẩn Weatherproof của EZVIZ)',
+                'Tính năng chính': '"360° Panoramic Coverage" với 2 ống kính; AI phát hiện người, tự động bám theo chuyển động; đàm thoại 2 chiều; phòng thủ chủ động còi báo động + đèn nháy; nén H.265 giảm dung lượng file; tích hợp Google Assistant & Amazon Alexa'
+            }
+        },
+        {
+            id: 'h8c-pro-new',
+            officialUrl: 'https://www.ezviz.com/product/h8c-pro-3knew/198493',
+            name: 'EZVIZ H8c Pro 3K (Thế hệ mới)',
+            category: 'Camera Wi-Fi ngoài trời xoay Pan/Tilt cao cấp',
+            type: 'camera-outdoor',
+            image: 'https://mfs.ezvizlife.com/09be48af5d23b76a6c8a4d3b1d2720c7_middle.png',
+            shortDesc: 'Thế hệ mới của dòng H8c Pro, thiết kế 1 ống kính (khác bản cũ 2 ống kính), bổ sung Wi-Fi 6 và đèn cảnh báo đỏ-xanh. Không gộp vào thẻ "EZVIZ H8C Pro" cũ vì khác biệt thiết kế đáng kể. Cùng dòng thế hệ mới còn có bản 4K.',
+            specs: {
+                'Cảm biến hình ảnh': '1/3" Progressive Scan CMOS',
+                'Độ phân giải': '2880 × 1620 (3K); cùng dòng thế hệ mới còn có bản 4K',
+                'Ống kính / Góc quan sát': '4mm F1.6, ngang 76°, dọc 41°, chéo 90°',
+                'Góc xoay Pan/Tilt': 'Có hỗ trợ xoay Pan/Tilt (chưa tìm thấy góc cụ thể trên trang chính thức)',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Tối đa 30m; quan sát màu ban đêm với 2 đèn spotlight, chế độ đen trắng và Smart tự động chuyển đổi',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 6 băng tần kép (802.11a/b/g/n/ac/ax) 2.4GHz/5GHz',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'DC 12V/1A, tối đa 12W',
+                'Chuẩn chống nước & bụi': 'IP65 (thiết kế chống chịu thời tiết theo chuẩn Weatherproof của EZVIZ)',
+                'Tính năng chính': 'Thế hệ mới của H8c Pro, thiết kế lại 1 ống kính (thay vì 2 ống kính như bản cũ), nâng cấp Wi-Fi 6 băng tần kép; đèn cảnh báo đỏ-xanh (Red-Blue Warning Lights) khi phát hiện xâm nhập; quan sát màu ban đêm với 2 đèn spotlight; phòng thủ chủ động còi báo động; nén H.265'
+            }
+        },
+        {
+            id: 'c8c-new',
+            officialUrl: 'https://www.ezviz.com/product/c8c-4knew/198362',
+            name: 'EZVIZ C8c 4K (Thế hệ mới)',
+            category: 'Camera PTZ Ngoài Trời',
+            type: 'camera-outdoor',
+            image: 'https://mfs.ezvizlife.com/93d6b7e45eeca683df7bbfc06f62a39c_middle.png',
+            shortDesc: 'Thế hệ mới của dòng C8c, độ phân giải 4K thực, bổ sung Wi-Fi 6 và đèn cảnh báo đỏ-xanh. Không gộp vào thẻ "EZVIZ C8C" cũ (1080p) vì khác biệt đáng kể về công nghệ kết nối và công suất. Cùng dòng thế hệ mới còn có bản 3K.',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.7" Progressive Scan CMOS',
+                'Độ phân giải': '3840 × 2160 (4K); cùng dòng thế hệ mới còn có bản 3K',
+                'Ống kính / Góc quan sát': '4mm F1.6, ngang 88°, dọc 46°, chéo 105°',
+                'Góc xoay Pan/Tilt': 'Pan 350°, Tilt 90°',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Tối đa 30m; Full-color night vision với 2 đèn spotlight',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 6 băng tần kép (802.11a/b/g/n/ac/ax) 2.4GHz/5GHz',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'DC 12V/1A, tối đa 12W',
+                'Chuẩn chống nước & bụi': 'IP65 (thiết kế chống chịu thời tiết theo chuẩn Weatherproof của EZVIZ)',
+                'Tính năng chính': 'Thế hệ mới của C8c, độ phân giải nâng lên 4K, nâng cấp Wi-Fi 6 băng tần kép; đèn cảnh báo đỏ-xanh (Red-Blue Warning Lights); AI phát hiện người/phương tiện, tự động zoom bám theo chuyển động; chế độ tuần tra thông minh tùy chỉnh; lưu 12 vị trí xem yêu thích; chế độ tiết kiệm pin ghi hình cả ngày; đàm thoại 2 chiều; tích hợp Google Assistant & Amazon Alexa; nén H.265'
+            }
+        },
+        {
+            id: 'el3',
+            officialUrl: 'https://www.ezviz.com/product/el3/47930',
+            name: 'EZVIZ EL3',
+            category: 'Đèn cảm biến an ninh tích hợp Camera',
+            type: 'camera-outdoor',
+            image: 'https://mfs.ezvizlife.com/9a27843953cacca650574fd1304960e4_middle.png',
+            shortDesc: 'Đèn LED cảm biến an ninh tích hợp camera Wi-Fi 6 độ phân giải 3MP, đèn chiếu sáng 780 lumen điều chỉnh được, AI nhận diện người/phương tiện kèm nhận diện biển số xe.',
+            specs: {
+                'Cảm biến hình ảnh': 'Chưa tìm thấy thông tin cảm biến cụ thể trên trang chính thức',
+                'Độ phân giải': '2048 × 1536 (3MP)',
+                'Ống kính / Góc quan sát': 'Chéo 130°, ngang 99°, dọc 71°',
+                'Góc xoay Pan/Tilt': 'Tự động xoay ngang bám theo chuyển động (không phải cơ cấu Pan/Tilt đầy đủ)',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Quan sát màu ban đêm tối đa 15m',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 6 băng tần kép 2.4GHz/5GHz',
+                'Lưu trữ': 'MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'Nguồn điện lưới 100-240VAC, công suất tối đa 25W',
+                'Chuẩn chống nước & bụi': 'IP65',
+                'Tính năng chính': 'Đèn LED chiếu sáng 780 lumen, điều chỉnh độ sáng và nhiệt độ màu 3000K-5700K; AI phát hiện người/phương tiện kèm nhận diện biển số xe (License Plate Recognition); tự động xoay camera bám theo chuyển động; phòng thủ chủ động còi báo động 92dB + đèn nháy; Wi-Fi 6 băng tần kép; đàm thoại 2 chiều; nén H.265/H.264'
+            }
+        },
+        {
+            id: 'lc3',
+            officialUrl: 'https://www.ezviz.com/product/lc3/31513',
+            name: 'EZVIZ LC3',
+            category: 'Đèn cảm biến an ninh tích hợp Camera',
+            type: 'camera-outdoor',
+            image: 'https://mfs.ezvizlife.com/a2a2571c7d0de2a9d781d5926d218d7d_middle.png',
+            shortDesc: 'Đèn LED cảm biến an ninh tích hợp camera độ phân giải 4MP, đèn chiếu sáng 700 lumen, còi báo động 100dB, bộ nhớ eMMC 32GB tích hợp sẵn.',
+            specs: {
+                'Cảm biến hình ảnh': 'Chưa tìm thấy thông tin cảm biến cụ thể trên trang chính thức',
+                'Độ phân giải': '2560 × 1440 (4MP)',
+                'Ống kính / Góc quan sát': 'Chéo 157°, ngang 140°, dọc 75°',
+                'Góc xoay Pan/Tilt': 'Không có (camera cố định)',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Quan sát màu ban đêm tối đa 10m',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Wi-Fi 802.11b/g/n 2.4GHz, ăng-ten kép',
+                'Lưu trữ': 'Bộ nhớ trong eMMC 32GB tích hợp sẵn; hỗ trợ lưu trữ đám mây EZVIZ',
+                'Nguồn điện / Pin': 'Nguồn điện lưới 110-240VAC 50/60Hz, công suất tối đa 30W',
+                'Chuẩn chống nước & bụi': 'IP67 (phần camera), IP65 (phần thân đèn)',
+                'Tính năng chính': 'Đèn LED chiếu sáng 700 lumen, nhiệt độ màu 3000K, tuổi thọ LED 30.000 giờ; AI phát hiện người; quan sát màu ban đêm; phòng thủ chủ động còi báo động 100dB + đèn sáng; đàm thoại 2 chiều; bộ nhớ trong 32GB không cần thẻ nhớ rời; nén H.265/H.264'
+            }
+        },
+        {
+            id: 'cb8',
+            officialUrl: 'https://www.ezviz.com/product/cb8/42368',
+            name: 'EZVIZ CB8',
+            category: 'Camera Wi-Fi Dùng Pin Xoay Pan/Tilt Ngoài Trời',
+            type: 'camera-battery',
+            image: 'https://mfs.ezvizlife.com/badeb972d9d053a01659c0c4043816ab_middle.png',
+            shortDesc: 'Camera Wi-Fi dùng pin xoay Pan/Tilt độ phân giải 2K (3MP), pin 10.400mAh dùng được tới 210 ngày, có đèn pha kép hỗ trợ quan sát màu ban đêm và tính năng Active Defense.',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.8" CMOS quét tuần tự 3 Megapixel',
+                'Độ phân giải': '2K (2304 × 1296), 15fps tự thích ứng theo băng thông mạng',
+                'Ống kính / Góc quan sát': '4mm F1.6, góc nhìn 100° (chéo), 83° (ngang), 44° (dọc)',
+                'Góc xoay Pan/Tilt': 'Pan: 340°, Tilt: 65°',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại tới 15m; có đèn pha kép (dual spotlight) hỗ trợ quan sát màu ban đêm (Color Night Vision)',
+                'Màn hình': 'Không có màn hình tích hợp',
+                'Kết nối mạng': 'Wi-Fi IEEE802.11b/g/n, băng tần 2.4GHz, yêu cầu tối thiểu 4 Mbps',
+                'Lưu trữ': 'Thẻ nhớ microSD tối đa 256GB, hỗ trợ lưu trữ đám mây EZVIZ CloudPlay (trả phí)',
+                'Nguồn điện / Pin': 'Pin sạc 10.400mAh, dùng được tới 210 ngày, có thể sạc bổ sung qua tấm pin năng lượng mặt trời (mua riêng)',
+                'Chuẩn chống nước & bụi': 'IP65 (thiết kế chống chịu thời tiết theo chuẩn Weatherproof của EZVIZ)',
+                'Tính năng chính': 'Phát hiện chuyển động người thông minh (Smart Human Motion Detection), tự động bám theo (auto-tracking), Active Defense (còi hú + đèn pha cảnh báo), nén H.265/H.264, hoạt động -20°C đến 50°C'
+            }
+        },
+        {
+            id: 'cb8-pro',
+            officialUrl: 'https://www.ezviz.com/product/cb8-pro/65750',
+            name: 'EZVIZ CB8 Pro',
+            category: 'Camera Wi-Fi Dùng Pin Xoay Pan/Tilt Ngoài Trời (bản Pro)',
+            type: 'camera-battery',
+            image: 'https://mfs.ezvizlife.com/b8fe2fa6d555bbf1e8d23350ea66667e_middle.png',
+            shortDesc: 'Bản nâng cấp 4K của CB8, cảm biến 8MP, Wi-Fi 6, pin 10.400mAh, hỗ trợ AOV 2.0 quay cả ngày. Sản phẩm này cũng có bán dạng "CB8 Pro Kit" kèm tấm pin năng lượng mặt trời.',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.8" CMOS quét tuần tự 8 Megapixel',
+                'Độ phân giải': '4K (3840 × 2160), 15fps tự thích ứng theo băng thông mạng',
+                'Ống kính / Góc quan sát': '4mm F1.2, góc nhìn 104° (chéo), 83° (ngang), 44° (dọc)',
+                'Góc xoay Pan/Tilt': 'Pan: 340°, Tilt: 75°',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại tới 15m, có chế độ đen trắng và quan sát màu ban đêm (color night vision) đầy đủ',
+                'Màn hình': 'Không có màn hình tích hợp',
+                'Kết nối mạng': 'Wi-Fi 6 IEEE802.11b/g/n/ax, băng tần 2.4GHz',
+                'Lưu trữ': 'Thẻ nhớ microSD tối đa 512GB, hỗ trợ lưu trữ đám mây EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'Pin sạc 10.400mAh, sạc qua adapter DC 5V/2A, tương thích tấm pin năng lượng mặt trời (mua riêng hoặc mua kèm bản "CB8 Pro Kit")',
+                'Chuẩn chống nước & bụi': 'IP65 (thiết kế chống chịu thời tiết theo chuẩn Weatherproof của EZVIZ)',
+                'Tính năng chính': 'Always-On Video Mode 2.0 (AOV) quay cả ngày, AI phát hiện người/phương tiện, Smart Tracking, nén H.265, Wi-Fi 6, tương thích tấm pin mặt trời'
+            }
+        },
+        {
+            id: 'hb8',
+            officialUrl: 'https://www.ezviz.com/product/hb8/40825',
+            name: 'EZVIZ HB8',
+            category: 'Camera Wi-Fi Dùng Pin Xoay Pan/Tilt Ngoài Trời',
+            type: 'camera-battery',
+            image: 'https://mfs.ezvizlife.com/0bcfb39a97c7163ef16f896571a02ab0_middle.png',
+            shortDesc: 'Camera Wi-Fi dùng pin xoay Pan/Tilt độ phân giải 2K+ (4MP), tích hợp sẵn 32GB bộ nhớ eMMC (không có khe thẻ microSD), pin 10.400mAh dùng tới 210 ngày.',
+            specs: {
+                'Cảm biến hình ảnh': '1/3" CMOS quét tuần tự 4 Megapixel',
+                'Độ phân giải': '2K+ (2560 × 1440)',
+                'Ống kính / Góc quan sát': '4mm F1.6, góc nhìn 100° (chéo), 83° (ngang), 44° (dọc)',
+                'Góc xoay Pan/Tilt': 'Pan: 340°, Tilt: 65°',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại tới 15m, có đèn pha kép hỗ trợ quan sát màu ban đêm và chế độ đen trắng',
+                'Màn hình': 'Không có màn hình tích hợp',
+                'Kết nối mạng': 'Wi-Fi IEEE802.11b/g/n, băng tần 2.4GHz, bitrate tối đa 2 Mbps',
+                'Lưu trữ': 'Bộ nhớ trong 32GB eMMC tích hợp sẵn (không có khe thẻ microSD), hỗ trợ lưu trữ đám mây EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'Pin sạc 10.400mAh, dùng tới 210 ngày (test 5 phút/ngày), sạc qua adapter DC 5V/2A, tiêu thụ tối đa 10W',
+                'Chuẩn chống nước & bụi': 'IP65 (thiết kế chống chịu thời tiết theo chuẩn Weatherproof của EZVIZ)',
+                'Tính năng chính': 'Quan sát toàn cảnh 360°, phát hiện chuyển động người thông minh, tự động bám theo, Active Defense (còi + đèn pha), đàm thoại 2 chiều, nén H.265, tích hợp Google Assistant/Alexa'
+            }
+        },
+        {
+            id: 'hb8-pro',
+            officialUrl: 'https://www.ezviz.com/product/hb8-pro/65826',
+            name: 'EZVIZ HB8 Pro',
+            category: 'Camera Wi-Fi Dùng Pin Xoay Pan/Tilt Ngoài Trời (bản Pro)',
+            type: 'camera-battery',
+            image: 'https://mfs.ezvizlife.com/b8fe2fa6d555bbf1e8d23350ea66667e_middle.png',
+            shortDesc: 'Bản nâng cấp 4K của HB8, cảm biến 8MP, Wi-Fi 6, pin 10.400mAh. Sản phẩm này cũng có bán dạng "HB8 Pro Kit" kèm tấm pin năng lượng mặt trời. Lưu ý: dùng chung ảnh sản phẩm với CB8 Pro do cùng dòng phần cứng OEM.',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.8" CMOS quét tuần tự 8 Megapixel',
+                'Độ phân giải': '4K (3840 × 2160), tối đa 15fps tự thích ứng',
+                'Ống kính / Góc quan sát': '4mm F1.2, góc nhìn 104° (chéo), 83° (ngang), 44° (dọc)',
+                'Góc xoay Pan/Tilt': 'Pan: 340°, Tilt: 75°',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại tới 15m (0.01 Lux F1.2 AGC ON, 0 Lux khi bật hồng ngoại), có đèn pha tích hợp hỗ trợ quan sát màu ban đêm',
+                'Màn hình': 'Không có màn hình tích hợp',
+                'Kết nối mạng': 'Wi-Fi 6 IEEE802.11b/g/n/ax, băng tần 2.4GHz, yêu cầu tối thiểu 8 Mbps',
+                'Lưu trữ': 'Thẻ nhớ microSD tối đa 512GB, hỗ trợ lưu trữ đám mây EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'Pin sạc 10.400mAh, adapter DC 5V/2A (mua riêng), tiêu thụ tối đa 10W, tương thích tấm pin mặt trời (mua riêng hoặc mua kèm bản "HB8 Pro Kit")',
+                'Chuẩn chống nước & bụi': 'IP65 (thiết kế chống chịu thời tiết theo chuẩn Weatherproof của EZVIZ)',
+                'Tính năng chính': 'AOV 2.0 quay cả ngày, AI phát hiện người/phương tiện, Smart Tracking, đàm thoại 2 chiều, hoạt động -20°C đến 50°C'
+            }
+        },
+        {
+            id: 'cb90-dual',
+            officialUrl: 'https://www.ezviz.com/product/cb90-dual-kit/67433',
+            name: 'EZVIZ CB90 Dual Kit',
+            category: 'Camera Wi-Fi Dùng Pin 2 Ống Kính Quay Cả Ngày (kèm tấm pin mặt trời)',
+            type: 'camera-battery',
+            image: 'https://mfs.ezvizlife.com/c6180aa1750a0e7a9a31b5f19aa952fb_middle.png',
+            shortDesc: 'Camera Wi-Fi 2 ống kính (trên xoay Pan/Tilt + dưới góc rộng) độ phân giải 2K+, dùng công nghệ AOV 2.0 quay cả ngày, bán kèm sẵn tấm pin năng lượng mặt trời 8W ("Kit" là tên sản phẩm chính hãng, không phải bundle tự ghép).',
+            specs: {
+                'Cảm biến hình ảnh': '1/3" CMOS quét tuần tự 4 Megapixel (cả 2 ống kính)',
+                'Độ phân giải': '2K+ (2560 × 1440)',
+                'Ống kính / Góc quan sát': 'Ống trên: 2.8mm F1.2, góc nhìn 110° (chéo)/96° (ngang)/54° (dọc); Ống dưới: 6mm F1.2, góc nhìn 60° (chéo)/52° (ngang)/28° (dọc)',
+                'Góc xoay Pan/Tilt': 'Ống trên: Pan 220°, Tilt 10°; Ống dưới: Pan 324°, Tilt 90°',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại tới 35m (0.01 Lux F1.2 AGC ON), có đèn pha hỗ trợ quan sát màu ban đêm (Color Night Vision)',
+                'Màn hình': 'Không có màn hình tích hợp',
+                'Kết nối mạng': 'Wi-Fi 6 IEEE802.11b/g/n/ax, băng tần 2.4GHz, yêu cầu tối thiểu 4 Mbps',
+                'Lưu trữ': 'Thẻ nhớ microSD tối đa 512GB, hỗ trợ lưu trữ đám mây EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'Pin sạc 10.400mAh, kèm sẵn tấm pin năng lượng mặt trời công suất 8W, adapter DC 5V/2A, tiêu thụ tối đa 10W',
+                'Chuẩn chống nước & bụi': 'IP65 (thiết kế chống chịu thời tiết theo chuẩn Weatherproof của EZVIZ)',
+                'Tính năng chính': 'Quay cả ngày 2 ống kính (Dual-Lens All-Day Recording), AOV 2.0, AI phát hiện người/phương tiện, Co-Detection tự động bám theo (Auto Smart Tracking) bằng cả 2 ống kính, Active Defense (còi + đèn)'
+            }
+        },
+        {
+            id: 'hb90-dual',
+            officialUrl: 'https://www.ezviz.com/product/hb90-dual-kit/62742',
+            name: 'EZVIZ HB90 Dual Kit',
+            category: 'Camera Wi-Fi Dùng Pin 2 Ống Kính Quay Cả Ngày (kèm tấm pin mặt trời)',
+            type: 'camera-battery',
+            image: 'https://mfs.ezvizlife.com/8ef7ae257362f22559b6b775692b8cb6_middle.png',
+            shortDesc: 'Cùng dòng phần cứng với CB90 Dual Kit, khác tên thương mại theo thị trường — camera Wi-Fi 2 ống kính độ phân giải 2K+, quay cả ngày với AOV 2.0, kèm sẵn tấm pin năng lượng mặt trời 8W.',
+            specs: {
+                'Cảm biến hình ảnh': '1/3" CMOS quét tuần tự 4 Megapixel (cả 2 ống kính)',
+                'Độ phân giải': '2K+ (2560 × 1440)',
+                'Ống kính / Góc quan sát': 'Ống trên: 2.8mm F1.2, góc nhìn 110° (chéo)/96° (ngang)/54° (dọc); Ống dưới: 6mm F1.2, góc nhìn 60° (chéo)/52° (ngang)/28° (dọc)',
+                'Góc xoay Pan/Tilt': 'Cùng thân máy với CB90 Dual Kit (Ống trên: Pan 220°, Tilt 10°; Ống dưới: Pan 324°, Tilt 90°) — trang sản phẩm HB90 chỉ ghi chung "dual rotations", không công bố lại số liệu riêng',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại tới 35m, có đèn pha hỗ trợ quan sát màu ban đêm và chế độ đen trắng',
+                'Màn hình': 'Không có màn hình tích hợp',
+                'Kết nối mạng': 'Wi-Fi 6 IEEE802.11b/g/n/ax, băng tần 2.4GHz ~ 2.4835GHz, yêu cầu tối thiểu 4 Mbps',
+                'Lưu trữ': 'Thẻ nhớ microSD tối đa 512GB, hỗ trợ lưu trữ đám mây EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'Pin sạc 10.400mAh, kèm sẵn tấm pin năng lượng mặt trời công suất tối đa 8W ±5%, adapter DC 5V/2A (mua riêng)',
+                'Chuẩn chống nước & bụi': 'IP65 (thiết kế chống chịu thời tiết theo chuẩn Weatherproof của EZVIZ)',
+                'Tính năng chính': 'Quay cả ngày 2 ống kính với AOV 2.0, AI phát hiện người/phương tiện, xoay kép (dual rotations), quan sát màu ban đêm, Wi-Fi 6, hoạt động -20°C đến 50°C'
+            }
+        },
+        {
+            id: 'h1c',
+            officialUrl: 'https://www.ezviz.com/product/h1c/47789',
+            name: 'EZVIZ H1c',
+            category: 'Camera Wi-Fi Mini Trong Nhà',
+            type: 'camera-indoor',
+            image: 'https://mfs.ezvizlife.com/d114c8d2c8321eadd28568d0a122fabf_middle.png',
+            shortDesc: 'Camera Wi-Fi mini trong nhà độ phân giải 1080p, thân nhỏ gọn với chân đế nam châm, có chế độ ngủ bảo vệ riêng tư.',
+            specs: {
+                'Cảm biến hình ảnh': '1/3" CMOS quét tuần tự',
+                'Độ phân giải': '1080p (1920 × 1080)',
+                'Ống kính / Góc quan sát': '2.8mm, góc nhìn 108° (chéo), 91° (ngang), 50° (dọc)',
+                'Góc xoay Pan/Tilt': 'Không hỗ trợ (camera cố định, không xoay)',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại tới 10m (0.5 Lux F2.2 AGC ON, 0.1 Lux khi bật hồng ngoại)',
+                'Màn hình': 'Không có màn hình tích hợp',
+                'Kết nối mạng': 'Wi-Fi IEEE802.11b/g/n, băng tần 2.4GHz, tốc độ truyền tối đa 72 Mbps (11n)',
+                'Lưu trữ': 'Thẻ nhớ microSD tối đa 512GB, hỗ trợ lưu trữ đám mây EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'Adapter DC 5V/1A, tiêu thụ tối đa 3.0W',
+                'Chuẩn chống nước & bụi': 'Không có chuẩn chống nước & bụi',
+                'Tính năng chính': 'Phát hiện chuyển động, đàm thoại 2 chiều, chế độ ngủ (sleep mode) bảo vệ riêng tư, chân đế nam châm dễ lắp đặt, 3 chế độ cảnh báo âm thanh, tích hợp Google Assistant/Alexa'
+            }
+        },
+        {
+            id: 'c1c-b',
+            officialUrl: 'https://www.ezviz.com/product/c1c-b/30482',
+            name: 'EZVIZ C1C-B',
+            category: 'Camera Wi-Fi Trong Nhà',
+            type: 'camera-indoor',
+            image: 'https://mfs.ezvizlife.com/e11c0c81cbeee54e7b3e056c22244403_middle.png',
+            shortDesc: 'Camera Wi-Fi trong nhà độ phân giải 1080p, nén H.265 tiết kiệm băng thông/lưu trữ, mã hóa dữ liệu AES 128-bit và TLS.',
+            specs: {
+                'Cảm biến hình ảnh': '1/3" CMOS quét tuần tự',
+                'Độ phân giải': '1080p (1920 × 1080)',
+                'Ống kính / Góc quan sát': '2.8mm, góc nhìn 108° (chéo), 91° (ngang), 50° (dọc)',
+                'Góc xoay Pan/Tilt': 'Không hỗ trợ (camera cố định, không xoay)',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại tới 12m, có bộ lọc cắt hồng ngoại tự động chuyển đổi (IR-cut filter auto-switching)',
+                'Màn hình': 'Không có màn hình tích hợp',
+                'Kết nối mạng': 'Wi-Fi IEEE802.11b/g/n, băng tần 2.4GHz',
+                'Lưu trữ': 'Thẻ nhớ microSD tối đa 256GB, hỗ trợ lưu trữ đám mây EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'Adapter DC 5V/1A, tiêu thụ tối đa 3.0W',
+                'Chuẩn chống nước & bụi': 'Không có chuẩn chống nước & bụi',
+                'Tính năng chính': 'Phát hiện chuyển động, đàm thoại 2 chiều, chế độ ngủ thích ứng bảo vệ riêng tư, mã hóa AES 128-bit và giao thức TLS, nén H.265 giảm một nửa băng thông/lưu trữ so với chuẩn cũ'
+            }
+        },
+        {
+            id: 'c2c-h265',
+            officialUrl: 'https://www.ezviz.com/product/c2c-h.265/30664',
+            name: 'EZVIZ C2C H.265',
+            category: 'Camera Wi-Fi Trong Nhà',
+            type: 'camera-indoor',
+            image: 'https://mfs.ezvizlife.com/97020918b8ca2547bd50640777f78a76_middle.png',
+            shortDesc: 'Camera Wi-Fi trong nhà độ phân giải Full HD 1080p, nén H.265, thân dạng thanh dài với chân đế nam châm.',
+            specs: {
+                'Cảm biến hình ảnh': '1/3" CMOS quét tuần tự',
+                'Độ phân giải': 'Full HD 1080p (1920 × 1080)',
+                'Ống kính / Góc quan sát': '2.8mm, góc nhìn 108° (chéo), 91° (ngang), 50° (dọc)',
+                'Góc xoay Pan/Tilt': 'Không hỗ trợ (camera cố định, không xoay)',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại tới 10m, có bộ lọc cắt hồng ngoại tự động chuyển đổi (IR-cut filter auto-switching)',
+                'Màn hình': 'Không có màn hình tích hợp',
+                'Kết nối mạng': 'Wi-Fi IEEE802.11b/g/n, băng tần 2.4GHz',
+                'Lưu trữ': 'Thẻ nhớ microSD tối đa 256GB, hỗ trợ lưu trữ đám mây EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'Adapter DC 5V/1A, tiêu thụ tối đa 4.0W',
+                'Chuẩn chống nước & bụi': 'Không có chuẩn chống nước & bụi',
+                'Tính năng chính': 'Góc nhìn rộng, tự động chuyển chế độ ban đêm, phát hiện chuyển động với 3 chế độ cảnh báo âm thanh tùy chỉnh (im lặng/beep/còi hú), chế độ ngủ bảo vệ riêng tư, đàm thoại 2 chiều, nén H.265 giảm 50% băng thông/lưu trữ, chân đế nam châm, mã hóa đầu-cuối'
+            }
+        },
+        {
+            id: 'cb3-4g',
+            officialUrl: 'https://www.ezviz.com/product/cb3-4g/64198',
+            name: 'EZVIZ CB3 4G',
+            category: 'Camera 4G ngoài trời dùng pin, cố định (không xoay Pan/Tilt), hỗ trợ năng lượng mặt trời (AOV)',
+            type: 'camera-battery',
+            image: 'https://mfs.ezvizlife.com/15ddcabce2c1984dfe0f86c8bd8db8a3_middle.png',
+            shortDesc: 'Camera 4G dùng pin, thân cố định (không xoay Pan/Tilt), hoạt động độc lập qua SIM 4G không cần Wi-Fi, phù hợp khu vực không có mạng hoặc điện lưới ổn định. Cũng có bản bán kèm tấm pin năng lượng mặt trời dưới tên "CB3 4G Kit" (không tạo thẻ riêng).',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.8" CMOS quét tuần tự 3 Megapixel',
+                'Độ phân giải': '2K (2304 × 1296)',
+                'Ống kính / Góc quan sát': '2.8mm F1.6; chéo 130°, ngang 108°, dọc 56°',
+                'Góc xoay Pan/Tilt': 'Không có (thân camera cố định, không xoay Pan/Tilt)',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại xa 15m; quan sát màu ban đêm 15m nhờ 2 đèn spotlight',
+                'Màn hình': 'Không có màn hình tích hợp',
+                'Kết nối mạng': '4G LTE (SIM Nano) — không hỗ trợ Wi-Fi; hỗ trợ Bluetooth để hỗ trợ kết nối/cài đặt ban đầu',
+                'Lưu trữ': 'Thẻ nhớ MicroSD tối đa 512GB; EZVIZ CloudPlay (trả phí)',
+                'Nguồn điện / Pin': 'Pin sạc 5.200mAh; sạc qua adapter DC 5V/2A (bán rời); công suất tiêu thụ tối đa 10W; tương thích tấm pin năng lượng mặt trời EZVIZ',
+                'Chuẩn chống nước & bụi': 'IP65 (thiết kế chống chịu thời tiết theo chuẩn Weatherproof của EZVIZ)',
+                'Tính năng chính': 'AI phát hiện người/phương tiện; quan sát màu ban đêm với 2 đèn spotlight (tầm 15m); phòng thủ chủ động: còi báo động + đèn flash cảnh báo; Always-On Video Mode ghi time-lapse khi không có chuyển động; nén H.265 giảm khoảng 50% dung lượng lưu trữ; tương thích tấm pin năng lượng mặt trời EZVIZ (bán rời); tích hợp Google Assistant & Amazon Alexa; kết nối 4G độc lập, không cần Wi-Fi'
+            }
+        },
+        {
+            id: 'cb8-lite-4g',
+            officialUrl: 'https://www.ezviz.com/product/cb8-lite-4g/68075',
+            name: 'EZVIZ CB8 Lite 4G',
+            category: 'Camera 4G & Wi-Fi ngoài trời xoay Pan/Tilt dùng pin, hỗ trợ năng lượng mặt trời (AOV)',
+            type: 'camera-battery',
+            image: 'https://mfs.ezvizlife.com/bdca1867e862d21cdf33fc8f0f4aa5c2_middle.png',
+            shortDesc: 'Camera 4G & Wi-Fi xoay Pan/Tilt dùng pin cho khu vực ngoài trời, hỗ trợ Always-On Video Mode 2.0 để ghi hình gần như cả ngày, tự động chuyển sang 4G khi Wi-Fi chập chờn. Cũng có bản bán kèm tấm pin năng lượng mặt trời dưới tên "CB8 Lite 4G Kit" (không tạo thẻ riêng).',
+            specs: {
+                'Cảm biến hình ảnh': '1/3" CMOS quét tuần tự 4 Megapixel',
+                'Độ phân giải': '2K+ (2560 × 1440)',
+                'Ống kính / Góc quan sát': '4mm F1.6; chéo 90°, ngang 75°, dọc 40°',
+                'Góc xoay Pan/Tilt': 'Pan 340°, Tilt 80°',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Tầm 15m; IR-cut filter tự động chuyển đổi, 2 chế độ (hồng ngoại trắng đen hoặc đèn spotlight quan sát màu)',
+                'Màn hình': 'Không có màn hình tích hợp',
+                'Kết nối mạng': 'Wi-Fi 6 (802.11ax) và 4G LTE (SIM Nano, nhiều băng tần cho thị trường IN/EU/LA) hoạt động song song, tự động chuyển đổi khi mất Wi-Fi',
+                'Lưu trữ': 'Thẻ nhớ MicroSD tối đa 512GB; EZVIZ CloudPlay (trả phí)',
+                'Nguồn điện / Pin': 'Pin sạc 5.200mAh; sạc qua adapter DC 5V/2A (bán rời); tương thích tấm pin năng lượng mặt trời EZVIZ (cổng Type-C)',
+                'Chuẩn chống nước & bụi': 'IP65 (thiết kế chống chịu thời tiết theo chuẩn Weatherproof của EZVIZ)',
+                'Tính năng chính': 'Always-On Video Mode 2.0 ghi hình gần như cả ngày (time-lapse khi không có chuyển động, tốc độ thường khi phát hiện hoạt động); AI phát hiện người/phương tiện theo vùng tùy chỉnh; quan sát màu ban đêm bằng đèn spotlight hoặc hồng ngoại trắng đen; phòng thủ chủ động còi + đèn nháy đôi; Smart Tracking tự động bám theo chuyển động; xoay Pan/Tilt 340°/80° bao quát toàn cảnh 360°; tự động chuyển đổi Wi-Fi/4G; tương thích tấm pin năng lượng mặt trời EZVIZ; nén H.265 giảm khoảng 50% dung lượng lưu trữ; tích hợp Google Assistant & Amazon Alexa'
+            }
+        },
+        {
+            id: 'hb8-lite-4g',
+            officialUrl: 'https://www.ezviz.com/product/hb8-lite-4g/68027',
+            name: 'EZVIZ HB8 Lite 4G',
+            category: 'Camera 4G & Wi-Fi ngoài trời xoay Pan/Tilt dùng pin, hỗ trợ năng lượng mặt trời (AOV)',
+            type: 'camera-battery',
+            image: 'https://mfs.ezvizlife.com/87e6e5664fec0a3fbc9092b2fece0604_middle.png',
+            shortDesc: 'Cùng phân khúc với CB8 Lite 4G, khác tên thương mại/thân máy theo thị trường. Camera 4G & Wi-Fi xoay Pan/Tilt dùng pin, Always-On Video Mode 2.0. Cũng có bản bán kèm tấm pin năng lượng mặt trời dưới tên "HB8 Lite 4G Kit" (không tạo thẻ riêng).',
+            specs: {
+                'Cảm biến hình ảnh': '1/3" CMOS quét tuần tự 4 Megapixel',
+                'Độ phân giải': '2K+ (2560 × 1440)',
+                'Ống kính / Góc quan sát': '4mm F1.6; chéo 90°, ngang 75°, dọc 40°',
+                'Góc xoay Pan/Tilt': 'Pan 340°, Tilt 80°',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Tầm 15m; IR-cut filter tự động chuyển đổi; 3D DNR giảm nhiễu hình ảnh ban đêm',
+                'Màn hình': 'Không có màn hình tích hợp',
+                'Kết nối mạng': 'Wi-Fi 6 (802.11ax) và 4G LTE (SIM Nano, nhiều băng tần) hoạt động song song, tự động chuyển đổi khi mất Wi-Fi',
+                'Lưu trữ': 'Thẻ nhớ MicroSD tối đa 512GB; EZVIZ CloudPlay (trả phí)',
+                'Nguồn điện / Pin': 'Pin sạc 5.200mAh; sạc qua adapter DC 5V/2A (bán rời); tương thích tấm pin năng lượng mặt trời EZVIZ',
+                'Chuẩn chống nước & bụi': 'IP65 (thiết kế chống chịu thời tiết theo chuẩn Weatherproof của EZVIZ)',
+                'Tính năng chính': 'Always-On Video Mode 2.0 ghi hình gần như cả ngày; AI phát hiện người/phương tiện; quan sát màu ban đêm bằng đèn spotlight kép hoặc hồng ngoại, 3D DNR giảm nhiễu; phòng thủ chủ động còi + đèn nháy; Smart Tracking tự động bám theo chuyển động; xoay Pan/Tilt 340°/80°; tự động chuyển đổi Wi-Fi 6/4G; tương thích tấm pin năng lượng mặt trời EZVIZ'
+            }
+        },
+        {
+            id: 'eb8-pro-4g',
+            officialUrl: 'https://www.ezviz.com/product/eb8-pro-4g/190111',
+            name: 'EZVIZ EB8 Pro 4G',
+            category: 'Camera 4G & Wi-Fi ngoài trời xoay Pan/Tilt dùng pin, độ phân giải 4K, hỗ trợ năng lượng mặt trời (AOV)',
+            type: 'camera-battery',
+            image: 'https://mfs.ezvizlife.com/ebdb3cda3eb57da9bbbdf678c6bcdb8d_middle.png',
+            shortDesc: 'Camera 4G & Wi-Fi xoay Pan/Tilt dùng pin độ phân giải 4K, pin dung lượng lớn 10.400mAh, AI phát hiện được cả người, phương tiện và động vật hoang dã. Cũng có bản bán kèm tấm pin năng lượng mặt trời dưới tên "EB8 Pro 4G Kit" (không tạo thẻ riêng).',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.8" CMOS quét tuần tự 8 Megapixel',
+                'Độ phân giải': '4K (3840 × 2160, 8MP)',
+                'Ống kính / Góc quan sát': '4mm F1.2; chéo 104°, ngang 83°, dọc 44°',
+                'Góc xoay Pan/Tilt': 'Pan 340°, Tilt 75°',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Tầm 15m; hỗ trợ chế độ quan sát màu hoặc hồng ngoại trắng đen',
+                'Màn hình': 'Không có màn hình tích hợp',
+                'Kết nối mạng': 'Wi-Fi 6 (802.11ax) và 4G LTE (SIM Nano) hoạt động song song',
+                'Lưu trữ': 'Thẻ nhớ MicroSD tối đa 512GB; EZVIZ CloudPlay (trả phí)',
+                'Nguồn điện / Pin': 'Pin sạc 10.400mAh; sạc qua adapter DC 5V/2A (bán rời); có tùy chọn tấm pin năng lượng mặt trời 8W (bán rời)',
+                'Chuẩn chống nước & bụi': 'IP65 (thiết kế chống chịu thời tiết theo chuẩn Weatherproof của EZVIZ)',
+                'Tính năng chính': 'Always-On Video Mode 2.0 ghi hình gần như cả ngày; AI phát hiện người, phương tiện và động vật hoang dã (hơn 20 loài); Smart Tracking tự động bám theo chuyển động; xoay Pan/Tilt 340°/75° quan sát toàn cảnh 360°; quan sát màu ban đêm thích ứng thông minh; phòng thủ chủ động còi + đèn nháy, đàm thoại 2 chiều; độ phân giải 4K/8MP sắc nét; tùy chọn tấm pin năng lượng mặt trời 8W'
+            }
+        },
+        {
+            id: 'eb8-pro-ranger-kit',
+            officialUrl: 'https://www.ezviz.com/product/eb8-pro-ranger-kit/191072',
+            name: 'EZVIZ EB8 Pro Ranger Kit',
+            category: 'Camera 4G & Wi-Fi ngoài trời dùng pin, phiên bản "Ranger" hướng tới giám sát động vật hoang dã/rừng núi, kèm sẵn tấm pin năng lượng mặt trời 8W (AOV)',
+            type: 'camera-battery',
+            image: 'https://mfs.ezvizlife.com/b99287360a28254a2935d59406ed0a93_middle.png',
+            shortDesc: 'Biến thể riêng biệt của dòng EB8 Pro 4G, được ezviz.com định vị là "the ultimate 4K ranger, built for the wildlife and wilderness" — thiết kế hướng tới quan sát động vật hoang dã/khu vực rừng núi, bán kèm sẵn tấm pin năng lượng mặt trời 8W trong bộ Kit.',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.8" CMOS quét tuần tự 8 Megapixel',
+                'Độ phân giải': '4K (3840 × 2160)',
+                'Ống kính / Góc quan sát': '4mm F1.2; chéo 104°, ngang 83°, dọc 44°',
+                'Góc xoay Pan/Tilt': 'Pan 340°, Tilt 75°',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Tầm 15m; đèn hồng ngoại không chớp sáng (no-glow) 940nm',
+                'Màn hình': 'Không có màn hình tích hợp',
+                'Kết nối mạng': 'Wi-Fi 6 (802.11ax) và 4G LTE hoạt động song song',
+                'Lưu trữ': 'Thẻ nhớ MicroSD tối đa 512GB; EZVIZ CloudPlay (trả phí)',
+                'Nguồn điện / Pin': 'Pin sạc 10.400mAh; đi kèm sẵn tấm pin năng lượng mặt trời 8W trong bộ Kit (điện áp 5.4V±5%, hiệu suất ≥22% pin đơn tinh thể, dây 3m); sạc qua adapter DC 5V/2A',
+                'Chuẩn chống nước & bụi': 'IP65 (thiết kế chống chịu thời tiết theo chuẩn Weatherproof của EZVIZ)',
+                'Tính năng chính': 'Định vị là camera "ranger" chuyên cho giám sát động vật hoang dã/rừng núi; AI phát hiện người, phương tiện và trên 20 loài động vật hoang dã; Always-On Video Mode 2.0 ghi hình gần như cả ngày; phòng thủ chủ động còi + đèn nháy; đàm thoại 2 chiều; đi kèm sẵn tấm pin năng lượng mặt trời 8W trong bộ Kit, không cần mua thêm phụ kiện'
+            }
+        },
+        {
+            id: 'cb90x-dual-4g',
+            officialUrl: 'https://www.ezviz.com/product/cb90x-dual-4g-kit/62756',
+            name: 'EZVIZ CB90x Dual 4G Kit',
+            category: 'Camera 4G & Wi-Fi ngoài trời 2 ống kính xoay Pan/Tilt dùng pin, kèm sẵn tấm pin năng lượng mặt trời 8W (AOV)',
+            type: 'camera-battery',
+            image: 'https://mfs.ezvizlife.com/0e8d39b904ada2fd2dce5b90c5c1cb27_middle.png',
+            shortDesc: 'Camera 4G & Wi-Fi hai ống kính dùng pin, mỗi ống xoay Pan/Tilt độc lập để giám sát đồng thời hai khu vực, đồng bộ bám theo chuyển động (co-detection); bán kèm sẵn tấm pin năng lượng mặt trời 8W trong bộ Kit ("Kit" là một phần tên sản phẩm chính thức).',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.8" CMOS quét tuần tự 4 Megapixel (cả 2 ống kính)',
+                'Độ phân giải': '2K+ (2560 × 1440) trên cả 2 ống kính',
+                'Ống kính / Góc quan sát': 'Ống trên: 2.8mm F1.2 (chéo 122°); Ống dưới: 6mm F1.2 (chéo 65°)',
+                'Góc xoay Pan/Tilt': 'Ống trên: Pan 220°, Tilt 10°; Ống dưới: Pan 324°, Tilt 90°',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Tầm 35m (khi 2 ống kính cùng hướng); độ nhạy sáng tối thiểu 0.01 Lux; IR-cut filter tự động, 3D DNR',
+                'Màn hình': 'Không có màn hình tích hợp',
+                'Kết nối mạng': 'Wi-Fi 6 (802.11ax) và 4G LTE (nhiều băng tần) hoạt động song song',
+                'Lưu trữ': 'Thẻ nhớ MicroSD tối đa 512GB; EZVIZ CloudPlay (trả phí)',
+                'Nguồn điện / Pin': 'Pin sạc 10.400mAh, công suất tiêu thụ tối đa 10W; đi kèm sẵn tấm pin năng lượng mặt trời 8W (cổng Type-C, pin đơn tinh thể, dây 3m) trong bộ Kit; sạc qua adapter DC 5V/2A',
+                'Chuẩn chống nước & bụi': 'IP65 (thiết kế chống chịu thời tiết theo chuẩn Weatherproof của EZVIZ)',
+                'Tính năng chính': 'Camera 2 ống kính "co-action" AI độc lập từng ống, đồng bộ bám theo (co-detection) và auto-tracking; ColorFULL Night Vision quan sát màu cực nét trong điều kiện thiếu sáng (tới 0.01 lux); AI phát hiện người/phương tiện trên cả 2 ống kính; Always-On Video Mode 2.0, time-lapse tùy chỉnh; phòng thủ chủ động còi + đèn nháy; tích hợp trợ lý ảo Alexa/Google Assistant; nén H.265 giảm khoảng 50% dung lượng lưu trữ; đi kèm sẵn tấm pin năng lượng mặt trời 8W trong bộ Kit; tự động chuyển đổi Wi-Fi 6/4G'
+            }
+        },
+        {
+            id: 'hb90x-dual-4g',
+            officialUrl: 'https://www.ezviz.com/product/hb90x-dual-4g-kit/67438',
+            name: 'EZVIZ HB90x Dual 4G Kit',
+            category: 'Camera 4G & Wi-Fi ngoài trời 2 ống kính xoay Pan/Tilt dùng pin, kèm sẵn tấm pin năng lượng mặt trời 8W (AOV)',
+            type: 'camera-battery',
+            image: 'https://mfs.ezvizlife.com/1516643d835f59f184c73ed1e89fe828_middle.png',
+            shortDesc: 'Cùng phân khúc với CB90x Dual 4G Kit, khác tên thương mại/thân máy theo thị trường — giống quan hệ H90/C90 Dual đã có trong catalog. Camera 4G & Wi-Fi hai ống kính dùng pin, bán kèm sẵn tấm pin năng lượng mặt trời 8W trong bộ Kit.',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.8" CMOS quét tuần tự 4 Megapixel (cả 2 ống kính)',
+                'Độ phân giải': '2K+ (2560 × 1440) trên cả 2 ống kính',
+                'Ống kính / Góc quan sát': 'Ống trên: 2.8mm F1.2 (chéo 122°, ngang 105°, dọc 58°); Ống dưới: 6mm F1.2 (chéo 65°, ngang 56°, dọc 30°)',
+                'Góc xoay Pan/Tilt': 'Ống trên: Pan 220°, Tilt 10°; Ống dưới: Pan 324°, Tilt 90°',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Tầm 35m (khi 2 ống kính cùng hướng); độ nhạy sáng tối thiểu 0.01 Lux (F1.2, AGC ON)',
+                'Màn hình': 'Không có màn hình tích hợp',
+                'Kết nối mạng': 'Wi-Fi 802.11b/g/n/ax (2.4GHz) và 4G LTE (nhiều băng tần cho thị trường IN/EU/LA) hoạt động song song; hỗ trợ Bluetooth',
+                'Lưu trữ': 'Thẻ nhớ MicroSD tối đa 512GB; EZVIZ CloudPlay (trả phí)',
+                'Nguồn điện / Pin': 'Pin sạc 10.400mAh, công suất tiêu thụ tối đa 10W; đi kèm sẵn tấm pin năng lượng mặt trời 8W (cổng Type-C) trong bộ Kit; sạc qua adapter DC 5V/2A',
+                'Chuẩn chống nước & bụi': 'IP65 (thiết kế chống chịu thời tiết theo chuẩn Weatherproof của EZVIZ)',
+                'Tính năng chính': 'Cùng phân khúc với CB90x Dual 4G Kit, khác tên thương mại theo thị trường; camera 2 ống kính đồng bộ bám theo chuyển động (co-detection); ColorFULL Night Vision quan sát màu tới 0.01 lux; AI phát hiện người/phương tiện trên cả 2 ống kính; Always-On Video Mode 2.0; phòng thủ chủ động còi + đèn nháy; đàm thoại 2 chiều; tích hợp Alexa/Google Assistant; đi kèm sẵn tấm pin năng lượng mặt trời 8W trong bộ Kit; hỗ trợ Bluetooth; tự động chuyển đổi Wi-Fi/4G'
+            }
+        },
+        {
+            id: 'h5-4g',
+            officialUrl: 'https://www.ezviz.com/product/h5-4g/56952',
+            name: 'EZVIZ H5 4G',
+            category: 'Camera 4G ngoài trời',
+            type: 'camera-outdoor',
+            image: 'https://mfs.ezvizlife.com/e8dacd99fcf99dae2df52b2b2e20e76c_middle.png',
+            shortDesc: 'Camera bullet ngoài trời độ phân giải 2K, dùng SIM 4G thay cho Wi-Fi (kèm cổng Ethernet dự phòng), phù hợp lắp ở khu vực không có mạng cố định/Wi-Fi ổn định.',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.8" Progressive Scan CMOS',
+                'Độ phân giải': '2304 × 1296 (2K)',
+                'Ống kính / Góc quan sát': 'Tùy chọn 4mm @ F1.6 (102° chéo / 86° ngang / 46° dọc) hoặc 6mm @ F1.6 (62° chéo / 52° ngang / 28° dọc)',
+                'Góc xoay Pan/Tilt': '—',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại tối đa 30m/98ft; trang sản phẩm không công bố mục Color Night Vision riêng',
+                'Màn hình': '—',
+                'Kết nối mạng': '4G LTE (cần SIM Nano + gói cước dữ liệu di động) kèm cổng Ethernet RJ45 10/100M dự phòng; không có Wi-Fi',
+                'Lưu trữ': 'Thẻ nhớ MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'Nguồn điện lưới DC 12V/1A, tiêu thụ tối đa 7W (dùng nguồn điện trực tiếp, không có pin)',
+                'Chuẩn chống nước & bụi': 'IP67',
+                'Tính năng chính': 'AI phát hiện người/phương tiện, phòng thủ chủ động với còi báo động + đèn nháy, đàm thoại 2 chiều, nén H.265 giảm khoảng 50% dung lượng lưu trữ so với H.264, thiết kế chuyên cho lắp đặt ở nơi không phủ Wi-Fi (chỉ cần SIM 4G hoặc dây mạng)'
+            }
+        },
+        {
+            id: 'h8c-pro-4g',
+            officialUrl: 'https://www.ezviz.com/product/h8c-pro-4g/290172',
+            name: 'EZVIZ H8c Pro 4G',
+            category: 'Camera 4G xoay Pan/Tilt ngoài trời',
+            type: 'camera-outdoor',
+            image: 'https://mfs.ezvizlife.com/226371f82b4d51f8bf2f4ab4f47b71e5_middle.png',
+            shortDesc: 'Camera xoay Pan/Tilt ngoài trời độ phân giải 3K, kết nối kép Wi-Fi + 4G (kèm cổng Ethernet), có Auto Tracking tự động bám theo đối tượng.',
+            specs: {
+                'Cảm biến hình ảnh': '1/3" Progressive Scan CMOS',
+                'Độ phân giải': '2880 × 1620 (3K)',
+                'Ống kính / Góc quan sát': '4mm F1.6, góc nhìn 41° (dọc) / 76° (ngang) / 90° (chéo)',
+                'Góc xoay Pan/Tilt': 'Pan 350°, Tilt 90°',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại tối đa 30m; độ nhạy sáng tối thiểu 0.5 lux (F1.6, AGC ON), 0 lux khi bật hồng ngoại; hỗ trợ Color Night Vision/Smart Color Night Vision qua 2 đèn spotlight tích hợp',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Kết nối kép Wi-Fi (2.4GHz/5GHz) và 4G LTE (SIM Nano, nhiều băng tần theo thị trường), có thêm cổng Ethernet RJ45 10/100M',
+                'Lưu trữ': 'Thẻ nhớ MicroSD tối đa 512GB; EZVIZ CloudPlay (cần đăng ký thuê bao)',
+                'Nguồn điện / Pin': 'DC 12V/1A, tiêu thụ tối đa 12W',
+                'Chuẩn chống nước & bụi': 'IP65 (thiết kế chống chịu thời tiết theo chuẩn Weatherproof của EZVIZ)',
+                'Tính năng chính': 'AI phát hiện người/phương tiện, Auto Tracking (tự động bám + zoom theo chuyển động), phòng thủ chủ động với còi báo động + đèn cảnh báo đỏ-xanh, lưu tối đa 12 vị trí xem trước (Preset Locations), đàm thoại 2 chiều, kết nối kép Wi-Fi + 4G + Ethernet linh hoạt lắp đặt, nén H.265 tiết kiệm khoảng 50% dung lượng lưu trữ so với H.264'
+            }
+        },
+        {
+            id: 'h3k-poe',
+            officialUrl: 'https://www.ezviz.com/product/h3k-poe-4k/59259',
+            name: 'EZVIZ H3K PoE 4K',
+            category: 'Camera PoE ngoài trời',
+            type: 'camera-poe',
+            image: 'https://mfs.ezvizlife.com/63063ad578f1dae31166ba841f6d8008_middle.png',
+            shortDesc: 'Camera bullet ngoài trời độ phân giải 4K, cấp nguồn qua cáp mạng PoE chuẩn IEEE 802.3af. Cũng được bán dưới dạng "H3K PoE 4K Kit" kèm injector/NVR PoE — cùng một camera, không tạo thẻ riêng.',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.7" Progressive Scan CMOS',
+                'Độ phân giải': '3840 × 2160 (4K)',
+                'Ống kính / Góc quan sát': '2.8mm, góc nhìn 113° (ngang) / 62° (dọc) / 134° (chéo)',
+                'Góc xoay Pan/Tilt': '—',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại tối đa 30m; hỗ trợ Full-Color Night Vision qua đèn spotlight tích hợp',
+                'Màn hình': '—',
+                'Kết nối mạng': 'PoE chuẩn IEEE 802.3af Class 3 (tối đa 9.5W) qua cổng Ethernet RJ45 10/100M; có thể dùng nguồn rời DC 12V ±25%/0.66A nếu không cấp PoE',
+                'Lưu trữ': 'Thẻ nhớ MicroSD (mua riêng); cần NVR tương thích mua riêng nếu muốn ghi hình tập trung nhiều camera',
+                'Nguồn điện / Pin': 'Cấp nguồn qua PoE IEEE 802.3af Class 3, tối đa 9.5W (hoặc adapter rời DC 12V ±25%/0.66A, tối đa 8W)',
+                'Chuẩn chống nước & bụi': 'IP67',
+                'Tính năng chính': 'AI phát hiện người/phương tiện, phòng thủ chủ động với còi báo động + đèn nháy, Full-Color Night Vision, đàm thoại 2 chiều, nén H.265+/H.265/H.264+/H.264, lắp đặt đơn giản chỉ với 1 dây mạng vừa cấp nguồn vừa truyền dữ liệu (PoE)'
+            }
+        },
+        {
+            id: 'h4-poe',
+            officialUrl: 'https://www.ezviz.com/product/h4-poe-2k/60035',
+            name: 'EZVIZ H4 PoE 2K',
+            category: 'Camera PoE ngoài trời',
+            type: 'camera-poe',
+            image: 'https://mfs.ezvizlife.com/6e04f05785c4426090c22ca7434d36f1_middle.png',
+            shortDesc: 'Camera bullet ngoài trời độ phân giải 2K, cấp nguồn qua cáp mạng PoE, có 2 tùy chọn tiêu cự ống kính, mic đôi tăng tầm thu âm.',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.8" Progressive Scan CMOS',
+                'Độ phân giải': '2304 × 1296 (2K)',
+                'Ống kính / Góc quan sát': 'Tùy chọn 2.8mm @ F1.6 (106° ngang / 122° chéo) hoặc 4mm @ F1.6 (86° ngang / 102° chéo)',
+                'Góc xoay Pan/Tilt': '—',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại tối đa 30m; hỗ trợ Color Night Vision qua 2 đèn spotlight tích hợp',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Hỗ trợ cấp nguồn PoE qua cổng Ethernet RJ45 10/100M (trang không công bố cụ thể chuẩn IEEE 802.3af/at)',
+                'Lưu trữ': 'Thẻ nhớ MicroSD tối đa 512GB; EZVIZ CloudPlay (cần đăng ký thuê bao)',
+                'Nguồn điện / Pin': 'DC 12V/1A, hỗ trợ cấp nguồn qua PoE, tiêu thụ tối đa 8W',
+                'Chuẩn chống nước & bụi': 'IP67',
+                'Tính năng chính': 'AI phát hiện người/phương tiện, phòng thủ chủ động với còi báo động + đèn nháy, Color Night Vision, đàm thoại 2 chiều với mic đôi (dual-mic) thu âm xa tới 15m, nén H.265, lắp đặt đơn giản chỉ với 1 dây mạng (PoE)'
+            }
+        },
+        {
+            id: 'h5-poe',
+            officialUrl: 'https://www.ezviz.com/product/h5-poe-2k/60137',
+            name: 'EZVIZ H5 PoE 2K',
+            category: 'Camera PoE ngoài trời',
+            type: 'camera-poe',
+            image: 'https://mfs.ezvizlife.com/f64db3300dd26a2d62898327be82fb24_middle.png',
+            shortDesc: 'Camera bullet ngoài trời độ phân giải 2K, cấp nguồn qua cáp mạng PoE, có 2 tùy chọn tiêu cự ống kính, phát hiện người/phương tiện bằng AI.',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.8" Progressive Scan CMOS',
+                'Độ phân giải': '2304 × 1296 (2K)',
+                'Ống kính / Góc quan sát': 'Tùy chọn 4mm @ F1.6 (102° chéo / 86° ngang / 46° dọc) hoặc 6mm @ F1.6 (62° chéo / 52° ngang / 28° dọc)',
+                'Góc xoay Pan/Tilt': '—',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại tối đa 30m, độ nhạy sáng tối thiểu 0.01 lux (F1.6, AGC ON), 0 lux khi bật hồng ngoại',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Hỗ trợ cấp nguồn PoE qua cổng Ethernet RJ45 10/100M (trang không công bố cụ thể chuẩn IEEE 802.3af/at)',
+                'Lưu trữ': 'Thẻ nhớ MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'DC 12V/1A, hỗ trợ cấp nguồn qua PoE, tiêu thụ tối đa 7W',
+                'Chuẩn chống nước & bụi': 'IP67',
+                'Tính năng chính': 'AI phát hiện người/phương tiện, phòng thủ chủ động cảnh báo bằng còi báo động + đèn nháy từ 2 spotlight, đàm thoại 2 chiều, nén H.265/H.264, lắp đặt đơn giản chỉ với 1 dây mạng (PoE)'
+            }
+        },
+        {
+            id: 'h8c-poe',
+            officialUrl: 'https://www.ezviz.com/product/h8c-poe-2k/57976',
+            name: 'EZVIZ H8c PoE 2K',
+            category: 'Camera PoE xoay Pan/Tilt ngoài trời',
+            type: 'camera-poe',
+            image: 'https://mfs.ezvizlife.com/5e1bac3c96c5d4d4e0915b5e26c28f0f_middle.png',
+            shortDesc: 'Camera xoay Pan/Tilt ngoài trời độ phân giải 2K, cấp nguồn qua cáp mạng PoE, có Auto Tracking tự động bám theo chuyển động.',
+            specs: {
+                'Cảm biến hình ảnh': '1/2.8" Progressive Scan CMOS',
+                'Độ phân giải': '2304 × 1296 (2K)',
+                'Ống kính / Góc quan sát': 'Tùy chọn 4mm @ F1.6 (49° dọc / 89° ngang / 104° chéo) hoặc 6mm @ F1.6 (28° dọc / 52° ngang / 60° chéo)',
+                'Góc xoay Pan/Tilt': 'Pan 350°, Tilt 80°',
+                'Hồng ngoại / Quan sát màu ban đêm': 'Hồng ngoại đen trắng tối đa 30m, độ nhạy sáng tối thiểu 0.5 lux (F1.6, AGC ON), 0 lux khi bật hồng ngoại; trang marketing có nhắc Color Night Vision nhưng không có mục riêng trong bảng thông số kỹ thuật',
+                'Màn hình': '—',
+                'Kết nối mạng': 'Hỗ trợ cấp nguồn PoE qua cổng Ethernet RJ45 10/100M (trang không công bố cụ thể chuẩn IEEE 802.3af/at)',
+                'Lưu trữ': 'Thẻ nhớ MicroSD tối đa 512GB; EZVIZ CloudPlay',
+                'Nguồn điện / Pin': 'DC 12V/1A, hỗ trợ cấp nguồn qua PoE, tiêu thụ tối đa 12W',
+                'Chuẩn chống nước & bụi': 'IP65 (thiết kế chống chịu thời tiết theo chuẩn Weatherproof của EZVIZ)',
+                'Tính năng chính': 'AI phát hiện người (trang chỉ công bố "Human Shape Detection", không nêu phát hiện phương tiện), Auto Tracking tự động bám theo chuyển động, phòng thủ chủ động với còi báo động + đèn nháy, hỗ trợ Color Night Vision, đàm thoại 2 chiều, nén H.265, lắp đặt đơn giản chỉ với 1 dây mạng (PoE)'
+            }
+        },
+        {
             id: 'dl06',
+            officialUrl: 'https://www.ezviz.com/product/dl06/77590',
             name: 'EZVIZ DL06',
             category: 'Khóa cửa thông minh vân tay',
             type: 'lock',
@@ -1955,7 +3041,10 @@
 
     // CATALOG (TRA CỨU THÔNG SỐ SP)
     const CATALOG_TYPE_META = {
-      camera: { label: 'Camera', icon: 'camera' },
+      'camera-indoor': { label: 'Camera trong nhà', icon: 'camera' },
+      'camera-outdoor': { label: 'Camera ngoài trời', icon: 'camera' },
+      'camera-battery': { label: 'Camera pin', icon: 'battery-charging' },
+      'camera-poe': { label: 'Camera PoE', icon: 'cable' },
       doorbell: { label: 'Chuông cửa hình', icon: 'bell' },
       peephole: { label: 'Mắt thần thông minh', icon: 'eye' },
       babymonitor: { label: 'Camera trông trẻ', icon: 'baby' },
@@ -1963,7 +3052,7 @@
       nvr: { label: 'Đầu ghi (NVR)', icon: 'server' },
       smarthome: { label: 'Smart Home / Hub', icon: 'house' }
     };
-    const CATALOG_TYPE_ORDER = ['camera', 'doorbell', 'peephole', 'babymonitor', 'lock', 'nvr', 'smarthome'];
+    const CATALOG_TYPE_ORDER = ['camera-indoor', 'camera-outdoor', 'camera-battery', 'camera-poe', 'doorbell', 'peephole', 'babymonitor', 'lock', 'nvr', 'smarthome'];
 
     function catalogCardHTML(product) {
       const isSelected = compareList.includes(product.id);
@@ -2237,9 +3326,10 @@
               </p>
               
               <div class="flex flex-wrap gap-4">
-                <button class="bg-blue-600 text-white px-6 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-sm shadow-blue-200 flex items-center gap-2">
-                  <i data-lucide="download" class="w-4 h-4"></i> Tải Datasheet
-                </button>
+                ${product.officialUrl ? `
+                <a href="${product.officialUrl}" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-6 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-sm shadow-blue-200 flex items-center gap-2">
+                  <i data-lucide="external-link" class="w-4 h-4"></i> Xem Datasheet
+                </a>` : ''}
                 <button onclick="copyToClipboard('${product.name}', 'Đã copy tên sản phẩm!')" class="bg-white text-gray-700 border border-gray-300 px-6 py-2.5 rounded-lg font-medium hover:bg-gray-50 hover:text-blue-600 transition-colors flex items-center gap-2">
                   <i data-lucide="copy" class="w-4 h-4"></i> Copy Tên SP
                 </button>
