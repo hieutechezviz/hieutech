@@ -252,6 +252,16 @@
           </div>
           <input type="text" id="faq-search" class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-xl bg-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm" placeholder="Tìm kiếm theo mã lỗi, tên thiết bị, từ khóa..." oninput="filterFaqs()">
         </div>
+        <button onclick="openRemoteToolModal()" class="w-full flex items-center gap-4 bg-white border-2 border-blue-200 hover:border-blue-500 hover:bg-blue-50 rounded-2xl p-4 mb-6 text-left transition-all group max-w-2xl">
+          <div class="w-11 h-11 rounded-xl bg-blue-100 group-hover:bg-blue-200 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="qr-code" class="w-5 h-5 text-blue-600"></i>
+          </div>
+          <div class="flex-1 min-w-0">
+            <h3 class="font-semibold text-gray-900">Cấp QR / Xóa tài khoản từ xa</h3>
+            <p class="text-sm text-gray-500 mt-0.5">Gửi yêu cầu cấp mã QR (Verification Code) hoặc xóa tài khoản liên kết cũ trên thiết bị</p>
+          </div>
+          <i data-lucide="chevron-right" class="w-5 h-5 text-gray-400 flex-shrink-0"></i>
+        </button>
         <div id="faq-breadcrumb" class="flex flex-wrap items-center gap-1.5 text-sm text-gray-500 mb-4 min-h-[20px]"></div>
         <div id="faq-list" class="space-y-4">
           <!-- Rendered by JS -->
@@ -614,6 +624,46 @@
 
     <!-- Compare Bar -->
     <div id="compare-bar" class="hidden fixed bottom-0 inset-x-0 z-[70] bg-white border-t border-gray-200 shadow-[0_-4px_20px_rgba(0,0,0,0.08)]"></div>
+
+    <!-- Remote Tool Modal (Cấp QR / Xóa tài khoản từ xa) -->
+    <div id="remote-tool-modal" class="hidden fixed inset-0 z-[80] flex items-center justify-center p-4">
+      <div class="absolute inset-0 bg-black/50" onclick="closeRemoteToolModal()"></div>
+      <div class="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-6">
+        <div class="flex items-start justify-between mb-1">
+          <h3 class="text-lg font-bold text-gray-900">Cấp QR / Xóa tài khoản từ xa</h3>
+          <button onclick="closeRemoteToolModal()" class="text-gray-400 hover:text-gray-600 -mt-1 -mr-1 p-1">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+        <p class="text-sm text-gray-500 mb-5">Chọn yêu cầu bạn muốn gửi:</p>
+        <div class="space-y-3">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSey8uYsnyq6E5U0xzn_DWRp1FYj2wMp5fPuXHgO3Vm-iPo3dA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 rounded-xl border-2 border-gray-200 hover:border-blue-500 hover:bg-blue-50 transition-all">
+            <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="qr-code" class="w-5 h-5 text-blue-600"></i>
+            </div>
+            <div class="min-w-0">
+              <div class="font-semibold text-gray-900">Cấp mã QR (Verification Code) từ xa</div>
+              <div class="text-xs text-gray-500 mt-0.5">Gửi yêu cầu để được cấp mã QR kích hoạt thiết bị</div>
+            </div>
+          </a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSe-wNB7CXLQj-zxDsUyo2CXc1GbSyIRrGKWCjWiuKFZt-dcAQ/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 rounded-xl border-2 border-gray-200 hover:border-red-500 hover:bg-red-50 transition-all">
+            <div class="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="user-x" class="w-5 h-5 text-red-600"></i>
+            </div>
+            <div class="min-w-0">
+              <div class="font-semibold text-gray-900">Xóa tài khoản liên kết từ xa</div>
+              <div class="text-xs text-gray-500 mt-0.5">Gửi yêu cầu gỡ tài khoản cũ đang liên kết trên thiết bị</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feedback Bubble (always visible, links to feedback form) -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSffyAMAfIHXoidKhQQor8TxRoJ1PiXWgESjtxcsNmiosQ7G3Q/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" title="Góp ý cho chúng tôi" class="fixed bottom-6 right-6 z-[75] h-14 pl-4 pr-5 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-xl flex items-center gap-2 transition-transform hover:scale-105">
+      <i data-lucide="message-circle" class="w-6 h-6 flex-shrink-0"></i>
+      <span class="font-semibold text-sm whitespace-nowrap">Góp ý</span>
+    </a>
   </div>
 
   <script>
@@ -3422,6 +3472,15 @@
       const faq = faqsData.find(f => f._id === id);
       if (!faq) return;
       copyToClipboard(faq.answer, 'Đã copy phương án xử lý!');
+    }
+
+    function openRemoteToolModal() {
+      document.getElementById('remote-tool-modal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeRemoteToolModal() {
+      document.getElementById('remote-tool-modal').classList.add('hidden');
     }
 
     // FAQ — điều hướng 3 tầng: Nhóm lỗi chung → Lỗi cụ thể → Giải pháp
