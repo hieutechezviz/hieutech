@@ -810,7 +810,14 @@
       { model: "GT&HD Cấu hình Beansview D320", link: "https://www.youtube.com/watch?v=4gpeU6U5Nmw&t=9s", type: "Camera" },
       { model: "GT&HD Cấu hình CB8C LITE", link: "https://www.youtube.com/watch?v=2L5HPTpN9iA&t=60s", type: "Camera" },
       { model: "GT&HD Cấu hình DL20FVS", link: "https://www.youtube.com/watch?v=hOSUM1OA5y8", type: "Smartlock" },
-      { model: "GT&HD Cấu hình TY1 G1 2K", link: "https://www.youtube.com/watch?v=bojH0LTCp_Q", type: "Camera" }
+      { model: "GT&HD Cấu hình TY1 G1 2K", link: "https://www.youtube.com/watch?v=bojH0LTCp_Q", type: "Camera" },
+      { model: "Giới thiệu tính năng DL10/Y1000", link: "https://www.youtube.com/watch?v=aJeqaQSg9NU&t=21s", type: "Smartlock" },
+      { model: "GT&HD Lắp đặt DL10/Y1000", link: "https://www.youtube.com/watch?v=VFjq0kB2Sho", type: "Smartlock" },
+      { model: "GT&HD Cấu hình TP5 PoE", link: "https://www.youtube.com/watch?v=EAi5ZPJdHx4&t=688s", type: "Camera" },
+      { model: "GT&HD Cấu hình DL50FVX", link: "https://www.youtube.com/watch?v=FAWECOPfoZg&pp=0gcJCT8MAYcqIYzv", type: "Smartlock" },
+      { model: "GT&HD Cấu hình HB30 3K", link: "https://www.youtube.com/watch?v=00Kp4zX-umw", type: "Camera" },
+      { model: "GT&HD Cấu hình C8C 2K (R210)", link: "https://www.youtube.com/watch?v=7IxYYJcqp9A&t=16s", type: "Camera" },
+      { model: "GT&HD Cấu hình H90 3K (R105)", link: "https://www.youtube.com/watch?v=WE652O_TqOg&t=9s", type: "Camera" }
     ];
 
     // DATA CATALOG (THÔNG SỐ KỸ THUẬT)
@@ -2987,16 +2994,24 @@
     };
 
     // LOCK DATA
+    // minThickness/minDepth/centerDistance tính bằng cm. centerDistance = khoảng cách tâm tay nắm đến lõi khóa
+    // (dùng để kiểm tra cửa cải tạo), tolerance = sai số cho phép quanh centerDistance.
     const LOCK_MODELS = [
-      { id: 'DL05', name: 'DL05', type: 'wood' },
-      { id: 'DL50FVS', name: 'DL50FVS', type: 'wood' },
-      { id: 'Y2000', name: 'Y2000', type: 'wood' },
-      { id: 'Y3000FVP', name: 'Y3000FVP', type: 'wood' },
-      { id: 'DL20FVS', name: 'DL20FVS', type: 'wood' },
-      { id: 'DL04', name: 'DL04 Series', type: 'wood' },
-      { id: 'DL03', name: 'DL03 Series', type: 'wood' },
-      { id: 'DL06', name: 'DL06', type: 'alum' },
-      { id: 'DL06Pro', name: 'DL06 Pro', type: 'alum' },
+      { id: 'DL05', name: 'DL05', type: 'wood', minThickness: 3.0, minDepth: 9.9, centerDistance: 6.0, tolerance: 0.3 },
+      { id: 'DL50FVS', name: 'DL50FVS', type: 'wood', minThickness: 3.0, minDepth: 9.9, centerDistance: 6.0, tolerance: 0.3 },
+      { id: 'Y2000', name: 'Y2000', type: 'wood', minThickness: 3.0, minDepth: 9.9, centerDistance: 6.0, tolerance: 0.3 },
+      { id: 'Y3000FVP', name: 'Y3000FVP', type: 'wood', minThickness: 3.0, minDepth: 9.9, centerDistance: 6.0, tolerance: 0.3 },
+      { id: 'DL20FVS', name: 'DL20FVS', type: 'wood', minThickness: 3.0, minDepth: 9.9, centerDistance: 6.0, tolerance: 0.3 },
+      { id: 'DL04', name: 'DL04 Series', type: 'wood', minThickness: 3.0, minDepth: 9.9, centerDistance: 6.0, tolerance: 0.3 },
+      { id: 'DL03', name: 'DL03 Series', type: 'wood', minThickness: 3.0, minDepth: 9.9, centerDistance: 6.0, tolerance: 0.3 },
+      { id: 'DL06', name: 'DL06', type: 'alum', minThickness: 3.0, minDepth: 7.0, centerDistance: 3.5, tolerance: 0.2 },
+      { id: 'DL06Pro', name: 'DL06 Pro', type: 'alum', minThickness: 3.0, minDepth: 7.0, centerDistance: 3.5, tolerance: 0.2 },
+      { id: 'Y2000FVS', name: 'Y2000FVS', type: 'wood', minThickness: 3.4, minDepth: 10, centerDistance: 6.0, tolerance: 0.3 },
+      { id: 'Y2000F', name: 'Y2000F', type: 'wood', minThickness: 3.4, minDepth: 10, centerDistance: 6.0, tolerance: 0.3 },
+      { id: 'DL20F', name: 'DL20F', type: 'wood', minThickness: 3.4, minDepth: 10, centerDistance: 6.0, tolerance: 0.3 },
+      { id: 'DL50FVX', name: 'DL50FVX', type: 'wood', minThickness: 3.4, minDepth: 10, centerDistance: 6.0, tolerance: 0.3 },
+      { id: 'Y1000', name: 'Y1000', type: 'wood', minThickness: 3.4, minDepth: 7, centerDistance: 5.0, tolerance: 0.3 },
+      { id: 'DL10', name: 'DL10', type: 'wood', minThickness: 3.4, minDepth: 7, centerDistance: 5.0, tolerance: 0.3 },
     ];
 
     // PROVINCE DATA
@@ -3853,7 +3868,9 @@
       const val = e.target.value;
       lockState.selectedLock = val;
       if (val) {
-        lockState.lockType = LOCK_MODELS.find(l => l.id === val).type;
+        const model = LOCK_MODELS.find(l => l.id === val);
+        lockState.selectedLockModel = model;
+        lockState.lockType = model.type;
         lockState.step = 2;
         document.getElementById('lock-type-label').innerText = lockState.lockType === 'wood' ? 'KHÓA CỬA GỖ' : 'KHÓA CỬA NHÔM';
         renderLockStep();
@@ -3874,23 +3891,15 @@
     function checkLockDimensions() {
       const t = parseFloat(document.getElementById('lock-thickness').value.replace(',', '.'));
       const d = parseFloat(document.getElementById('lock-depth').value.replace(',', '.'));
-      
+
       if (isNaN(t) || isNaN(d)) return;
 
-      if (lockState.lockType === 'wood') {
-        if (t < 3.0 || d < 9.9) {
-          lockState.result = 'fail';
-          lockState.step = 6;
-        } else {
-          lockState.step = 4;
-        }
-      } else if (lockState.lockType === 'alum') {
-        if (t < 3.0 || d < 7.0) {
-          lockState.result = 'fail';
-          lockState.step = 6;
-        } else {
-          lockState.step = 4;
-        }
+      const model = lockState.selectedLockModel;
+      if (t < model.minThickness || d < model.minDepth) {
+        lockState.result = 'fail';
+        lockState.step = 6;
+      } else {
+        lockState.step = 4;
       }
       renderLockResult();
       renderLockStep();
@@ -3917,18 +3926,11 @@
       const hd = parseFloat(document.getElementById('lock-handle-distance').value.replace(',', '.'));
       if (isNaN(hd)) return;
 
-      if (lockState.lockType === 'wood') {
-        if (hd > 5.7 && hd < 6.3) {
-          lockState.result = 'success';
-        } else {
-          lockState.result = 'fail';
-        }
-      } else if (lockState.lockType === 'alum') {
-        if (hd > 3.3 && hd < 3.7) {
-          lockState.result = 'success';
-        } else {
-          lockState.result = 'fail';
-        }
+      const model = lockState.selectedLockModel;
+      if (hd > model.centerDistance - model.tolerance && hd < model.centerDistance + model.tolerance) {
+        lockState.result = 'success';
+      } else {
+        lockState.result = 'fail';
       }
       lockState.step = 6;
       renderLockResult();
