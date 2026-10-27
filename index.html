@@ -664,6 +664,26 @@
       <i data-lucide="message-circle" class="w-6 h-6 flex-shrink-0"></i>
       <span class="font-semibold text-sm whitespace-nowrap">Góp ý</span>
     </a>
+
+    <!-- Migration Notice Modal: trang đã chuyển sang tên miền mới -->
+    <div id="migration-notice-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4">
+      <div class="absolute inset-0 bg-black/60"></div>
+      <div class="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 text-center">
+        <div class="flex justify-center mb-4">
+          <div class="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center">
+            <i data-lucide="megaphone" class="w-7 h-7 text-blue-600"></i>
+          </div>
+        </div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Website đã chuyển địa chỉ mới!</h3>
+        <p class="text-sm text-gray-600 mb-5">Trang web này đã chuyển sang tên miền mới. Mọi người vui lòng truy cập địa chỉ bên dưới để nhận những thông tin mới nhất nhé!</p>
+        <a href="https://ezvizvietnam.github.io/ezviz/" class="block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-xl transition-colors mb-3 break-all">
+          ezvizvietnam.github.io/ezviz
+        </a>
+        <button onclick="document.getElementById('migration-notice-modal').remove()" class="text-sm text-gray-500 hover:text-gray-700 font-medium">
+          Đóng và tiếp tục xem trang này
+        </button>
+      </div>
+    </div>
   </div>
 
   <script>
